@@ -21,6 +21,13 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 
 ?>
 
+<?php
+// Mercado Pago
+
+
+// Exibição do botão de pagamento
+?>
+
 <div class="middle minfit bg-gray">
 
 	<div class="container">
@@ -108,10 +115,83 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 
 		</div>
 
+		<div class="integracao">
+
+			<div class="data box-white mt-16">
+
+	            <div class="row">
+
+	              <div class="col-md-12">
+
+	                <div class="title-line pd-0">
+	                  <i class="lni lni-money-location"></i>
+	                  <span>Mercado Pago</span>
+	                  <div class="clear"></div>
+	                </div>
+
+	              </div>
+
+	            </div>
+
+<!-- 	            <div class="row">
+
+	              <div class="col-md-12">
+
+		              <div class="form-field-default">
+
+		                  <label>Tutorial (Passo a passo):</label>
+		                  <span class="form-tip">Assista o vídeo abaixo para aprender como importar os seus produtos automaticamente par ao seu facebook / instagram shopping.</span>
+		                  <iframe></iframe>
+
+		              </div>
+
+	              </div>
+
+	            </div> -->
+
+	          <div class="row">
+
+	            <div class="col-md-9">
+
+	              <div class="form-field-default">
+	                  <label>Public key:</label>
+				  	  <input id="copyme" type="text" value="" DISABLED>
+					  <!-- <input id="valor" type="number" placeholder="R$0.00" name="valor" value="25" > -->
+					  <label>Secret key:</label>
+					  <input id="copyme" type="text" value="" DISABLED>
+
+	              </div>
+
+				  <div class="form-field-default">
+					  <!-- <input id="valor" type="number" placeholder="R$0.00" name="valor" value="25" DISABLED> -->
+
+	              </div>
+
+	            </div>
+				<a href="sdk/card.php">
+					<div class="col-md-3">
+						<label></label>
+						  <button class="fullwidth" data-clipboard-text="<?php echo $meudominio; ?>/shopping.xml">
+						  	<span>
+						  		<i class="lni lni-shopping-basket"></i> Mercado Pago
+								<!-- <a href="<?php echo $preference->sandbox_init_point; ?>">Pagar com Mercado Pago</a>  -->
+
+						  	</span>
+						  </button>
+					  </div>
+				</a>
+
+	          </div>
+
+			</div>
+
+		</div>
+
 	</div>
 
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 <?php 
 // FOOTER
 $system_footer .= "";

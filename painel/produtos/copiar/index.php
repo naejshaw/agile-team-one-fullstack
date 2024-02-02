@@ -117,7 +117,7 @@ include('../../_layout/modal.php');
 
     if( !$checkerrors ) {
 
-      if( $pid = new_produto( $eid,$categoria,$destaque,$ref,$nome,$descricao,$valor,$oferta,$valor_promocional,$variacao,$visible,$status,$visible,$integrado ) ) {
+      if( $pid = new_produto( $estabelecimento,$categoria,$destaque,$ref,$nome,$descricao,$valor,$oferta,$valor_promocional,$variacao,$status,$visible,$integrado ) ) {
 
         if ( $_FILES['file'] ) {
 

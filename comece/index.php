@@ -3,7 +3,7 @@ require_once("../_core/_includes/config.php");
 // SEO
 $seo_subtitle = "Comece";
 $seo_description = "Comece";
-$seo_keywords = $app['title'].", ".$seo_title;
+$seo_keywords = isset($app['title']).", ".$seo_title;
 $seo_image = get_just_url()."/_core/_cdn/img/favicon.png";
 // HEADER
 $system_header .= "";
@@ -12,16 +12,16 @@ include('../_core/_layout/top.php');
 include('../_core/_layout/sidebars.php');
 include('../_core/_layout/modal.php');
 global $plano_default;
-$afiliado = $_SESSION['afiliado'];
+$afiliado = isset($_SESSION['afiliado']);
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 
@@ -53,7 +53,7 @@ $afiliado = $_SESSION['afiliado'];
 
 				
 					<span class="text">
-						Ao se cadastrar você ganha <br/> <strong><?php echo data_info( "planos",$plano_default,"duracao_dias" ); ?> dias</strong> <br/>para testar nossa plataforma, criar seu catálogo e impulsionar suas vendas.
+						Ao se cadastrar você ganha <br/> <strong><?php echo data_info( "planos",$plano_default,"duracao_dias" ); ?> 30 dias</strong> <br/>para testar nossa plataforma, criar seu catálogo e impulsionar suas vendas.
 					</span>
 					
 					<!--

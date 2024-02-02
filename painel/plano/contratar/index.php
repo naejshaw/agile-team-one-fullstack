@@ -36,7 +36,7 @@ MercadoPago\SDK::setAccessToken($mp_acess_token);
   global $numeric_data;
   global $gallery_max_files;
 
-  $voucher = mysqli_real_escape_string( $db_con, $_GET['voucher'] );
+  $voucher = mysqli_real_escape_string( $db_con, isset($_GET['voucher']) );
   $voucher_query = mysqli_query( $db_con, "SELECT * FROM vouchers WHERE codigo = '$voucher' AND status = '1' LIMIT 1");
   $has_voucher = mysqli_num_rows( $voucher_query );
   $data_voucher = mysqli_fetch_array( $voucher_query );
@@ -54,13 +54,13 @@ MercadoPago\SDK::setAccessToken($mp_acess_token);
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']);
 
   if( $formdata ) {
 
     // Setar campos
 
-    $termos = mysqli_real_escape_string( $db_con, $_POST['termos'] );
+    $termos = mysqli_real_escape_string( $db_con, isset($_POST['termos']) );
 
     // Checar Erros
 
@@ -219,15 +219,15 @@ MercadoPago\SDK::setAccessToken($mp_acess_token);
 
             <div class="col-md-12">
 
-              <?php if( $checkerrors ) { list_errors(); } ?>
+              <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente mais tarde!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( $_GET['msg'] == "sucesso" ) { ?>
+              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
 
                 <?php modal_alerta("Editado com sucesso!","sucesso"); ?>
 
@@ -309,9 +309,9 @@ MercadoPago\SDK::setAccessToken($mp_acess_token);
                   <br/><br/>
 
                   <div class="form-field-terms">
-                    <input type="hidden" name="afiliado" value="<?php echo htmlclean( $_GET['afiliado'] ); ?>"/>
+                    <input type="hidden" name="afiliado" value="<?php echo htmlclean( isset($_GET['afiliado']) ); ?>"/>
                     <input type="hidden" name="formdata" value="1"/>
-                    <input type="radio" name="terms" value="1" <?php if( $_POST['terms'] ){ echo 'CHECKED'; }; ?>> Eu aceito os termos de <?php if( $has_voucher ){ echo 'adesão'; } else { echo 'compra'; }; ?>
+                    <input type="radio" name="terms" value="1" <?php if( isset($_POST['terms']) ){ echo 'CHECKED'; }; ?>> Eu aceito os termos de <?php if( $has_voucher ){ echo 'adesão'; } else { echo 'compra'; }; ?>
                   </div>
 
               </div>

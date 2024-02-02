@@ -25,11 +25,11 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 // Variables
 
-$estabelecimento = mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] );
-$numero = mysqli_real_escape_string( $db_con, $_GET['numero'] );
-$nome = mysqli_real_escape_string( $db_con, $_GET['nome'] );
-$status = mysqli_real_escape_string( $db_con, $_GET['status'] );
-$cupom = mysqli_real_escape_string( $db_con, $_GET['cupom'] );
+$estabelecimento = mysqli_real_escape_string( $db_con, isset($_GET['estabelecimento_id']) );
+$numero = mysqli_real_escape_string( $db_con, isset($_GET['numero']) );
+$nome = mysqli_real_escape_string( $db_con, isset($_GET['nome']) );
+$status = mysqli_real_escape_string( $db_con, isset($_GET['status']) );
+$cupom = mysqli_real_escape_string( $db_con, isset($_GET['cupom']) );
 
 $getdata = "";
 
@@ -42,12 +42,12 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 20;
-$pagina = $_GET["pagina"] == "" ? 1 : $_GET["pagina"];
+$pagina = isset($_GET["pagina"]) == "" ? 1 : isset($_GET["pagina"]);
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
 
-$query .= "SELECT * FROM pedidos ";
+$query = "SELECT * FROM pedidos ";
 
 $query .= "WHERE 1=1 ";
 
@@ -69,13 +69,13 @@ if( $cupom ) {
   $query .= "AND cupom = '$cupom' ";
 }
 
-$data_inicial = mysqli_real_escape_string( $db_con, $_GET['data_inicial'] );
-if( !$data_inicial ) { $data_inicial = date("d/m/").(date(Y)-1); }
+$data_inicial = mysqli_real_escape_string( $db_con, isset($_GET['data_inicial']) );
+if( !isset($data_inicial) ) { $data_inicial = date("d/m/").(date(Y)-1); }
 $data_inicial_sql = datausa_min( $data_inicial );
 $data_inicial_sql = $data_inicial_sql." 00:00:00";
 
-$data_final = mysqli_real_escape_string( $db_con, $_GET['data_final'] );
-if( !$data_final ) { $data_final = date("d/m/Y"); }
+$data_final = mysqli_real_escape_string( $db_con, isset($_GET['data_final']) );
+if( !isset($data_final) ) { $data_final = date("d/m/Y"); }
 $data_final_sql = datausa_min( $data_final );
 $data_final_sql = $data_final_sql." 23:59:59";
 
@@ -109,13 +109,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 
@@ -163,7 +163,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-filtros" class="panel-collapse collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div id="collapse-filtros" class="panel-collapse collapse <?php if( isset($_GET['filtered']) ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET">
@@ -184,7 +184,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 												<select name="status">
 													<option></option>
 		                                            <?php for( $x = 0; $x < count( $numeric_data['status_pedido'] ); $x++ ) { ?>
-		                                            <option value="<?php echo $numeric_data['status_pedido'][$x]['value']; ?>" <?php if( $_GET['status'] == $numeric_data['status_pedido'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['status_pedido'][$x]['name']; ?></option>
+		                                            <option value="<?php echo $numeric_data['status_pedido'][$x]['value']; ?>" <?php if( isset($_GET['status']) == $numeric_data['status_pedido'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['status_pedido'][$x]['name']; ?></option>
 		                                            <?php } ?>
 												</select>
 											</div>
@@ -229,7 +229,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php panel_url(); ?>/pedidos" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

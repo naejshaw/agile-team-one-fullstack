@@ -49,19 +49,19 @@ include('../_layout/modal.php');
   
 ?>
 
-<?php if( $_GET['msg'] == "inativo" ) { ?>
+<?php if( isset($_GET['msg']) == "inativo" ) { ?>
 
 <?php modal_alerta("Seu plano encontrasse inativo, contrate um novo plano para continuar a usar os serviços!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "funcaodesativada" ) { ?>
+<?php if( isset($_GET['msg']) == "funcaodesativada" ) { ?>
 
 <?php modal_alerta("Seu plano não tem acesso a essa funcionalidade, contrate um correspondente verificando a aba meu plano!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "bemvindo" ) { ?>
+<?php if( isset($_GET['msg']) == "bemvindo" ) { ?>
 
 <?php modal_alerta("Seu catálogo foi criado com sucesso. Aproveite o seu período de testes!<br/><br/>Ao final do período você deve escolher um plano para continuar utilizando o sistema.","sucesso"); ?>
 

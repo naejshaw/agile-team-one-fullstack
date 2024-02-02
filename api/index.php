@@ -7,7 +7,7 @@ include('../_core/_includes/config.php');
 global $app;
 
 
-$token = mysqli_real_escape_string( $db_con, $_GET['token'] );
+$token = mysqli_real_escape_string( $db_con, isset($_GET['token']) );
 
 $contatoken = strlen($token);
 

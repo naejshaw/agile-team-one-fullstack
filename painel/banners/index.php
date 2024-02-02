@@ -23,8 +23,8 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 // Variables
 
-$titulo = mysqli_real_escape_string( $db_con, $_GET['titulo'] );
-$status = mysqli_real_escape_string( $db_con, $_GET['status'] );
+$titulo = mysqli_real_escape_string( $db_con, isset($_GET['titulo']) );
+$status = mysqli_real_escape_string( $db_con, isset($_GET['status']) );
 
 $getdata = "";
 
@@ -37,12 +37,12 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 20;
-$pagina = $_GET["pagina"] == "" ? 1 : $_GET["pagina"];
+$pagina = isset($_GET["pagina"]) == "" ? 1 : isset($_GET["pagina"]);
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
 
-$query .= "SELECT * FROM banners ";
+$query = "SELECT * FROM banners ";
 
 $query .= "WHERE 1=1 ";
 
@@ -80,13 +80,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 
@@ -134,7 +134,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-filtros" class="panel-collapse collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div id="collapse-filtros" class="panel-collapse collapse <?php if( isset($_GET['filtered']) ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET">
@@ -172,7 +172,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php panel_url(); ?>/banners" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

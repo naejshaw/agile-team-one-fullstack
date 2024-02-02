@@ -23,9 +23,9 @@ global $db_con;
 // $lng = $_POST['longitude'];
 $radius = "10";
 $key = "AIzaSyBXQ9nkYb95_z-Vp1D9pE6Yqy574q943To";
-$location = $_GET['location'];
-$type = $_GET['type'];
-$filtered = $_GET['filtered'];
+$location = isset($_GET['location']);
+$type = isset($_GET['type']);
+$filtered = isset($_GET['filtered']);
 ?>
 
 <div class="middle minfit bg-gray">
@@ -70,7 +70,7 @@ $filtered = $_GET['filtered'];
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-filtros" class="panel-collapse collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div id="collapse-filtros" class="panel-collapse collapse <?php if( isset($_GET['filtered']) ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET">
@@ -100,7 +100,7 @@ $filtered = $_GET['filtered'];
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php admin_url(); ?>/usuarios" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

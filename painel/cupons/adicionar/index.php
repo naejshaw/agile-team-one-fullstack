@@ -24,7 +24,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']);
 
   if( $formdata ) {
 
@@ -146,15 +146,15 @@ include('../../_layout/modal.php');
 
             <div class="col-md-12">
 
-              <?php if( $checkerrors ) { list_errors(); } ?>
+              <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( $_GET['msg'] == "sucesso" ) { ?>
+              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 
@@ -171,7 +171,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Nome:</label>
-                  <input type="text" id="input-nome" name="nome" placeholder="Nome" value="<?php echo htmlclean( $_POST['nome'] ); ?>">
+                  <input type="text" id="input-nome" name="nome" placeholder="Nome" value="<?php echo htmlclean( isset($_POST['nome']) ); ?>">
 
               </div>
 
@@ -186,7 +186,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Descrição:</label>
-                  <textarea rows="6" name="descricao" placeholder="Descrição do seu cupom"><?php echo htmlclean( $_POST['descricao'] ); ?></textarea>
+                  <textarea rows="6" name="descricao" placeholder="Descrição do seu cupom"><?php echo htmlclean( isset($_POST['descricao']) ); ?></textarea>
 
               </div>
 
@@ -201,7 +201,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Código:</label>
-                  <input class="strupper" type="text" id="input-codigo" name="codigo" placeholder="Código" value="<?php echo htmlclean( $_POST['codigo'] ); ?>">
+                  <input class="strupper" type="text" id="input-codigo" name="codigo" placeholder="Código" value="<?php echo htmlclean( isset($_POST['codigo']) ); ?>">
 
               </div>
 
@@ -217,10 +217,10 @@ include('../../_layout/modal.php');
 
                   <label>Tipo de desconto:</label>
                   <div class="form-field-radio">
-                    <input type="radio" name="tipo" value="1" element-show=".elemento-porcentagem" element-hide=".elemento-fixo" <?php if( $_POST['tipo'] == 1 OR !$_POST['tipo'] ){ echo 'CHECKED'; }; ?>> Porcentagem
+                    <input type="radio" name="tipo" value="1" element-show=".elemento-porcentagem" element-hide=".elemento-fixo" <?php if( isset($_POST['tipo']) == 1 OR !isset($_POST['tipo']) ){ echo 'CHECKED'; }; ?>> Porcentagem
                   </div>
                   <div class="form-field-radio">
-                    <input type="radio" name="tipo" value="2" element-show=".elemento-fixo" element-hide=".elemento-porcentagem" <?php if( $_POST['tipo'] == 2  ){ echo 'CHECKED'; }; ?>> Fixo
+                    <input type="radio" name="tipo" value="2" element-show=".elemento-fixo" element-hide=".elemento-porcentagem" <?php if( isset($_POST['tipo']) == 2  ){ echo 'CHECKED'; }; ?>> Fixo
                   </div>
                   <div class="clear"></div>
 
@@ -237,7 +237,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Desconto em porcentagem:</label>
-                  <input type="number" min="0" max="100" name="desconto_porcentagem" placeholder="Desconto em porcentagem" value="<?php echo htmlclean( $_POST['desconto_porcentagem'] ); ?>">
+                  <input type="number" min="0" max="100" name="desconto_porcentagem" placeholder="Desconto em porcentagem" value="<?php echo htmlclean( isset($_POST['desconto_porcentagem']) ); ?>">
 
               </div>
 
@@ -252,7 +252,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Desconto fixo:</label>
-                  <input class="maskmoney" type="text" name="desconto_fixo" placeholder="Desconto Fixo" value="<?php echo htmlclean( $_POST['desconto_fixo'] ); ?>">
+                  <input class="maskmoney" type="text" name="desconto_fixo" placeholder="Desconto Fixo" value="<?php echo htmlclean( isset($_POST['desconto_fixo']) ); ?>">
 
               </div>
 
@@ -267,7 +267,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Valor máximo (teto do desconto):</label>
-                  <input class="maskmoney" type="text" name="valor_maximo" placeholder="Valor máximo" value="<?php echo htmlclean( $_POST['valor_maximo'] ); ?>">
+                  <input class="maskmoney" type="text" name="valor_maximo" placeholder="Valor máximo" value="<?php echo htmlclean( isset($_POST['valor_maximo']) ); ?>">
 
               </div>
 
@@ -282,7 +282,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Quantidade:</label>
-                  <input type="number" min="1" name="quantidade" placeholder="Quantidade" value="<?php echo htmlclean( $_POST['quantidade'] ); ?>">
+                  <input type="number" min="1" name="quantidade" placeholder="Quantidade" value="<?php echo htmlclean( isset($_POST['quantidade']) ); ?>">
 
               </div>
 
@@ -297,7 +297,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Validade (data):</label>
-                  <input class="maskdate" type="text" name="validade_data" placeholder="Validade (data)" value="<?php echo htmlclean( $_POST['validade_data'] ); ?>">
+                  <input class="maskdate" type="text" name="validade_data" placeholder="Validade (data)" value="<?php echo htmlclean( isset($_POST['validade_data']) ); ?>">
 
               </div>
 
@@ -308,7 +308,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Validade (hora):</label>
-                  <input class="masktimemin" type="text" name="validade_hora" placeholder="Validade (hora)" value="<?php echo htmlclean( $_POST['validade_hora'] ); ?>">
+                  <input class="masktimemin" type="text" name="validade_hora" placeholder="Validade (hora)" value="<?php echo htmlclean( isset($_POST['validade_hora']) ); ?>">
 
               </div>
 

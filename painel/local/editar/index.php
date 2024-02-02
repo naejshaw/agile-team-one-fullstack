@@ -23,22 +23,22 @@ include('../../_layout/modal.php');
   global $numeric_data;
   $eid = $_SESSION['estabelecimento']['id'];
 
-  $id = mysqli_real_escape_string( $db_con, $_GET['id'] );
+  $id = mysqli_real_escape_string( $db_con, isset($_GET['id']) );
   $edit = mysqli_query( $db_con, "SELECT * FROM frete WHERE id = '$id' AND rel_estabelecimentos_id = '$eid' LIMIT 1");
   $hasdata = mysqli_num_rows( $edit );
   $data = mysqli_fetch_array( $edit );
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']);
 
   if( $formdata ) {
 
     // Setar campos
 
     $estabelecimento = $_SESSION['estabelecimento']['id'];
-    $nome = mysqli_real_escape_string( $db_con, $_POST['nome'] );
-    $valor = dinheiro( mysqli_real_escape_string( $db_con, $_POST['valor'] ) );
+    $nome = mysqli_real_escape_string( $db_con, isset($_POST['nome']) );
+    $valor = dinheiro( mysqli_real_escape_string( $db_con, isset($_POST['valor']) ) );
     if( !$valor ) {
       $valor = "0.00";
     }
