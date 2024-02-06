@@ -322,8 +322,8 @@ class Manager
         $difference = [];
 
         foreach (array_keys($secondArray) as $key) {
-            $secondArray[$key] = $secondArray[$key] instanceof MercadoPagoEntity ? $secondArray[$key]->toArray() : $secondArray[$key];
-            if (array_key_exists($key, $firstArray) && $firstArray[$key] instanceof MercadoPagoEntity){
+            $secondArray[$key] = $secondArray[$key] instanceof Entity ? $secondArray[$key]->toArray() : $secondArray[$key];
+            if (array_key_exists($key, $firstArray) && $firstArray[$key] instanceof Entity){
                 $firstArray[$key] = $firstArray[$key]->toArray();
             }
 

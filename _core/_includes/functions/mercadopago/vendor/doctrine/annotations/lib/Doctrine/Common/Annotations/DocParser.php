@@ -525,6 +525,7 @@ final class DocParser
 
                 if ($annotation instanceof Attributes) {
                     foreach ($annotation->value as $attribute) {
+                        $attribute = new Attribute();
                         $this->collectAttributeTypeMetadata($metadata, $attribute);
                     }
                 }

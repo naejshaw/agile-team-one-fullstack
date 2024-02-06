@@ -24,9 +24,8 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 <?php
 // Mercado Pago
 
-
-// Exibição do botão de pagamento
 ?>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
 
 <div class="middle minfit bg-gray">
 
@@ -155,31 +154,26 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 
 	              <div class="form-field-default">
 	                  <label>Public key:</label>
-				  	  <input id="copyme" type="text" value="" DISABLED>
-					  <!-- <input id="valor" type="number" placeholder="R$0.00" name="valor" value="25" > -->
+				  	  <input name="public_key" id="public_key" type="text" value="">
+					  <hr>
 					  <label>Secret key:</label>
-					  <input id="copyme" type="text" value="" DISABLED>
-
-	              </div>
-
-				  <div class="form-field-default">
-					  <!-- <input id="valor" type="number" placeholder="R$0.00" name="valor" value="25" DISABLED> -->
+					  <input name="secret_key" id="secret_key" type="text" value="">
 
 	              </div>
 
 	            </div>
-				<a href="sdk/card.php">
-					<div class="col-md-3">
-						<label></label>
-						  <button class="fullwidth" data-clipboard-text="<?php echo $meudominio; ?>/shopping.xml">
-						  	<span>
-						  		<i class="lni lni-shopping-basket"></i> Mercado Pago
-								<!-- <a href="<?php echo $preference->sandbox_init_point; ?>">Pagar com Mercado Pago</a>  -->
-
-						  	</span>
-						  </button>
-					  </div>
-				</a>
+				<div class="col-md-3">
+					<br>
+					<br>
+					<br>
+					<br>
+					<!-- TODO: criar função que captura as keys do MercadoPago e envia para o banco de dados -->
+					<button class="fullwidth" type="submit">
+						<span>
+							<i class="lni lni-key"></i> Mercado Pago
+						</span>
+					</button>
+				</div>
 
 	          </div>
 
@@ -190,8 +184,6 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 	</div>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/app.js"></script>
 <?php 
 // FOOTER
 $system_footer .= "";

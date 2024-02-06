@@ -52,7 +52,7 @@ global $simple_url;
       // Aparência
 
         $cor = mysqli_real_escape_string( $db_con, $_POST['cor'] );
-		$exibicao = mysqli_real_escape_string( $db_con, $_POST['exibicao'] );
+	    	$exibicao = mysqli_real_escape_string( $db_con, $_POST['exibicao'] );
 
       // Pagamento
 

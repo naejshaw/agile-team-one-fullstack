@@ -197,7 +197,7 @@ function random_key($a) {
 
 		}
 
-		$value .= $chars[ $rand1 ][ rand(0,$rand2) ];
+		$value .= isset($chars[ $rand1 ][ rand(0,$rand2) ]);
 
 	}
 

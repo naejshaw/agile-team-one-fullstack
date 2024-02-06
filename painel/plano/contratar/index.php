@@ -1,6 +1,8 @@
 <?php
 // CORE
 include('../../../_core/_includes/config.php');
+
+
 // RESTRICT
 restrict_estabelecimento();
 // SEO
