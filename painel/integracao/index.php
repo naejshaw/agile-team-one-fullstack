@@ -151,16 +151,13 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 	          <div class="row">
 
 	            <div class="col-md-9">
-
 	              <div class="form-field-default">
-	                  <label>Public key:</label>
-				  	  <input name="public_key" id="public_key" type="text" value="">
-					  <hr>
-					  <label>Secret key:</label>
-					  <input name="secret_key" id="secret_key" type="text" value="">
-
+	                <label>Public key:</label>
+				  	<input name="public_key" id="public_key" type="text" value="">
+					<hr>
+					<label>Secret key:</label>
+					<input name="secret_key" id="secret_key" type="text" value=""> 
 	              </div>
-
 	            </div>
 				<div class="col-md-3">
 					<br>
@@ -170,17 +167,13 @@ $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimen
 					<!-- TODO: criar função que captura as keys do MercadoPago e envia para o banco de dados -->
 					<button class="fullwidth" type="submit">
 						<span>
-							<i class="lni lni-key"></i> Mercado Pago
+							<i class="lni lni-clipboard"></i> Enviar
 						</span>
 					</button>
 				</div>
-
 	          </div>
-
 			</div>
-
 		</div>
-
 	</div>
 
 </div>
