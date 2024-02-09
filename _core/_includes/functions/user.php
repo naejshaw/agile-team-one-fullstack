@@ -1579,7 +1579,7 @@ function aplicar_voucher( $eid,$voucher ) {
 
 }
 
-function aplicar_plano( $eid, $plano) {
+function aplicar_plano( $eid,$plano ) {
 
 	global $db_con;
 	global $_SESSION;

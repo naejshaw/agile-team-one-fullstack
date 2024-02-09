@@ -26,6 +26,8 @@ global $mp_client_id;
 global $mp_client_secret;
 global $external_token;
 
+$preference_id = '';
+
 require_once "../../../vendor/autoload.php";
 
 use MercadoPago\MercadoPagoConfig;
@@ -34,66 +36,80 @@ use MercadoPago\Exceptions\MPApiException;
 ?>
 
 <?php
-// Globals
+// Globals $has_voucher
 
 global $numeric_data;
 global $gallery_max_files;
+$has_voucher = '';
 
-$preference_id = '';
 
-$voucher = mysqli_real_escape_string($db_con, $_GET["voucher"]);
-$voucher_query = mysqli_query(
-    $db_con,
-    "SELECT * FROM vouchers WHERE codigo = '$voucher' AND status = '1' LIMIT 1"
-);
-$has_voucher = mysqli_num_rows($voucher_query);
-$data_voucher = mysqli_fetch_array($voucher_query);
+//se in informar um voucher isset($_GET["voucher"])
+$codigo_voucher = isset($_GET["voucher"]);
+if ($codigo_voucher ){
+  
+  //verifica e trata o codigo enviado evitando sql inject
+  $voucher = mysqli_real_escape_string($db_con, $_GET["voucher"] );
+  //resultado da consulta no Banco pelo voucher 
+  $voucher_query = mysqli_query(
+      $db_con,
+      "SELECT * FROM vouchers WHERE codigo = '$voucher' AND status = '1' LIMIT 1"
+  );
 
-if ($has_voucher) {
+  // define se exite ou nao o voucher se retornar uma linha 
+  $has_voucher = mysqli_num_rows($voucher_query) > 0;
+
+  //Dados do Voucher
+  $data_voucher = mysqli_fetch_array($voucher_query);
+  
+  //se existi pega o ID do plano do voucher informado
+  if ($has_voucher) {
     $id = $data_voucher["rel_planos_id"];
-} else {
-    $id = mysqli_real_escape_string($db_con, $_GET["plano"]);
-}
+  } else {
+      $id = mysqli_real_escape_string($db_con, isset($_GET["plano"]));
+  }
 
-$eid = $_SESSION["estabelecimento"]["id"];
-$edit = mysqli_query(
+  //pega o ID do estabelecimento logado
+  $eid = $_SESSION["estabelecimento"]["id"];
+
+  //acao de editar o estabelecimento
+  $edit = mysqli_query(
     $db_con,
     "SELECT * FROM planos WHERE id = '$id' AND status = '1' LIMIT 1"
-);
-$hasdata = mysqli_num_rows($edit);
-$data = mysqli_fetch_array($edit);
+  );
+
+  $hasdata = mysqli_num_rows($edit);
+  $data = mysqli_fetch_array($edit);
+  //print("<pre>".print_r($data)."</pre>");
+
+}
 
 // Checar se formulário foi executado
 
-$formdata = $_POST["formdata"];
+$formdata = isset($_POST["formdata"]);
 
 if ($formdata) {
     // Setar campos
-
-    $termos = mysqli_real_escape_string($db_con, $_POST["termos"]);
+    $termos = mysqli_real_escape_string($db_con, isset($_POST["termos"]));
 
     // Checar Erros
-
     $checkerrors = 0;
     $errormessage = [];
 
     // -- Compravel
-
     if ($data["status"] != "1") {
         $checkerrors++;
         $errormessage[] = "Ação inválida";
     }
 
     // -- Termos
-
-    if ($termos) {
+    if (($termos)) {
         $checkerrors++;
         $errormessage[] = "Você deve aceitar os termos";
     }
 
     // Executar registro
-
     if (!$checkerrors) {
+       //se tiver um voucher aplica como pagamento
         if ($has_voucher) {
             if (aplicar_voucher($eid, $voucher)) {
                 atualiza_estabelecimento(
@@ -105,6 +121,7 @@ if ($formdata) {
             } else {
                 header("Location: ../index.php?msg=naoaplicado");
             }
+           // se nao tiver voucher executa o mercado pago 
         } else {
             $eid = $_SESSION["estabelecimento"]["id"];
             $define_query = mysqli_query(
@@ -188,84 +205,48 @@ if ($formdata) {
 
             if (isset($obj->id)) {
                 if ($obj->id != null) {
-                    if (isset($card)) {
-                        $preference_id = $obj->id;
-                    } else {
-                        $link_externo = $obj->init_point;
-                        $external_reference = $obj->external_reference;
+                 
+                  // Setar gateway
+                  //Numero do Pedido
+                  $gateway_ref = $obj->external_reference;
+                  //numero da referencia criada
+                  $gateway_transaction = $obj->id;
+                  
+                  //Link de Pagamento de acordo com a configuracao teste ou producao
+                  if( $mp_sandbox == true ) {
+                    $gateway_link = $obj->sandbox_init_point;
+                  } else {
+                    $gateway_link = $obj->init_point;
+                  }
 
-                        echo "<h3>{$assinatura_valor} #{$external_reference}</h3> <br />";
-                        echo "<a href='{$link_externo}' target='_blank' >Link externo</a>";
+                  //ver retorno
+                  //print("<pre>".print_r($obj,true)."</pre>");
+
+                  if( $gateway_link ) {
+                    
+                    if( contratar_plano( $eid, $id, $gateway_transaction,$gateway_ref,$gateway_link ) ) {
+          
+                      unset( $_POST );
+                      header("Location: ".$gateway_link);
+          
+                    } else {
+          
+                      header("Location: ../index.php?msg=erro&plano=".$id);
+          
                     }
+          
+                  } else {
+          
+                    header("Location: ../index.php?msg=erro&plano=".$id);
+          
+                  }          
+
                 }
             }
         }
     }
 }
 
-// Cria um item na preferência
-//  $payer = new MercadoPago\Payer();
-//$payer->email = $email_cliente;
-//$item = new MercadoPago\Item();
-//$item->title = $assinatura_nome;
-//$item->quantity = 1;
-//$item->unit_price = $assinatura_valor;
-// $preference->items = [$item];
-// $preference->external_reference = $transaction_ref;
-/*
-       $preference->back_urls = array(
-            "success" => get_just_url()."/painel/plano?msg=obrigado",
-            "failure" => get_just_url()."/painel/plano?msg=erro",
-            "pending" => get_just_url()."/painel/plano?msg=obrigado"
-        );
-        $preference->payer = $payer;
-        if( $assinatura_parcelas ) {
-          $preference->payment_methods = array(
-            "installments" => $assinatura_parcelas
-          );
-        }
-        $preference->statement_descriptor = "EstouOn";
-        $preference->notification_url = get_just_url()."/postback.php?token=".$external_token;
-        $preference->save();
-
-        // Setar gateway
-
-        $gateway_ref = $transaction_ref;
-        $gateway_transaction = $preference->id;
-        
-        if( $mp_sandbox == true ) {
-          $gateway_link = $preference->sandbox_init_point;
-        } else {
-          $gateway_link = $preference->init_point;
-        }
-
-        // print("<pre>".print_r($preference,true)."</pre>");
-
-        if( $gateway_link ) {
-
-          if( contratar_plano( $eid,$id,$gateway_transaction,$gateway_ref,$gateway_link ) ) {
-
-            unset( $_POST );
-            header("Location: ".$gateway_link);
-
-          } else {
-
-            header("Location: ../index.php?msg=erro&plano=".$id);
-
-          }
-
-        } else {
-
-          header("Location: ../index.php?msg=erro&plano=".$id);
-
-        }
-
-      }
-
-    }
-
-  }
-  */
 ?>
 
 <div class="middle minfit bg-gray">
@@ -307,11 +288,11 @@ if ($formdata) {
 
             <div class="col-md-12">
 
-              <?php if ($checkerrors) {
+              <?php if (isset($checkerrors)) {
                   list_errors();
               } ?>
 
-              <?php if ($_GET["msg"] == "erro") { ?>
+              <?php if (isset($_GET["msg"] )== "erro") { ?>
 
                 <?php modal_alerta(
                     "Erro, tente novamente mais tarde!",
@@ -320,7 +301,7 @@ if ($formdata) {
 
               <?php } ?>
 
-              <?php if ($_GET["msg"] == "sucesso") { ?>
+              <?php if (isset($_GET["msg"]) == "sucesso") { ?>
 
                 <?php modal_alerta("Editado com sucesso!", "sucesso"); ?>
 
@@ -416,11 +397,11 @@ if ($formdata) {
 
                   <div class="form-field-terms">
                     <input type="hidden" name="afiliado" value="<?php echo htmlclean(
-                        $_GET["afiliado"]
+                        isset($_GET["afiliado"])
                     ); ?>"/>
                     <input type="hidden" name="formdata" value="1"/>
                     <input type="radio" name="terms" value="1" <?php if (
-                        $_POST["terms"]
+                        isset($_POST["terms"])
                     ) {
                         echo "CHECKED";
                     } ?>> Eu aceito os termos de <?php if ($has_voucher) {
@@ -470,10 +451,10 @@ if ($formdata) {
       <?php } ?>
 
     </div>
-    <!-- Se obter uma preference id renderiza o checkout pro-->
-    <?php if ($preference_id) { ?>
+    <!-- Se obter uma preference id renderiza o checkout pro
+    <?php //if ($preference_id) { ?>
       <div id="wallet_container">
-    <?php } ?>
+    <?php //} ?>
     <script>
       const mp = new MercadoPago($mp_public_key, {
         locale: 'pt-BR'
@@ -485,6 +466,7 @@ if ($formdata) {
         },
       });
   </script>
+  -->
     <!-- / Content -->
 
   </div>
