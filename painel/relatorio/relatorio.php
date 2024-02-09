@@ -18,7 +18,7 @@ include('../../_layout/head.php');
 $eid = mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] );
 
 $data_inicial = mysqli_real_escape_string( $db_con, $_GET['data_inicial'] );
-if( !isset($data_inicial) ) { $data_inicial = date("d/m/").(date(Y)-1); }
+if( !$data_inicial ) { $data_inicial = date("d/m/").(date(Y)-1); }
 $data_inicial_sql = datausa_min( $data_inicial );
 $data_inicial_sql = $data_inicial_sql." 00:00:00";
 

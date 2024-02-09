@@ -37,12 +37,12 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 20;
-$pagina = isset($_GET["pagina"]) == "" ? 1 : isset($_GET["pagina"]);
+$pagina = isset($_GET["pagina"]) == "" ? 1 : $_GET["pagina"];
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
-
-$query = "SELECT * FROM categorias ";
+$query = '';
+$query .= "SELECT * FROM categorias ";
 
 $query .= "WHERE 1=1 ";
 
@@ -63,6 +63,8 @@ if( $status ) {
 }
 
 $query_full = $query;
+
+//var_dump($query_full);
 
 $query .= "ORDER BY nome ASC LIMIT $inicio,$limite";
 
@@ -149,7 +151,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 										<div class="col-md-3">
 							              <div class="form-field-default">
 							                  <label>Estabelecimento:</label>
-							                  <input class="autocompleter <?php if( isset($_GET['estabelecimento']) && isset($_GET['estabelecimento_id']) ) { echo "autocomplete-selected"; } ?>" type="text" name="estabelecimento" placeholder="Estabelecimento" value="<?php echo htmlclean( isset($_GET['estabelecimento']) ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_estabelecimentos.php" completer_field="estabelecimento_id"/>
+							                  <input class="autocompleter <?php if( isset($_GET['estabelecimento']) && isset($_GET['estabelecimento_id']) ) { echo "autocomplete-selected"; } ?>" type="text" name="estabelecimento" placeholder="Estabelecimento" value="<?php echo htmlclean(isset($_GET['estabelecimento']) ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_estabelecimentos.php" completer_field="estabelecimento_id"/>
 							                  <input class="fakehidden" type="text" name="estabelecimento_id" value="<?php echo htmlclean( isset($_GET['estabelecimento_id']) ); ?>"/>
 							              </div>
 										</div>

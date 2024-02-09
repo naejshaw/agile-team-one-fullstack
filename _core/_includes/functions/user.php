@@ -1358,7 +1358,8 @@ function atualiza_estabelecimento( $eid,$mode ) {
 		$expiracao = "0";
 
 	}
-
+	
+	$limite_produtos = 0;
 	mysqli_query( $db_con, "UPDATE estabelecimentos SET 
 		status = '$status',
 		funcionalidade_marketplace = '$funcionalidade_marketplace', 
@@ -1578,7 +1579,7 @@ function aplicar_voucher( $eid,$voucher ) {
 
 }
 
-function aplicar_plano( $eid,$plano ) {
+function aplicar_plano( $eid, $plano) {
 
 	global $db_con;
 	global $_SESSION;
@@ -1711,7 +1712,7 @@ function consulta_pagamento( $gateway_ref ) {
 	$dados = json_decode($res,1);
 	// print("<pre>".print_r($dados,true)."</pre>");
 
-	if( $dados['elements'][0] ) {
+	if( isset($dados['elements'][0]) ) {
 		$consulta = $dados['elements'][0];
 		$retorno['gateway_ref'] = $consulta['external_reference'];
 		$retorno['status'] = $consulta['order_status'];

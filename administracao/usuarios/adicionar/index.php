@@ -23,7 +23,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = $_POST['formdata'];
 
   if( $formdata ) {
 
@@ -126,15 +126,15 @@ include('../../_layout/modal.php');
 
             <div class="col-md-12">
 
-              <?php if( isset($checkerrors) ) { list_errors(); } ?>
+              <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 
@@ -165,7 +165,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Nome completo:</label>
-                  <input type="text" id="input-nome" name="nome" placeholder="Nome completo" value="<?php echo htmlclean( isset($_POST['nome']) ); ?>">
+                  <input type="text" id="input-nome" name="nome" placeholder="Nome completo" value="<?php echo htmlclean( $_POST['nome'] ); ?>">
 
               </div>
 
@@ -180,7 +180,7 @@ include('../../_layout/modal.php');
                 <div class="form-field-default">
 
                   <label>Data de nascimento:</label>
-                  <input type="text" class="maskdate" id="input-nascimento" name="nascimento" placeholder="Data de nascimento" value="<?php echo htmlclean( isset($_POST['nascimento']) ); ?>">
+                  <input type="text" class="maskdate" id="input-nascimento" name="nascimento" placeholder="Data de nascimento" value="<?php echo htmlclean( $_POST['nascimento'] ); ?>">
 
               </div>
 
@@ -200,7 +200,7 @@ include('../../_layout/modal.php');
                     <select id="input-documento_tipo" name="documento_tipo">
                       <option></option>
                       <?php for( $x = 0; $x < count( $numeric_data['documento_tipo'] ); $x++ ) { ?>
-                      <option value="<?php echo $numeric_data['documento_tipo'][$x]['value']; ?>" <?php if( isset($_POST['documento_tipo']) == $numeric_data['documento_tipo'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['documento_tipo'][$x]['name']; ?></option>
+                      <option value="<?php echo $numeric_data['documento_tipo'][$x]['value']; ?>" <?php if( $_POST['documento_tipo'] == $numeric_data['documento_tipo'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['documento_tipo'][$x]['name']; ?></option>
                       <?php } ?>
                     </select>
                     <div class="clear"></div>
@@ -215,7 +215,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Nº do documento:</label>
-                  <input type="text" id="input-documento" name="documento" placeholder="Nº do documento" value="<?php echo htmlclean( isset($_POST['documento']) ); ?>">
+                  <input type="text" id="input-documento" name="documento" placeholder="Nº do documento" value="<?php echo htmlclean( $_POST['documento'] ); ?>">
 
               </div>
 
@@ -240,7 +240,7 @@ include('../../_layout/modal.php');
                         while( $quickdata = mysqli_fetch_array( $sql ) ) {
                         ?>
 
-                          <option <?php if( isset($_POST['estado']) == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
+                          <option <?php if( $_POST['estado'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
 
                         <?php } ?>
 
@@ -280,7 +280,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Celular:</label>
-                  <input type="text" class="maskcel" id="input-telefone" name="telefone" placeholder="Telefone" value="<?php echo htmlclean( isset($_POST['telefone']) ); ?>">
+                  <input type="text" class="maskcel" id="input-telefone" name="telefone" placeholder="Telefone" value="<?php echo htmlclean( $_POST['telefone'] ); ?>">
 
               </div>
 
@@ -309,7 +309,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>E-mail:</label>
-                  <input type="text" id="input-email" name="email" placeholder="E-mail" value="<?php echo htmlclean( isset($_POST['email']) ); ?>">
+                  <input type="text" id="input-email" name="email" placeholder="E-mail" value="<?php echo htmlclean( $_POST['email'] ); ?>">
 
               </div>
 
@@ -393,7 +393,7 @@ include('../../_layout/footer.php');
   $( "#input-estado" ).change(function() {
     exibe_cidades();
   });
-  <?php if( isset($_POST['estado']) ) { ?>
+  <?php if( $_POST['estado'] ) { ?>
     exibe_cidades();
   <?php } ?>
 

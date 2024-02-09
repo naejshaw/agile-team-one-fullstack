@@ -45,59 +45,6 @@ if( !function_exists( 'imagecreatefrombmp' ) ){
    }
 }
 
-function upload_video($relpath, $video) {
-   global $rootpath;
-   global $video_max_size;
-
-   if (isset($video)) {
-      $datepathy = date("Y");
-      $datepathm = date("m");
-      $datepath = $datepathy . "/" . $datepathm;
-      $uploadpath = $rootpath . "/_core/_uploads/";
-      $uploadpathfull = $rootpath . "/_core/_uploads/" . $relpath . "/" . $datepath;
-      $uploadpathreturn = $relpath . "/" . $datepath;
-      
-      if (!file_exists($uploadpathfull)) {
-         mkdir($uploadpath . "/" . $relpath, 0777);
-         mkdir($uploadpath . "/" . $relpath . "/" . $datepathy, 0777);
-         mkdir($uploadpath . "/" . $relpath . "/" . $datepathy . "/" . $datepathm, 0777);
-      }
-      
-      $uploadinfo = array();
-      $file_name = $video['name'];
-      $file_size = $video['size'];
-      $file_tmp = $video['tmp_name'];
-      $file_type = $video['type'];
-      $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
-      $random_key = @random_key(10);
-      $new_name = date('Hidmy') . $random_key . '.' . $file_ext;
-      
-      $allowed_extensions = array("mp4", "mkv", "wmv", "avi", "webm", "ogg");
-      
-      if (!in_array($file_ext, $allowed_extensions)) {
-         $uploadinfo['errors'][] = "Extensão não permitida (mp4, mkv, wmv, avi, webm, ogg)";
-      }
-      
-      if ($file_size > $video_max_size) {
-         $uploadinfo['errors'][] = 'O arquivo deve ser inferior a ' . ($video_max_size / (1024 * 1024)) . ' megabytes';
-      }
-      
-      if (empty($uploadinfo['errors'])) {
-         if (move_uploaded_file($file_tmp, $uploadpathfull . "/" . $new_name)) {
-            $uploadinfo['status'] = "1";
-            $uploadinfo['url'] = $uploadpathreturn . "/" . $new_name;
-            return $uploadinfo;
-         } else {
-            $uploadinfo['status'] = "2";
-            return $uploadinfo;
-         }
-      } else {
-         $uploadinfo['status'] = "2";
-         return $uploadinfo;
-      }
-   }
-}
-
 function upload_image( $relpath,$image ) {
 
    global $rootpath;

@@ -1,5 +1,6 @@
 /_core/_includes/config.php
-/node_modules
-/painel/integracao/
-/teste.estouon.app.br/
-/_core/_includes/functions/mercadopago/config.php
+/conheca/.htaccess
+.htaccess
+/vendor
+/teste.estouon.app.br
+/_core/_includes/functions/mercadopagoOld

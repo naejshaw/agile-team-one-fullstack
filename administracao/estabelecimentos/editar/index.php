@@ -27,7 +27,7 @@ global $simple_url;
   $hasdataestabelecimento = mysqli_num_rows( $queryestabelecimento );
   $dataestabelecimento = mysqli_fetch_array( $queryestabelecimento );
 
-  $uid = isset($dataestabelecimento['rel_users_id']);
+  $uid = $dataestabelecimento['rel_users_id'];
   $queryusuario = mysqli_query( $db_con, "SELECT * FROM users WHERE id = '$uid' LIMIT 1");
   $hasdatausuario = mysqli_num_rows( $queryusuario );
   $datausuario = mysqli_fetch_array( $queryusuario );
@@ -35,11 +35,11 @@ global $simple_url;
   $querysubdominio = mysqli_query( $db_con, "SELECT * FROM subdominios WHERE rel_id = '$id' LIMIT 1");
   $hasdatasubdominio = mysqli_num_rows( $querysubdominio );
   $datasubdominio = mysqli_fetch_array( $querysubdominio );
-  $sid = isset($datasubdominio['id']);
+  $sid = $datasubdominio['id'];
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = $_POST['formdata'];
 
   if( $formdata ) {
 
@@ -379,61 +379,50 @@ global $simple_url;
     if( !$checkerrors ) {
 
       if( edit_estabelecimento( 
-        $id,
-        $nome,
-        $descricao,
-        $segmento,
-        $estado,
-        $cidade,
-        $subdominio,
-        $perfil,
-        $capa,
-        $cor,
-		$exibicao,
-        $pedido_minimo,
-        $pagamento_dinheiro,
-        $pagamento_cartao_debito,
-        $pagamento_cartao_debito_bandeiras,
-        $pagamento_cartao_credito,
-        $pagamento_cartao_credito_bandeiras,
-        $pagamento_cartao_alimentacao,
-        $pagamento_cartao_alimentacao_bandeiras,
-        $pagamento_outros,
-        $pagamento_outros_descricao,
-        $pagamento_pix,
-        $pagamento_pix_chave,
-		$pagamento_pix_beneficiario,
-        $endereco_cep,
-        $endereco_numero,
-        $endereco_bairro,
-        $endereco_rua,
-        $endereco_complemento,
-        $endereco_referencia,
-        $horario_funcionamento,
-        $entrega_retirada,
-        $entrega_entrega,
-        $entrega_entrega_tipo,
-        $entrega_entrega_valor,
-        $entrega_delivery,
-	    	$entrega_balcao,
-	    	$entrega_outros,
-	    	$entrega_outros_nome,
-        $contato_whatsapp,
-        $contato_email,
-        $contato_instagram,
-        $contato_facebook,
-        $contato_youtube,
-        $estatisticas_analytics,
-        $estatisticas_pixel,
-        $html,
-        $responsavel_nome,
-        $responsavel_nascimento,
-        $responsavel_documento_tipo,
-        $responsavel_documento,
-        $email,
-        $pass,
-        $status_force,
-        $excluded
+            $id,
+            $nome,
+            $descricao,
+            $segmento,
+            $estado,
+            $cidade,
+            $subdominio,
+            $perfil,
+            $capa,
+            $cor,
+            $pedido_minimo,
+            $pagamento_dinheiro,
+            $pagamento_cartao_debito,
+            $pagamento_cartao_debito_bandeiras,
+            $pagamento_cartao_credito,
+            $pagamento_cartao_credito_bandeiras,
+            $pagamento_cartao_alimentacao,
+            $pagamento_cartao_alimentacao_bandeiras,
+            $pagamento_outros,
+            $pagamento_outros_descricao,
+            $endereco_cep,
+            $endereco_numero,
+            $endereco_bairro,
+            $endereco_rua,
+            $endereco_complemento,
+            $endereco_referencia,
+            $horario_funcionamento,
+            $entrega_retirada,
+            $entrega_entrega,
+            $entrega_entrega_tipo,
+            $entrega_entrega_valor,
+            $contato_whatsapp,
+            $contato_email,
+            $contato_instagram,
+            $contato_facebook,
+            $contato_youtube,
+            $responsavel_nome,
+            $responsavel_nascimento,
+            $responsavel_documento_tipo,
+            $responsavel_documento,
+            $email,
+            $pass,
+            $status_force,
+            $excluded
        ) ) {
 
         header("Location: index.php?msg=sucesso&id=".$id);
@@ -491,15 +480,15 @@ global $simple_url;
 
             <div class="col-md-12">
 
-              <?php if( isset($checkerrors) ) { list_errors(); } ?>
+              <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Dados alterados com sucesso!","sucesso"); ?>
 

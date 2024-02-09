@@ -29,9 +29,9 @@ include('../../_layout/modal.php');
 
     // Setar campos
 
-    $estabelecimento = mysqli_real_escape_string( $db_con, $_POST['estabelecimento_id'] );
-    $nome = mysqli_real_escape_string( $db_con, $_POST['nome'] );
-    $visible = mysqli_real_escape_string( $db_con, $_POST['visible'] );
+    $estabelecimento = mysqli_real_escape_string( $db_con, isset($_POST['estabelecimento_id']) );
+    $nome = mysqli_real_escape_string( $db_con, isset($_POST['nome']) );
+    $visible = mysqli_real_escape_string( $db_con, isset($_POST['visible']) );
     $status = "1";
 
     // Checar Erros
@@ -57,7 +57,7 @@ include('../../_layout/modal.php');
 
     if( !$checkerrors ) {
 
-      if( new_categoria( $estabelecimento,$nome,$ordem,$visible,$status ) ) {
+      if( new_categoria( $estabelecimento,$nome,$visible,$status ) ) {
 
         header("Location: index.php?msg=sucesso");
 

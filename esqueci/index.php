@@ -8,7 +8,7 @@ $seo_keywords = "";
 // HEADER
 $system_header = "";
 
-if(isset($_SESSION['user']['logged']) && $_SESSION['user']['logged'] == "1" ) {
+if( $_SESSION['user']['logged'] == "1" ) {
 
 	if( $_SESSION['user']['level'] == "1" ) {
 		header("Location: ../administracao/inicio");
@@ -20,11 +20,11 @@ if(isset($_SESSION['user']['logged']) && $_SESSION['user']['logged'] == "1" ) {
 
 }
 
-$email = mysqli_real_escape_string( $db_con, isset($_POST['email']) );
+$email = mysqli_real_escape_string( $db_con, $_POST['email'] );
 
 // Checar se formulário foi executado
 
-$formdata = isset($_POST['formdata']);
+$formdata = $_POST['formdata'];
 
 if( $formdata ) {
 
@@ -110,7 +110,7 @@ if( $formdata ) {
 
 												</div>
 
-												<?php if( !isset($_GET['msg']) ) { ?>
+												<?php if( !$_GET['msg'] ) { ?>
 
 												<div class="row">
 
@@ -130,7 +130,7 @@ if( $formdata ) {
 												<?php } ?>
 
 
-												<?php if( isset($_GET['msg']) == "enviada" ) { ?>
+												<?php if( $_GET['msg'] == "enviada" ) { ?>
 
 												<div class="row">
 
@@ -150,7 +150,7 @@ if( $formdata ) {
 
 												<?php } ?>
 
-												<?php if( isset($_GET['msg']) == "erro" ) { ?>
+												<?php if( $_GET['msg'] == "erro" ) { ?>
 
 												<div class="row">
 
@@ -174,7 +174,7 @@ if( $formdata ) {
 														<div class="form-field form-field-icon form-field-text">
 
 															<i class="form-icon lni lni-user"></i>
-															<input type="text" name="email" placeholder="E-mail" value="<?php echo htmlclean( isset($_POST['email']) ); ?>"/>
+															<input type="text" name="email" placeholder="E-mail" value="<?php echo htmlclean( $_POST['email'] ); ?>"/>
 
 														</div>
 

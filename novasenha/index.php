@@ -8,7 +8,7 @@ $seo_keywords = "";
 // HEADER
 $system_header = "";
 
-if( isset($_SESSION['user']['logged']) && $_SESSION['user']['logged'] == "1" ) {
+if( $_SESSION['user']['logged'] == "1" ) {
 
 	if( $_SESSION['user']['level'] == "1" ) {
 		header("Location: ../administracao/inicio");
@@ -20,13 +20,13 @@ if( isset($_SESSION['user']['logged']) && $_SESSION['user']['logged'] == "1" ) {
 
 }
 
-$key = mysqli_real_escape_string( $db_con, isset($_GET['key']) );
-$pass = mysqli_real_escape_string( $db_con, isset($_POST['pass']) );
-$repass = mysqli_real_escape_string( $db_con, isset($_POST['repass']) );
+$key = mysqli_real_escape_string( $db_con, $_GET['key'] );
+$pass = mysqli_real_escape_string( $db_con, $_POST['pass'] );
+$repass = mysqli_real_escape_string( $db_con, $_POST['repass'] );
 
 // Checar se formulário foi executado
 
-$formdata = isset($_POST['formdata']);
+$formdata = $_POST['formdata'];
 
 if( $formdata && notnull( $pass ) && notnull( $repass ) && $pass == $repass ) {
 

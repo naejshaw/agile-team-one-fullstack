@@ -24,7 +24,7 @@ global $simple_url;
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = $_POST['formdata'];
 
   if( $formdata ) {
 
@@ -154,15 +154,15 @@ global $simple_url;
 
             <div class="col-md-12">
 
-              <?php if( isset($checkerrors) ) { list_errors(); } ?>
+              <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 
@@ -181,7 +181,7 @@ global $simple_url;
                   <label>Subdomínio:</label>
                   <div class="row lowpadd">
                     <div class="col-md-3 col-xs-6 col-sm-6">
-                      <input class="subdomain" type="text" name="subdominio" placeholder="subdominio" value="<?php echo htmlclean( isset($_POST['subdominio']) ); ?>">
+                      <input class="subdomain" type="text" name="subdominio" placeholder="subdominio" value="<?php echo htmlclean( $_POST['subdominio'] ); ?>">
                     </div>
                     <div class="col-md-9 col-xs-6 col-sm-6">
                       <input type="text" value=".<?php echo $simple_url; ?>" DISABLED>
@@ -205,7 +205,7 @@ global $simple_url;
                     <select name="tipo" id="input-tipo" onchange="campo_dependente('#input-tipo')" class="campo-dependente">
                       <option></option>
                       <?php for( $x = 0; $x < count( $numeric_data['subdominio_tipo'] ); $x++ ) { ?>
-                      <option value="<?php echo $numeric_data['subdominio_tipo'][$x]['value']; ?>" <?php if( isset($_POST['tipo']) == $numeric_data['subdominio_tipo'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['subdominio_tipo'][$x]['name']; ?></option>
+                      <option value="<?php echo $numeric_data['subdominio_tipo'][$x]['value']; ?>" <?php if( $_POST['tipo'] == $numeric_data['subdominio_tipo'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['subdominio_tipo'][$x]['name']; ?></option>
                       <?php } ?>
                     </select>
                     <div class="clear"></div>
@@ -224,7 +224,7 @@ global $simple_url;
               <div class="form-field-default">
 
                   <label>Estabelecimento:</label>
-                  <input class="autocompleter <?php if( isset($_POST['estabelecimento']) && $_POST['estabelecimento_id'] ) { echo "autocomplete-selected"; } ?>" type="text" name="estabelecimento" placeholder="Estabelecimento" value="<?php echo htmlclean( isset($_POST['estabelecimento']) ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_estabelecimentos.php" completer_field="estabelecimento_id">
+                  <input class="autocompleter <?php if( $_POST['estabelecimento'] && $_POST['estabelecimento_id'] ) { echo "autocomplete-selected"; } ?>" type="text" name="estabelecimento" placeholder="Estabelecimento" value="<?php echo htmlclean( $_POST['estabelecimento'] ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_estabelecimentos.php" completer_field="estabelecimento_id">
                   <input class="fakehidden" type="text" name="estabelecimento_id" value=""/>
 
               </div>
@@ -240,7 +240,7 @@ global $simple_url;
               <div class="form-field-default">
 
                   <label>Cidade:</label>
-                  <input class="autocompleter <?php if( isset($_POST['cidade']) && $_POST['cidade_id'] ) { echo "autocomplete-selected"; } ?>" type="text" name="cidade" placeholder="Cidade" value="<?php echo htmlclean( isset($_POST['cidade']) ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_cidades.php" completer_field="cidade_id">
+                  <input class="autocompleter <?php if( $_POST['cidade'] && $_POST['cidade_id'] ) { echo "autocomplete-selected"; } ?>" type="text" name="cidade" placeholder="Cidade" value="<?php echo htmlclean( $_POST['cidade'] ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_cidades.php" completer_field="cidade_id">
                   <input class="fakehidden" type="text" name="cidade_id" value=""/>
 
               </div>
@@ -256,7 +256,7 @@ global $simple_url;
               <div class="form-field-default">
 
                   <label>URL:</label>
-                  <input type="text" name="url" placeholder="URL" value="<?php echo htmlclean( isset($_POST['url']) ); ?>">
+                  <input type="text" name="url" placeholder="URL" value="<?php echo htmlclean( $_POST['url'] ); ?>">
 
               </div>
 

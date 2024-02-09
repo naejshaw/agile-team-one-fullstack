@@ -34,7 +34,7 @@ global $simple_url;
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = $_POST['formdata'];
 
   if( $formdata ) {
 
@@ -52,7 +52,7 @@ global $simple_url;
       // Aparência
 
         $cor = mysqli_real_escape_string( $db_con, $_POST['cor'] );
-	    	$exibicao = mysqli_real_escape_string( $db_con, $_POST['exibicao'] );
+		$exibicao = mysqli_real_escape_string( $db_con, $_POST['exibicao'] );
 
       // Pagamento
 
@@ -523,15 +523,15 @@ global $simple_url;
 
             <div class="col-md-12">
 
-              <?php if( isset($checkerrors) ) { list_errors(); } ?>
+              <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Dados alterados com sucesso!","sucesso"); ?>
 

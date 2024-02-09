@@ -26,7 +26,7 @@
 
 						<!--<form class="align-middle" action="https://conheca.veloximports.com.br">
 
-							<input type="text" name="busca" placeholder="Digite sua busca..." value="<?php echo htmlclean( isset($_GET['busca']) ); ?>"/>
+							<input type="text" name="busca" placeholder="Digite sua busca..." value="<?php echo htmlclean( $_GET['busca'] ); ?>"/>
 							<button>
 								<i class="lni lni-search-alt"></i>
 							</button>
@@ -68,7 +68,7 @@
 				</div>
 
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadd">
-						<a href="<?php echo isset($app['url']); ?>">
+						<a href="<?php echo $app['url']; ?>">
 						<div class="logofont logofont-city brand-cidade">
 							<span><?php echo $titulo_topo; ?></span>
 							</div>

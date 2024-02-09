@@ -30,7 +30,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = $_POST['formdata'];
 
   if( $formdata ) {
 
@@ -196,15 +196,15 @@ include('../../_layout/modal.php');
 
             <div class="col-md-12">
 
-              <?php if( isset($checkerrors) && $checkerrors ) { list_errors(); } ?>
+              <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Editado com sucesso!","sucesso"); ?>
 

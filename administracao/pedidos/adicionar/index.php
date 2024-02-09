@@ -24,7 +24,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = $_POST['formdata'];
 
   if( $formdata ) {
 
@@ -95,7 +95,7 @@ include('../../_layout/modal.php');
 
     if( !$checkerrors ) {
 
-      if( $pid = new_produto( $estabelecimento,$categoria,$destaque,$ref,$nome,$descricao,$valor,$oferta,$valor_promocional,$variacao,$status,$visible,$integrado ) ) {
+      if( $pid = new_produto( $estabelecimento,$categoria,$destaque,$nome,$descricao,$valor,$oferta,$valor_promocional,$status ) ) {
 
         if ( $_FILES['file'] ) {
 
@@ -169,15 +169,15 @@ include('../../_layout/modal.php');
 
             <div class="col-md-12">
 
-              <?php if( isset($checkerrors) ) { list_errors(); } ?>
+              <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 
@@ -194,8 +194,8 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Estabelecimento:</label>
-                  <input class="autocompleter <?php if( isset($_POST['estabelecimento']) && isset($_POST['estabelecimento_id']) ) { echo "autocomplete-selected"; } ?>" type="text" name="estabelecimento" placeholder="Estabelecimento" value="<?php echo htmlclean( isset($_POST['estabelecimento']) ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_estabelecimentos.php" completer_field="estabelecimento_id"/>
-                  <input class="fakehidden" type="text" name="estabelecimento_id" value="<?php echo htmlclean( isset($_POST['estabelecimento_id']) ); ?>"/>
+                  <input class="autocompleter <?php if( $_POST['estabelecimento'] && $_POST['estabelecimento_id'] ) { echo "autocomplete-selected"; } ?>" type="text" name="estabelecimento" placeholder="Estabelecimento" value="<?php echo htmlclean( $_POST['estabelecimento'] ); ?>" completer_url="<?php just_url(); ?>/_core/_ajax/autocomplete_estabelecimentos.php" completer_field="estabelecimento_id"/>
+                  <input class="fakehidden" type="text" name="estabelecimento_id" value="<?php echo htmlclean( $_POST['estabelecimento_id'] ); ?>"/>
 
               </div>
 
@@ -220,7 +220,7 @@ include('../../_layout/modal.php');
                       while( $quickdata = mysqli_fetch_array( $quicksql ) ) {
                       ?>
 
-                      <option <?php if( isset($_POST['categoria']) == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
+                      <option <?php if( $_POST['categoria'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
 
                       <?php } ?>
 
@@ -276,7 +276,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Nome:</label>
-                  <input type="text" id="input-nome" name="nome" placeholder="Nome" value="<?php echo htmlclean( isset($_POST['nome']) ); ?>">
+                  <input type="text" id="input-nome" name="nome" placeholder="Nome" value="<?php echo htmlclean( $_POST['nome'] ); ?>">
 
               </div>
 
@@ -291,7 +291,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Descrição:</label>
-                  <textarea rows="6" name="descricao" placeholder="Descrição do seu estabelecimento"><?php echo htmlclean( isset($_POST['descricao']) ); ?></textarea>
+                  <textarea rows="6" name="descricao" placeholder="Descrição do seu estabelecimento"><?php echo htmlclean( $_POST['descricao'] ); ?></textarea>
 
               </div>
 
@@ -306,7 +306,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Valor:</label>
-                  <input class="maskmoney" type="text" name="valor" placeholder="Valor" value="<?php echo htmlclean( isset($_POST['valor']) ); ?>">
+                  <input class="maskmoney" type="text" name="valor" placeholder="Valor" value="<?php echo htmlclean( $_POST['valor'] ); ?>">
 
               </div>
 
@@ -322,10 +322,10 @@ include('../../_layout/modal.php');
 
                   <label>Este produto está em oferta?</label>
                   <div class="form-field-radio">
-                    <input type="radio" name="oferta" value="1" element-show=".elemento-promocional" <?php if( isset($_POST['oferta']) == 1 ){ echo 'CHECKED'; }; ?>> Sim
+                    <input type="radio" name="oferta" value="1" element-show=".elemento-promocional" <?php if( $_POST['oferta'] == 1 ){ echo 'CHECKED'; }; ?>> Sim
                   </div>
                   <div class="form-field-radio">
-                    <input type="radio" name="oferta" value="2" element-hide=".elemento-promocional" <?php if( isset($_POST['oferta']) == 2 OR !isset($_POST['oferta'])  ){ echo 'CHECKED'; }; ?>> Não
+                    <input type="radio" name="oferta" value="2" element-hide=".elemento-promocional" <?php if( $_POST['oferta'] == 2 OR !$_POST['oferta']  ){ echo 'CHECKED'; }; ?>> Não
                   </div>
                   <div class="clear"></div>
 
@@ -342,7 +342,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Valor promocional:</label>
-                  <input class="maskmoney" type="text" name="valor_promocional" placeholder="Valor promocional" value="<?php echo htmlclean( isset($_POST['valor_promocional']) ); ?>">
+                  <input class="maskmoney" type="text" name="valor_promocional" placeholder="Valor promocional" value="<?php echo htmlclean( $_POST['valor_promocional'] ); ?>">
 
               </div>
 
@@ -361,10 +361,10 @@ include('../../_layout/modal.php');
                   <div class="radios">
                     <div class="spacer"></div>
                     <div class="form-field-radio">
-                      <input type="radio" name="visible" value="1" <?php if( isset($_POST['visible']) == 1 OR !isset($_POST['visible']) ){ echo 'CHECKED'; }; ?>> Sim
+                      <input type="radio" name="visible" value="1" <?php if( $_POST['visible'] == 1 OR !$_POST['visible'] ){ echo 'CHECKED'; }; ?>> Sim
                     </div>
                     <div class="form-field-radio">
-                      <input type="radio" name="visible" value="2" <?php if( isset($_POST['visible']) == 2 ){ echo 'CHECKED'; }; ?>> Não
+                      <input type="radio" name="visible" value="2" <?php if( $_POST['visible'] == 2 ){ echo 'CHECKED'; }; ?>> Não
                     </div>
                     <div class="clear"></div>
                   </div>

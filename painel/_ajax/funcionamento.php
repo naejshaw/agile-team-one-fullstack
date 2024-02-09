@@ -2,7 +2,7 @@
 include('../../_core/_includes/config.php');
 $token = mysqli_real_escape_string( $db_con, $_GET['token'] );
 $eid = mysqli_real_escape_string( $db_con, $_GET['eid'] );
-// session_id($token);
+session_id($token);
 ?>
 
 <?php if( $_SESSION['estabelecimento']['id'] == $eid ) { ?>

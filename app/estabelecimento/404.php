@@ -78,7 +78,7 @@ instantrender();
 
 								<i class="checkicon lni lni-cross-circle"></i>
 								<span class="text">A pagina que você esta tentando acessa é inválida ou não existe mais!</span>
-								<a href="<?php echo $just_url; ?>" class="botao-acao"><i class="lni lni-home"></i> <span>Voltar para o início</span></a>
+								<a href="<?php echo $app['url']; ?>" class="botao-acao"><i class="lni lni-home"></i> <span>Voltar para o início</span></a>
 
 							</div>
 

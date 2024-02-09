@@ -22,7 +22,7 @@ include('../../_layout/modal.php');
 
   global $numeric_data;
   global $gallery_max_files;
-  $id = mysqli_real_escape_string( $db_con, (isset($_GET['id'])) );
+  $id = mysqli_real_escape_string( $db_con, ($_GET['id']) );
   $edit = mysqli_query( $db_con, "SELECT * FROM planos WHERE id = '$id' LIMIT 1");
   $hasdata = mysqli_num_rows( $edit );
   $data = mysqli_fetch_array( $edit );
