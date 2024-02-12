@@ -1,6 +1,7 @@
 <?php
 // CORE
 include('../_core/_includes/config.php');
+include '../classes/UserLogged.php';
 // SEO
 $seo_subtitle = "Redefinição de senha";
 $seo_description = "";
@@ -8,17 +9,18 @@ $seo_keywords = "";
 // HEADER
 $system_header = "";
 
-if( $_SESSION['user']['logged'] == "1" ) {
+// if( $_SESSION['user']['logged'] == "1" ) {
 
-	if( $_SESSION['user']['level'] == "1" ) {
-		header("Location: ../administracao/inicio");
-	}
+// 	if( $_SESSION['user']['level'] == "1" ) {
+// 		header("Location: ../administracao/inicio");
+// 	}
 
-	if( $_SESSION['user']['level'] == "2" ) {
-		header("Location: ../painel/inicio");
-	}
+// 	if( $_SESSION['user']['level'] == "2" ) {
+// 		header("Location: ../painel/inicio");
+// 	}
 
-}
+// }
+$user = new UserLogged();
 
 $key = mysqli_real_escape_string( $db_con, $_GET['key'] );
 $pass = mysqli_real_escape_string( $db_con, $_POST['pass'] );

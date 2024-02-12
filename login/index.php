@@ -1,6 +1,7 @@
 <?php
 // CORE
 include('../_core/_includes/config.php');
+include '../classes/UserLogged.php';
 // SEO
 $seo_subtitle = "Login";
 $seo_description = "";
@@ -8,17 +9,18 @@ $seo_keywords = "";
 // HEADER
 $system_header = "";
 // CHECK LOGGED
-if( isset($_SESSION['user']['logged']) == "1" ) {
+// if( isset($_SESSION['user']['logged']) == "1" ) {
 
-	if( $_SESSION['user']['level'] == "1" ) {
-		header("Location: ../administracao/inicio");
-	}
+// 	if( $_SESSION['user']['level'] == "1" ) {
+// 		header("Location: ../administracao/inicio");
+// 	}
 
-	if( $_SESSION['user']['level'] == "2" ) {
-		header("Location: ../painel/inicio");
-	}
+// 	if( $_SESSION['user']['level'] == "2" ) {
+// 		header("Location: ../painel/inicio");
+// 	}
 
-}
+// }
+$user = new UserLogged();
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +137,7 @@ if ("serviceWorker" in navigator) {
 
 												</div>
 
-												<?php if( isset($_GET['msg']) == "erro" ) { ?>
+												<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 												<div class="row">
 
@@ -152,7 +154,7 @@ if ("serviceWorker" in navigator) {
 
 												<?php } ?>
 
-												<?php if( isset($_GET['msg']) == "alterada" ) { ?>
+												<?php if( isset($_GET['msg']) && $_GET['msg'] == "alterada" ) { ?>
 
 												<div class="row">
 
