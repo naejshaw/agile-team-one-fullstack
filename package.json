@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@mercadopago/sdk-js": "^0.0.3",
+    "mercadopago": "^2.0.7"
+  }
+}

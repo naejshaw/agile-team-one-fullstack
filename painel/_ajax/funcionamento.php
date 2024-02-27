@@ -2,7 +2,13 @@
 include('../../_core/_includes/config.php');
 $token = mysqli_real_escape_string( $db_con, $_GET['token'] );
 $eid = mysqli_real_escape_string( $db_con, $_GET['eid'] );
+if (session_status() == PHP_SESSION_ACTIVE) {
+    session_abort(); // Encerrar a sessão
+}
+
 session_id($token);
+// session_start(); // Iniciar a sessão novamente
+
 ?>
 
 <?php if( $_SESSION['estabelecimento']['id'] == $eid ) { ?>
@@ -16,7 +22,7 @@ session_id($token);
 			<div class="lista-menus-menu">
 				<div class="bt">
 					<i class="open-status"></i>
-					<span>Fechado</span>
+					<span>Fechado para Pedidos</span>
 					<i class="lni lni-shuffle"></i>
 					<div class="clear"></div>
 				</div>
@@ -35,7 +41,7 @@ session_id($token);
 			<div class="lista-menus-menu">
 				<div class="bt">
 					<i class="open-status"></i>
-					<span>Aberto</span>
+					<span>Aberto para Pedidos</span>
 					<i class="lni lni-shuffle"></i>
 					<div class="clear"></div>
 				</div>

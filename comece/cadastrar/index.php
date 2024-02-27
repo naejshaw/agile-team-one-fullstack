@@ -2,21 +2,17 @@
 // CORE
 require_once('../../_core/_includes/config.php');
 
-include '../../classes/UserLogged.php';
+if( $_SESSION['user']['logged'] == "1" ) {
 
-// if( $_SESSION['user']['logged'] == "1" ) {
+  if( $_SESSION['user']['level'] == "1" ) {
+    header("Location: ../../administracao/inicio");
+  }
 
-//   if( $_SESSION['user']['level'] == "1" ) {
-//     header("Location: ../../administracao/inicio");
-//   }
+  if( $_SESSION['user']['level'] == "2" ) {
+    header("Location: ../../painel/inicio");
+  }
 
-//   if( $_SESSION['user']['level'] == "2" ) {
-//     header("Location: ../../painel/inicio");
-//   }
-
-// }
-
-$user = new UserLogged();
+}
 
 // SEO
 $seo_subtitle = "Cadastrar";
