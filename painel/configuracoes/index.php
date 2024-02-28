@@ -525,13 +525,13 @@ global $simple_url;
 
               <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( isset($_GET['msg']) == "erro" ) { ?>
+              <?php if( $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+              <?php if( $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Dados alterados com sucesso!","sucesso"); ?>
 
@@ -1880,7 +1880,7 @@ $(document).ready( function() {
           $('#the_form').trigger("change");
       },
       onFinishing: function (event, currentIndex){
-          form.validate().settings.ignore = ":disabled";
+          form.validate().settings.ignore = ":enabled";
           return form.valid();
           $('#the_form').trigger("change");
       },

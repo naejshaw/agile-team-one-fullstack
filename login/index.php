@@ -8,7 +8,7 @@ $seo_keywords = "";
 // HEADER
 $system_header = "";
 // CHECK LOGGED
-if( $_SESSION['user']['logged'] == "1" ) {
+if( isset($_SESSION['user']) && $_SESSION['user']['logged'] == "1" ) {
 
 	if( $_SESSION['user']['level'] == "1" ) {
 		header("Location: ../administracao/inicio");
@@ -69,14 +69,15 @@ if ("serviceWorker" in navigator) {
 </script>
 
 		<?php
-
-		$redirect = mysqli_real_escape_string( $db_con, $_GET['redirect'] );
+		$redirect = isset($_GET['redirect']) ? mysqli_real_escape_string($db_con, $_GET['redirect']) : '';
 		// if( !$redirect ) {
-		// 	$redirect = $_SERVER['HTTP_REFERER'];
+		//     $redirect = $_SERVER['HTTP_REFERER'];
 		// }
-		$email = strtolower( mysqli_real_escape_string( $db_con, $_POST['email'] ) );
-		$pass = mysqli_real_escape_string( $db_con, $_POST['pass'] );
-		$keepalive = mysqli_real_escape_string( $db_con, $_POST['keepalive'] );
+		
+		$email = isset($_POST['email']) ? strtolower(mysqli_real_escape_string($db_con, $_POST['email'])) : '';
+		$pass = isset($_POST['pass']) ? mysqli_real_escape_string($db_con, $_POST['pass']) : '';
+		$keepalive = isset($_POST['keepalive']) ? mysqli_real_escape_string($db_con, $_POST['keepalive']) : '';
+		
 		if( !$keepalive ) {
 			$keepalive = 0;
 		}
@@ -135,7 +136,7 @@ if ("serviceWorker" in navigator) {
 
 												</div>
 
-												<?php if( $_GET['msg'] == "erro" ) { ?>
+												<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 												<div class="row">
 
@@ -152,7 +153,7 @@ if ("serviceWorker" in navigator) {
 
 												<?php } ?>
 
-												<?php if( $_GET['msg'] == "alterada" ) { ?>
+												<?php if( isset($_GET['msg']) &&  $_GET['msg'] == "alterada" ) { ?>
 
 												<div class="row">
 
@@ -176,7 +177,8 @@ if ("serviceWorker" in navigator) {
 														<div class="form-field form-field-icon form-field-text">
 
 															<i class="form-icon lni lni-user"></i>
-															<input type="text" name="email" placeholder="E-mail" value="<?php echo htmlclean( $_GET['email'] ); ?>"/>
+															<input type="text" name="email" placeholder="E-mail" value="<?php echo isset($_GET['email']) ? htmlclean($_GET['email']) : ''; ?>"/>
+
 
 														</div>
 
