@@ -22,7 +22,7 @@ include('../../_layout/modal.php');
 
   global $numeric_data;
   $estabelecimento = $_SESSION['estabelecimento']['id'];
-  $id = mysqli_real_escape_string( $db_con, $_GET['id'] );
+  $id = isset($_GET['id']) ? mysqli_real_escape_string( $db_con, $_GET['id'] ) : '';
   $edit = mysqli_query( $db_con, "SELECT * FROM banners WHERE id = '$id' AND rel_estabelecimentos_id = '$estabelecimento' LIMIT 1");
   $hasdata = mysqli_num_rows( $edit );
   $data = mysqli_fetch_array( $edit );
@@ -32,7 +32,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']);
 
   if( $formdata ) {
 

@@ -111,7 +111,7 @@ include('../../_layout/modal.php');
 
               <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg']) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg']) { ?>
 
                 <?php if( $_GET['msg'] == "erro" ) { ?>
 
