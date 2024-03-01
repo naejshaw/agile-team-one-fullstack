@@ -110,13 +110,13 @@ if(!$pagina or $pagina > $total_paginas or !is_numeric($pagina)) {
 
 ?>
 
-<?php if(isset($_GET['msg']) == "erro") { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro") { ?>
 
 <?php modal_alerta("Erro, tente novamente!", "erro"); ?>
 
 <?php } ?>
 
-<?php if(isset($_GET['msg']) == "sucesso") { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso") { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!", "sucesso"); ?>
 

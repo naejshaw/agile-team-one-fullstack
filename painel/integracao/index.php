@@ -82,7 +82,7 @@ function update_estabelecimento( $db_con, $public_key, $secret_key, $id)
 
 
 //se o botao salvar for clicado vai executar o post do form
-if ($formdata) {
+if (isset($formdata)) {
 	
 	// Checar Erros gerados se nao enviar os dados
 	 $checkerrors = 0;
@@ -171,7 +171,7 @@ if ($formdata) {
 					<div class="form-field-default">
 
 						<label>URL de importação:</label>
-						<input id="copyme" type="text" value="<?php echo isset($meudominio); ?>/shopping.xml" DISABLED/>
+						<input id="copyme" type="text" value="<?php echo $meudominio; ?>/shopping.xml" DISABLED/>
 
 					</div>
 
@@ -179,7 +179,7 @@ if ($formdata) {
 
 					<div class="col-md-3">
 						<label></label>
-						<button class="fullwidth" data-clipboard-text="<?php echo isset($meudominio); ?>/shopping.xml">
+						<button class="fullwidth" data-clipboard-text="<?php echo $meudominio; ?>/shopping.xml">
 							<span>
 								<i class="lni lni-clipboard"></i> Copiar
 							</span>

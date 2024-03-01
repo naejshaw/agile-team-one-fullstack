@@ -1,12 +1,6 @@
 <?php
 // CORE
 include "../../../_core/_includes/config.php";
-include "../../../vendor/autoload.php";
-
-use MercadoPago\MercadoPagoConfig;
-use MercadoPago\Client\Preference\PreferenceClient;
-use MercadoPago\Exceptions\MPApiException;
-
 // RESTRICT
 restrict_estabelecimento();
 // SEO
@@ -34,7 +28,11 @@ global $external_token;
 
 $preference_id = '';
 
+require_once "../../../vendor/autoload.php";
 
+use MercadoPago\MercadoPagoConfig;
+use MercadoPago\Client\Preference\PreferenceClient;
+use MercadoPago\Exceptions\MPApiException;
 ?>
 
 <?php
@@ -43,11 +41,11 @@ $preference_id = '';
 global $numeric_data;
 global $gallery_max_files;
 $has_voucher = '';
-//pega o ID do estabelecimento logado
-$eid = $_SESSION["estabelecimento"]["id"];
+
 
 //se in informar um voucher isset($_GET["voucher"])
-if (isset($_GET["voucher"]) ){
+$codigo_voucher = isset($_GET["voucher"]);
+if ($codigo_voucher ){
   
   //verifica e trata o codigo enviado evitando sql inject
   $voucher = mysqli_real_escape_string($db_con, $_GET["voucher"] );
@@ -66,17 +64,13 @@ if (isset($_GET["voucher"]) ){
   //se existi pega o ID do plano do voucher informado
   if ($has_voucher) {
     $id = $data_voucher["rel_planos_id"];
-  } 
+  } else {
+      $id = mysqli_real_escape_string($db_con, isset($_GET["plano"]));
+  }
 
-  //print("<pre>".print_r($data)."</pre>"); //use quando precisa ver conteudo de variavel
+  //pega o ID do estabelecimento logado
+  $eid = $_SESSION["estabelecimento"]["id"];
 
-}
-
-//fluxo sem voucher = plano=id
-if (isset($_GET["plano"])){
-  // id do Plano
-  $id = mysqli_real_escape_string($db_con, $_GET["plano"]);
-  
   //acao de editar o estabelecimento
   $edit = mysqli_query(
     $db_con,
@@ -84,12 +78,13 @@ if (isset($_GET["plano"])){
   );
 
   $hasdata = mysqli_num_rows($edit);
-  //dados da consulta do plano  array data
   $data = mysqli_fetch_array($edit);
+  //print("<pre>".print_r($data)."</pre>");
+
 }
 
+// Checar se formulário foi executado
 
-// Checar se formulário foi executado. inicia novo fluxo apos acionar o botao
 $formdata = isset($_POST["formdata"]);
 
 if ($formdata) {
@@ -128,27 +123,13 @@ if ($formdata) {
             }
            // se nao tiver voucher executa o mercado pago 
         } else {
-            //busca os dados do estabelecimento para usar no mercado pago
+            $eid = $_SESSION["estabelecimento"]["id"];
             $define_query = mysqli_query(
                 $db_con,
-                "SELECT
-                estabelecimentos.id,
-                estabelecimentos.email,
-                estabelecimentos.nome,
-                estabelecimentos.rel_users_id,
-                users.nome AS nome_usuario
-                FROM estabelecimentos
-                INNER JOIN users ON estabelecimentos.rel_users_id = users.id
-                WHERE estabelecimentos.id = $eid"
+                "SELECT email FROM estabelecimentos WHERE id = '$eid' LIMIT 1"
             );
-
-            //armazenar a consulta no array //dados do usuario e do seu estabelecimento para 0 mercado pago
-            $data_payer = mysqli_fetch_array($define_query);
-            //passar os dados do array pra variavel
-
-            $nome_cliente = $mp_sandbox ? $mp_user_test : $data_payer["nome_usuario"];
-            //operador ternario se config mp_sandbox = true, carrega o email teste, senao carrega o email do usuario
-            $email_cliente = $mp_sandbox ? $mp_email : $data_payer["email"];
+            $define_data = mysqli_fetch_array($define_query);
+            $email_cliente = $define_data["email"];
 
             $transaction_ref =
                 "REF-" .
@@ -157,78 +138,13 @@ if ($formdata) {
                 date("dmYHis") .
                 "-" .
                 random_key(4);
-            
 
-            // dados do array da consulta do plano Linha 86
+            // Executar compra
             $assinatura_id = $data["id"];
             $assinatura_nome = $data["nome"] . " - " . $seo_title;
-            $assinatura_valor = ($data["valor_total"]);
+            $assinatura_valor = $data["valor_total"];
             $assinatura_parcelas = intval($data["duracao_meses"]);
-            
-            //usando SDK
-            //configura o SDK com token do vendedor
-            MercadoPagoConfig::setAccessToken($mp_acess_token);
-            //inicia o objeto com a classe que fornece o metodo para criar a preferencia
-            $client = new PreferenceClient();
-            //cria um array com as informacoes exigidas pelo Mercado Pago para criar uma Preferencia
-            $createRequest = [
-                "payer" => [
-                  "name" => $nome_cliente,
-                  "email" => $email_cliente,
-                ],
-                "sandbox" => $mp_sandbox,
-                "back_urls" => [
-                    "success" =>
-                        get_just_url() . "/painel/plano?msg=obrigado",
-                    "pending" =>
-                        get_just_url() . "/painel/plano?msg=obrigado",
-                    "failure" => get_just_url() . "/painel/plano?msg=erro",
-                ],
-                "external_reference" => $transaction_ref,
-                "notification_url" =>
-                    get_just_url() .
-                    "/postback.php?token=" .
-                    $external_token,
-                "auto_return" => "approved",
-                "items" => [
-                    [
-                        "id" => $assinatura_id,
-                        "title" => $assinatura_nome,
-                        //"description" => "Dummy description",
-                        //"picture_url" => "http://www.myapp.com/myimage.jpg",
-                        //"category_id" => "car_electronics",
-                        "quantity" => 1,
-                        "currency_id" => "BRL",
-                        "unit_price" => floatval($assinatura_valor),
-                    ],
-                ],
-                "payment_methods" => [
-                    "excluded_payment_methods" => [],
-                    "excluded_payment_types" => [["id" => "ticket"]],
-                    "installments" => $assinatura_parcelas,
-                ],
-                "statement_descriptor" => "Assinatura Estou On"
-            ];
-            // chama o metodo responsavel por criar a preferencia e passa o array com as informacoes.
-            $preference = $client->create($createRequest); //ok
 
-            if ($preference->id) {
-              $gateway_ref = $preference->external_reference; //ok
-              $gateway_transaction = $preference->id; //ok
-          
-              if( $mp_sandbox == true ) {
-                $gateway_link = $preference->sandbox_init_point;
-              } else {
-                $gateway_link = $preference->init_point;
-              }
-          
-            }
-
-   //         var_dump($gateway_link);
-            //print("<pre>".print_r($preference,true)."</pre>");
-            //var_dump($preference );
-/*
-            // inicia a chamada pra API do Mercado Pago criando a preferencia
             $curl = curl_init();
 
             curl_setopt_array($curl, [
@@ -242,7 +158,6 @@ if ($formdata) {
                 CURLOPT_CUSTOMREQUEST => "POST",
                 CURLOPT_POSTFIELDS => json_encode([
                     "payer" => [
-                      "nome" => $nome_cliente,
                       "email" => $email_cliente,
                     ],
                     "back_urls" => [
@@ -275,7 +190,6 @@ if ($formdata) {
                         "excluded_payment_types" => [["id" => "ticket"]],
                         "installments" => $assinatura_parcelas,
                     ],
-                    "statement_descriptor" => "Assinatura Estou On"
                 ]),
                 CURLOPT_HTTPHEADER => [
                     // Headers da requisição
@@ -283,36 +197,35 @@ if ($formdata) {
                     "Authorization: Bearer " . $mp_acess_token,
                 ],
             ]);
-            $response = curl_exec($curl); //ok
+            $response = curl_exec($curl);
              //var_dump($response);
-            curl_close($curl); //fecha a conexao
-           
-            //converte a resposta JSON em um objeto
+            curl_close($curl);
+
             $obj = json_decode($response);
-            //se exitir um objeto a resposta foi convertida com sucesso
-            if (isset($obj)) {
-                //se o id do objeto da preferencia for diferente de nulo ou vazio
+
+            if (isset($obj->id)) {
                 if ($obj->id != null) {
+                 
                   // Setar gateway
                   //Numero do Pedido
                   $gateway_ref = $obj->external_reference;
                   //numero da referencia criada
                   $gateway_transaction = $obj->id;
-
+                  
                   //Link de Pagamento de acordo com a configuracao teste ou producao
                   if( $mp_sandbox == true ) {
                     $gateway_link = $obj->sandbox_init_point;
                   } else {
                     $gateway_link = $obj->init_point;
                   }
-*/                 
-                  //ver retorno chegando
+
+                  //ver retorno
                   //print("<pre>".print_r($obj,true)."</pre>");
 
                   if( $gateway_link ) {
-                    //chama a funcao pra contratar um plano e se retornar true, encerra o post e redireciona para o mercado pago
-                    if( contratar_plano( $eid, $id, $gateway_transaction, $gateway_ref, $gateway_link ) ) {
-
+                    
+                    if( contratar_plano( $eid, $id, $gateway_transaction,$gateway_ref,$gateway_link ) ) {
+          
                       unset( $_POST );
                       header("Location: ".$gateway_link);
           
@@ -331,8 +244,9 @@ if ($formdata) {
                 }
             }
         }
-//    }
-//}<?php echo isset($mp_public_ke); ?>
+    }
+}
+
 
 ?>
 
@@ -550,7 +464,22 @@ if ($formdata) {
       <?php } ?>
 
     </div>
-    
+    <!-- Se obter uma preference id renderiza o checkout pro
+    <?php //if ($preference_id) { ?>
+      <div id="wallet_container">
+    <?php //} ?>
+    <script>
+      const mp = new MercadoPago($mp_public_key, {
+        locale: 'pt-BR'
+      });
+
+      mp.bricks().create("wallet", "wallet_container", {
+        initialization: {
+            preferenceId: $preference_id,
+        },
+      });
+  </script>
+  -->
     <!-- / Content -->
 
   </div>
@@ -566,11 +495,18 @@ include "../../_layout/rdp.php";
 include "../../_layout/footer.php";
 ?>
 
+
 <script>
-   
+  const mp = new MercadoPago($mp_public_key);
+</script>
+
+<script>
+
 $(document).ready( function() {
           
     // Globais
+
+
     var form = $("#the_form");
     form.validate({
         focusInvalid: true,

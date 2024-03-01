@@ -56,31 +56,31 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 ?>
 
-<?php if( isset($_GET['msg']) == "naoaplicado" ) { ?>
+<?php if( $_GET['msg'] == "naoaplicado" ) { ?>
 
 <?php modal_alerta("Erro ao tentar utilizar voucher!","erro"); ?>
 
 <?php } ?>
 
-<?php if( isset($_GET['msg']) == "aplicado" ) { ?>
+<?php if( $_GET['msg'] == "aplicado" ) { ?>
 
 <?php modal_alerta("Voucher aplicado com sucesso!","sucesso"); ?>
 
 <?php } ?>
 
-<?php if( isset($_GET['msg']) == "obrigado" ) { ?>
+<?php if( $_GET['msg'] == "obrigado" ) { ?>
 
 <?php modal_alerta("Seu plano foi contratado com sucesso e será liberado logo após processarmos o pagamento!","sucesso"); ?>
 
 <?php } ?>
 
-<?php if( isset($_GET['msg']) == "deletada" ) { ?>
+<?php if( $_GET['msg'] == "deletada" ) { ?>
 
 <?php modal_alerta("Compra removida com sucesso!","sucesso"); ?>
 
 <?php } ?>
 
-<?php if( isset($_GET['msg']) == "erro" ) { ?>
+<?php if( $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro ao tentar realizar ação, tente novamente mais tarde!","erro"); ?>
 

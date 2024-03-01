@@ -13,13 +13,13 @@ include('_core/_layout/sidebars.php');
 include('_core/_layout/modal.php');
 ?>
 
-<?php if( isset($_GET['msg']) == "erro" ) { ?>
+<?php if( $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( isset($_GET['msg']) == "sucesso" ) { ?>
+<?php if( $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 

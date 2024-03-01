@@ -21,13 +21,13 @@ global $simple_url;
   // Globals
 
   global $numeric_data;
-  $id = mysqli_real_escape_string( $db_con, $_GET['id'] );
+  $id = isset($_GET['id']) ? mysqli_real_escape_string( $db_con, $_GET['id'] ) : '';
 
   $queryestabelecimento = mysqli_query( $db_con, "SELECT * FROM estabelecimentos WHERE id = '$id' LIMIT 1");
   $hasdataestabelecimento = mysqli_num_rows( $queryestabelecimento );
   $dataestabelecimento = mysqli_fetch_array( $queryestabelecimento );
 
-  $uid = $dataestabelecimento['rel_users_id'];
+  $uid = isset($dataestabelecimento['rel_users_id']) ? $dataestabelecimento['rel_users_id'] : '';
   $queryusuario = mysqli_query( $db_con, "SELECT * FROM users WHERE id = '$uid' LIMIT 1");
   $hasdatausuario = mysqli_num_rows( $queryusuario );
   $datausuario = mysqli_fetch_array( $queryusuario );
@@ -39,7 +39,7 @@ global $simple_url;
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']) ? $_POST['formdata'] : '';
 
   if( $formdata ) {
 
@@ -379,51 +379,62 @@ global $simple_url;
     if( !$checkerrors ) {
 
       if( edit_estabelecimento( 
-            $id,
-            $nome,
-            $descricao,
-            $segmento,
-            $estado,
-            $cidade,
-            $subdominio,
-            $perfil,
-            $capa,
-            $cor,
-            $pedido_minimo,
-            $pagamento_dinheiro,
-            $pagamento_cartao_debito,
-            $pagamento_cartao_debito_bandeiras,
-            $pagamento_cartao_credito,
-            $pagamento_cartao_credito_bandeiras,
-            $pagamento_cartao_alimentacao,
-            $pagamento_cartao_alimentacao_bandeiras,
-            $pagamento_outros,
-            $pagamento_outros_descricao,
-            $endereco_cep,
-            $endereco_numero,
-            $endereco_bairro,
-            $endereco_rua,
-            $endereco_complemento,
-            $endereco_referencia,
-            $horario_funcionamento,
-            $entrega_retirada,
-            $entrega_entrega,
-            $entrega_entrega_tipo,
-            $entrega_entrega_valor,
-            $contato_whatsapp,
-            $contato_email,
-            $contato_instagram,
-            $contato_facebook,
-            $contato_youtube,
-            $responsavel_nome,
-            $responsavel_nascimento,
-            $responsavel_documento_tipo,
-            $responsavel_documento,
-            $email,
-            $pass,
-            $status_force,
-            $excluded
-       ) ) {
+        $id,
+        $nome,
+        $descricao,
+        $segmento,
+        $estado,
+        $cidade,
+        $subdominio,
+        $perfil,
+        $capa,
+        $cor,
+		    $exibicao,
+        $pedido_minimo,
+        $pagamento_dinheiro,
+        $pagamento_cartao_debito,
+        $pagamento_cartao_debito_bandeiras,
+        $pagamento_cartao_credito,
+        $pagamento_cartao_credito_bandeiras,
+        $pagamento_cartao_alimentacao,
+        $pagamento_cartao_alimentacao_bandeiras,
+        $pagamento_outros,
+        $pagamento_outros_descricao,
+        $pagamento_pix,
+        $pagamento_pix_chave,
+	    	$pagamento_pix_beneficiario,
+        $endereco_cep,
+        $endereco_numero,
+        $endereco_bairro,
+        $endereco_rua,
+        $endereco_complemento,
+        $endereco_referencia,
+        $horario_funcionamento,
+        $entrega_retirada,
+        $entrega_entrega,
+        $entrega_entrega_tipo,
+        $entrega_entrega_valor,
+        $entrega_delivery,
+	    	$entrega_balcao,
+	    	$entrega_outros,
+	    	$entrega_outros_nome,
+        $contato_whatsapp,
+        $contato_email,
+        $contato_instagram,
+        $contato_facebook,
+        $contato_youtube,
+        $estatisticas_analytics,
+        $estatisticas_pixel,
+        $html,
+        $responsavel_nome,
+        $responsavel_nascimento,
+        $responsavel_documento_tipo,
+        $responsavel_documento,
+        $email,
+        $pass,
+        $status_force,
+        $excluded
+	 ) ) {
 
         header("Location: index.php?msg=sucesso&id=".$id);
         // echo "Cadastrou";

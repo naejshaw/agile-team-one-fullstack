@@ -23,9 +23,9 @@ global $db_con;
 // $lng = $_POST['longitude'];
 $radius = "10";
 $key = "AIzaSyBXQ9nkYb95_z-Vp1D9pE6Yqy574q943To";
-$location = $_GET['location'];
-$type = $_GET['type'];
-$filtered = $_GET['filtered'];
+$location = isset($_GET['location']) ? $_GET['location'] : '';
+$type = isset($_GET['type']) ? $_GET['type'] : '';
+$filtered = isset($_GET['filtered']) ? $_GET['filtered'] : '';
 ?>
 
 <div class="middle minfit bg-gray">

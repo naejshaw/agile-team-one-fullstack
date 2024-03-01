@@ -34,7 +34,7 @@ global $simple_url;
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']);
 
   if( $formdata ) {
 
@@ -523,7 +523,7 @@ global $simple_url;
 
             <div class="col-md-12">
 
-              <?php if( $checkerrors ) { list_errors(); } ?>
+              <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
               <?php if( $_GET['msg'] == "erro" ) { ?>
 
@@ -1701,7 +1701,7 @@ include('../_layout/footer.php');
   $( "#input-estado" ).change(function() {
     exibe_cidades();
   });
-  <?php if( $_POST['estado'] ) { ?>
+  <?php if( isset($_POST['estado']) ) { ?>
     exibe_cidades();
   <?php } ?>
 
@@ -1880,7 +1880,7 @@ $(document).ready( function() {
           $('#the_form').trigger("change");
       },
       onFinishing: function (event, currentIndex){
-          form.validate().settings.ignore = ":disabled";
+          form.validate().settings.ignore = ":enabled";
           return form.valid();
           $('#the_form').trigger("change");
       },

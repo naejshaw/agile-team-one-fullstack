@@ -1391,7 +1391,7 @@ function new_voucher( $plano,$descricao ) {
 
 	global $db_con;
 	global $_SESSION;
-
+	
 	for(  $x=0; $x<999; $x++ ) {
 		$codigo = strtoupper( random_key(4)."-".random_key(4)."-".random_key(4)."-".random_key(4) );
 		$naotem = mysqli_num_rows( mysqli_query( $db_con, "SELECT codigo FROM vouchers WHERE codigo = '$codigo'" ) );
@@ -1410,10 +1410,10 @@ function new_voucher( $plano,$descricao ) {
 			$log_nome = $_SESSION['user']['nome'];
 			$log_lid = "";
 			// Tipos
-			if( $_SESSION['user']['level'] == "1" ) {
+			if( isset($_SESSION['user']) && $_SESSION['user']['level'] == "1" ) {
 				$log_user_tipo = "O Administrador";
 			}
-			if( $_SESSION['user']['level'] == "2" ) {
+			if( isset($_SESSION['user']) && $_SESSION['user']['level'] == "2" ) {
 				$log_user_tipo = "A Loja";
 			}
 			log_register( $log_uid,$log_lid, $log_user_tipo." ".$log_nome." criou o voucher ".$descricao." às ".databr( date('Y-m-d H:i:s') ) );

@@ -112,7 +112,7 @@ include('../../_layout/modal.php');
 
               <?php if( $checkerrors ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg']) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 

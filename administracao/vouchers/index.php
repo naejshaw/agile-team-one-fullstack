@@ -79,8 +79,9 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 }
 
 ?>
-<?php if( isset($_GET['msg'])) { ?>
-	<?php if( isset($_GET['msg']) == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg']) { ?>
+	<?php if( $_GET['msg'] == "erro" ) { ?>
+
 
 		<?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
