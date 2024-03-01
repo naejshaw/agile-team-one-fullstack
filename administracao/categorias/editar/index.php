@@ -61,7 +61,7 @@ include('../../_layout/modal.php');
 
     if( !$checkerrors ) {
 
-      if( edit_categoria( $id,$estabelecimento,$nome,$visible,$status ) ) {
+      if( edit_categoria( $id,$estabelecimento,$nome,$ordem,$visible,$status ) ) {
 
         header("Location: index.php?msg=sucesso&id=".$id);
 
@@ -118,13 +118,13 @@ include('../../_layout/modal.php');
 
               <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( $_GET['msg'] == "sucesso" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Alterado com sucesso!","sucesso"); ?>
 

@@ -170,7 +170,13 @@
 		$edit = mysqli_query( $db_con, "SELECT $info FROM $table WHERE id = '$id' LIMIT 1");
 		$data = mysqli_fetch_array( $edit );
 		
-		return $data[$info];
+		if (is_array($data) && array_key_exists($info, $data)) {
+			return $data[$info];
+		} else {
+			// Tratar o caso em que a matriz é nula ou a chave não existe
+			return null;
+		}
+		
 
 	}
 

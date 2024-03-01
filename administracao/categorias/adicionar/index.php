@@ -57,7 +57,7 @@ include('../../_layout/modal.php');
 
     if( !$checkerrors ) {
 
-      if( new_categoria( $estabelecimento,$nome,$visible,$status ) ) {
+      if( new_categoria( $estabelecimento,$nome,$ordem,$visible,$status ) ) {
 
         header("Location: index.php?msg=sucesso");
 
@@ -112,13 +112,13 @@ include('../../_layout/modal.php');
 
               <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( $_GET['msg'] == "sucesso" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 

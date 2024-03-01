@@ -139,7 +139,7 @@ include('../_layout/modal.php');
             <div class="col-md-12">
 
               <?php if( isset($checkerrors) ) { list_errors(); } ?>
-                <?php if ($_GET['msg']) { ?>
+                <?php if (isset($_GET['msg'])) { ?>
                     <?php if( $_GET['msg'] == "erro" ) { ?>
 
                       <?php modal_alerta("Erro, tente novamente!","erro"); ?>
@@ -191,7 +191,7 @@ include('../_layout/modal.php');
                 <div class="form-field-default">
 
                   <label>Data de nascimento:</label>
-                  <input type="text" class="maskdate" id="input-nascimento" name="nascimento" placeholder="Data de nascimento" value="<?php echo htmlclean( $data2['nascimento'] ); ?>">
+                  <input type="text" class="maskdate" id="input-nascimento" name="nascimento" placeholder="Data de nascimento" value="<?php echo htmlclean( isset($data2['nascimento']) ); ?>">
 
               </div>
 
@@ -211,7 +211,7 @@ include('../_layout/modal.php');
                     <select id="input-documento_tipo" name="documento_tipo">
                       <option></option>
                       <?php for( $x = 0; $x < count( $numeric_data['documento_tipo'] ); $x++ ) { ?>
-                      <option value="<?php echo $numeric_data['documento_tipo'][$x]['value']; ?>" <?php if( $data2['documento_tipo'] == $numeric_data['documento_tipo'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['documento_tipo'][$x]['name']; ?></option>
+                      <option value="<?php echo $numeric_data['documento_tipo'][$x]['value']; ?>" <?php if( isset($data2['documento_tipo']) && $data2['documento_tipo'] == $numeric_data['documento_tipo'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['documento_tipo'][$x]['name']; ?></option>
                       <?php } ?>
                     </select>
                     <div class="clear"></div>
@@ -226,7 +226,7 @@ include('../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Nº do documento:</label>
-                  <input type="text" id="input-documento" name="documento" placeholder="Nº do documento" value="<?php echo htmlclean( $data2['documento'] ); ?>">
+                  <input type="text" id="input-documento" name="documento" placeholder="Nº do documento" value="<?php echo htmlclean( isset($data2['documento']) ); ?>">
 
               </div>
 
@@ -253,7 +253,7 @@ include('../_layout/modal.php');
                         while( $quickdata = mysqli_fetch_array( $sql ) ) {
                         ?>
 
-                          <option <?php if( $data2['estado'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
+                          <option <?php if( isset($data2['estado']) && $data2['estado'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
 
                         <?php } ?>
 
@@ -295,7 +295,7 @@ include('../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Celular:</label>
-                  <input type="text" class="maskcel" id="input-telefone" name="telefone" placeholder="Telefone" value="<?php echo htmlclean( $data2['telefone'] ); ?>">
+                  <input type="text" class="maskcel" id="input-telefone" name="telefone" placeholder="Telefone" value="<?php echo htmlclean( isset($data2['telefone']) ? $data2['telefone'] : '' ); ?>">
 
               </div>
 
@@ -407,14 +407,14 @@ include('../_layout/footer.php');
   function exibe_cidades() {
     var estado = $("#input-estado").children("option:selected").val();
     $("#input-cidade").html("<option>-- Carregando cidades --</option>");
-    $("#input-cidade").load("<?php just_url(); ?>/_core/_ajax/cidades.php?cidade=<?php echo $data2['cidade']; ?>&estado="+estado);
+    $("#input-cidade").load("<?php just_url(); ?>/_core/_ajax/cidades.php?cidade=<?php echo isset($data2['cidade']) ? $data2['cidade'] : ''; ?>&estado="+estado);
   }
 
   // Autopreenchimento de estado
   $( "#input-estado" ).change(function() {
     exibe_cidades();
   });
-  <?php if( $data2['estado'] ) { ?>
+  <?php if( isset($data2['estado']) ) { ?>
     exibe_cidades();
   <?php } ?>
 
