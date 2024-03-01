@@ -16,7 +16,7 @@ include('../_layout/sidebars.php');
 include('../_layout/modal.php');
 
 global $db_con;
-$eid = isset($_SESSION['estabelecimento']['id']); //estabelecimento logado
+$eid = $_SESSION['estabelecimento']['id']; //estabelecimento logado
 $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimento']['id'],"subdominio").".".$simple_url;
 
 // Id do estabelecimento logado 
@@ -82,7 +82,7 @@ function update_estabelecimento( $db_con, $public_key, $secret_key, $id)
 
 
 //se o botao salvar for clicado vai executar o post do form
-if (isset($formdata)) {
+if ($formdata) {
 	
 	// Checar Erros gerados se nao enviar os dados
 	 $checkerrors = 0;
