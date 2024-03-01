@@ -1,26 +1,11 @@
-<?php 
-include('_core/_includes/config.php');
+<?php
+require_once __DIR__ . '/app/config/config.php';
 
-  // Globais
-  $rootpath;
-  $httprotocol;
-  $simple_url;
-  $gowww = $httprotocol.$simple_url;
-  $firstdomain = explode(".", $simple_url);
-  $firstdomain = $firstdomain[0];
-
-// Mapeando subdominio //
-
-  $insubdominio = $_GET['insubdominio'];
-  if( !$insubdominio ) {
-    $insubdominio = array_shift((explode('.', $_SERVER['HTTP_HOST'])));
-    if( $insubdominio == $firstdomain ) {
-      $insubdominio = "";
-    }
-    // if( $insubdominio == "www" ) {
-    //   header("location: ".$gowww);
-    // }
-  }
+ // Mapeando subdominio
+ $insubdominio = parse_url($_SERVER['HTTP_HOST'], PHP_URL_HOST);
+ if (strpos($insubdominio, '.') !== false) {
+   $insubdominio = substr($insubdominio, 0, strpos($insubdominio, '.'));
+ }
 
   // Estabelecimento
   if( mysqli_num_rows( mysqli_query( $db_con, "SELECT id,subdominio FROM estabelecimentos WHERE subdominio = '$insubdominio' AND excluded != '1' LIMIT 1" ) ) ) {
@@ -74,7 +59,7 @@ include('_core/_includes/config.php');
 
 
     // Roteando
-    $router = isset($_GET['inrouter']);
+    $router = $_GET['inrouter'];
     $router = explode('/', $router);
     $inacao = $router[0];
     $inparametro = $router[1];
@@ -131,11 +116,8 @@ include('_core/_includes/config.php');
     if( $insubdominio ) {
       include("404.php");
     } else {
-      //include("localizacao/index.php");// DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
-      header("Location: https://ominichanel.redewe2m.com.br/conheca");
+      include("localizacao/index.php");// DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
+      //header("Location: https://conheca.ominichanel.redewe2m.com.br/");
     }
 
   }
-
-
-?>
