@@ -8,7 +8,9 @@ $seo_keywords = "";
 // HEADER
 $system_header = "";
 // CHECK LOGGED
+
 if( isset($_SESSION['user']) && $_SESSION['user']['logged'] == "1" ) {
+
 
 	if( $_SESSION['user']['level'] == "1" ) {
 		header("Location: ../administracao/inicio");
@@ -70,6 +72,7 @@ if ("serviceWorker" in navigator) {
 
 		<?php
 		$redirect = isset($_GET['redirect']) ? mysqli_real_escape_string($db_con, $_GET['redirect']) : '';
+
 		// if( !$redirect ) {
 		//     $redirect = $_SERVER['HTTP_REFERER'];
 		// }
@@ -138,6 +141,7 @@ if ("serviceWorker" in navigator) {
 
 												<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
+
 												<div class="row">
 
 													<div class="col-md-12">
@@ -154,6 +158,7 @@ if ("serviceWorker" in navigator) {
 												<?php } ?>
 
 												<?php if( isset($_GET['msg']) &&  $_GET['msg'] == "alterada" ) { ?>
+
 
 												<div class="row">
 
@@ -273,4 +278,3 @@ if ("serviceWorker" in navigator) {
 
 <script src="<?php just_url(); ?>/_core/_cdn/jquery/js/jquery.min.js"></script>
 <script src="<?php just_url(); ?>/_core/_cdn/panel/js/template.js"></script>
-
