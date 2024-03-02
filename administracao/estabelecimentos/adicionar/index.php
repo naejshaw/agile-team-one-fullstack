@@ -24,7 +24,7 @@ global $simple_url;
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']) ? $_POST['formdata'] : '';
 
   if( $formdata ) {
 
@@ -442,15 +442,15 @@ global $simple_url;
 
             <div class="col-md-12">
 
-              <?php if( $checkerrors ) { list_errors(); } ?>
+              <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( $_GET['msg'] == "sucesso" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 
@@ -487,7 +487,7 @@ global $simple_url;
                     <div class="form-field-default">
 
                         <label>Nome:</label>
-                        <input type="text" name="nome" placeholder="Nome do seu estabelecimento" value="<?php echo htmlclean( $_POST['nome'] ); ?>">
+                        <input type="text" name="nome" placeholder="Nome do seu estabelecimento" value="<?php echo htmlclean( isset($_POST['nome']) ? $_POST['nome'] : ''); ?>">
 
                     </div>
 
@@ -502,7 +502,7 @@ global $simple_url;
                     <div class="form-field-default">
 
                         <label>Descrição:</label>
-                        <textarea rows="6" name="descricao" placeholder="Descrição do seu estabelecimento"><?php echo htmlclean( $_POST['descricao'] ); ?></textarea>
+                        <textarea rows="6" name="descricao" placeholder="Descrição do seu estabelecimento"><?php echo htmlclean( isset($_POST['descricao']) ? $_POST['descricao'] : '' ); ?></textarea>
 
                     </div>
 
@@ -527,7 +527,7 @@ global $simple_url;
                               while( $quickdata = mysqli_fetch_array( $quicksql ) ) {
                               ?>
 
-                                <option <?php if( $_POST['segmento'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
+                                <option <?php if( isset($_POST['segmento']) && $_POST['segmento'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
 
                               <?php } ?>
 
@@ -554,7 +554,7 @@ global $simple_url;
                               while( $quickdata = mysqli_fetch_array( $quicksql ) ) {
                               ?>
 
-                                <option <?php if( $_POST['estado'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
+                                <option <?php if( isset($_POST['estado']) && $_POST['estado'] == $quickdata['id'] ) { echo "SELECTED"; }; ?> value="<?php echo $quickdata['id']; ?>"><?php echo $quickdata['nome']; ?></option>
 
                               <?php } ?>
 
@@ -597,7 +597,7 @@ global $simple_url;
                         <span class="form-tip">A URL que seus clientes usarão para acessar a estabelecimento, não serão permitidos acentos, cedilha, pontos e caracteres especiais.</span>
                         <div class="row lowpadd">
                           <div class="col-md-3 col-xs-6 col-sm-6">
-                            <input class="subdomain" type="text" name="subdominio" placeholder="estabelecimento" value="<?php echo subdomain( htmlclean( $_POST['subdominio'] ) ); ?>">
+                            <input class="subdomain" type="text" name="subdominio" placeholder="estabelecimento" value="<?php echo subdomain( htmlclean( isset($_POST['subdominio']) ? $_POST['subdominio'] : '' ) ); ?>">
                           </div>
                           <div class="col-md-9 col-xs-6 col-sm-6">
                             <input type="text" id="input-nome" name="url" value=".<?php echo $simple_url; ?>" DISABLED>

@@ -1,6 +1,6 @@
 <?php
 // CORE
-//include('../_core/_includes/config.php');
+include('../_core/_includes/config.php');
 
 global $httprotocol;
 global $simple_url;

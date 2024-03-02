@@ -41,7 +41,7 @@ if (mysqli_num_rows($result) > 0) {
 
 //var_dump($public_key);
 // Preenchimento dos campos do formulário
-if (isset($_POST['formdata'])) {
+if ($_POST['formdata']) {
     $public_key = htmlclean($_POST['input-public-key']);
     $secret_key = htmlclean($_POST['input-secret-key']);
 	$formdata = $_POST['formdata'];

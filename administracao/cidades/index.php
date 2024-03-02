@@ -21,8 +21,8 @@ global $db_con;
 
 // Variables
 
-$nome = mysqli_real_escape_string( $db_con, $_GET['nome'] );
-$estado = mysqli_real_escape_string( $db_con, $_GET['estado'] );
+$nome = isset($_GET['nome']) ? mysqli_real_escape_string( $db_con, $_GET['nome'] ) : '';
+$estado = isset($_GET['estado']) ? mysqli_real_escape_string( $db_con, $_GET['estado'] ) : '';
 
 $getdata = "";
 
@@ -35,11 +35,11 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 20;
-$pagina = $_GET["pagina"] == "" ? 1 : $_GET["pagina"];
+$pagina = isset($_GET["pagina"]) && $_GET["pagina"] != "" ? $_GET["pagina"] : 1;
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
-
+$query = "";
 $query .= "SELECT * FROM cidades ";
 
 $query .= "WHERE 1=1 ";
@@ -76,13 +76,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 

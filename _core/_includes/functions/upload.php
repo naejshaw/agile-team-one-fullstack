@@ -600,7 +600,7 @@ function thumber( $img,$width ) {
   global $rootpath;
   $uploadpath = $rootpath."/_core/_uploads/";
   $width = "512";
-
+  
   $thumb = explode( ".",$img );
   $thumb_name = $thumb[0]."_thumb";
   $thumb_extension = $thumb[1];

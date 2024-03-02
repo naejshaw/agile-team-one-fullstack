@@ -26,7 +26,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = $_POST['formdata'];
+  $formdata = isset($_POST['formdata']);
 
   if( $formdata ) {
 
@@ -138,15 +138,15 @@ include('../../_layout/modal.php');
 
             <div class="col-md-12">
 
-              <?php if( $checkerrors ) { list_errors(); } ?>
+              <?php if( isset($checkerrors) ) { list_errors(); } ?>
 
-              <?php if( $_GET['msg'] == "erro" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
                 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
               <?php } ?>
 
-              <?php if( $_GET['msg'] == "sucesso" ) { ?>
+              <?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
                 <?php modal_alerta("Cadastro efetuado com sucesso!","sucesso"); ?>
 
@@ -163,7 +163,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Título:</label>
-                  <input type="text" name="titulo" placeholder="titulo" value="<?php echo htmlclean( $_POST['titulo'] ); ?>">
+                  <input type="text" name="titulo" placeholder="titulo" value="<?php echo htmlclean( isset($_POST['titulo']) ); ?>">
 
               </div>
 
@@ -220,7 +220,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Link:</label>
-                  <input type="text" name="link" placeholder="link" value="<?php echo htmlclean( $_POST['link'] ); ?>">
+                  <input type="text" name="link" placeholder="link" value="<?php echo htmlclean( isset($_POST['link']) ); ?>">
 
               </div>
 
@@ -238,10 +238,10 @@ include('../../_layout/modal.php');
                   <div class="radios">
                     <div class="spacer"></div>
                     <div class="form-field-radio">
-                      <input type="radio" name="status" value="1" <?php if( $_POST['status'] == 1 OR !$_POST['status'] ){ echo 'CHECKED'; }; ?>> Sim
+                      <input type="radio" name="status" value="1" <?php if( isset($_POST['status']) && $_POST['status'] == 1 OR !isset($_POST['status']) ){ echo 'CHECKED'; }; ?>> Sim
                     </div>
                     <div class="form-field-radio">
-                      <input type="radio" name="status" value="2" <?php if( $_POST['status'] == 2 ){ echo 'CHECKED'; }; ?>> Não
+                      <input type="radio" name="status" value="2" <?php if( isset($_POST['status']) && $_POST['status'] == 2 ){ echo 'CHECKED'; }; ?>> Não
                     </div>
                     <div class="clear"></div>
                   </div>

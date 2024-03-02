@@ -9,7 +9,7 @@ if( !$cor ) {
 	$cor = "#27293E";
 }
 ?>
-
+<style>
 .naver {
 background: transparent;
 }
@@ -179,10 +179,10 @@ background: <?php echo $cor; ?> !important;
 
 }
 
-}
 
 /* ALL DESK */
 
 @media (min-width: 991px) {
-
+	
 }
+</style>

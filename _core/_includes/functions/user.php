@@ -1004,7 +1004,7 @@ function delete_plano( $id ) {
 	global $db_con;
 	global $rootpath;
 
-	$nome = data_info("planos", $id, "nome");
+	$nome = data_info("plano",$id,"nome");
 
 	if( mysqli_query( $db_con, "DELETE FROM planos WHERE id = '$id'") ) {
 
@@ -1358,8 +1358,7 @@ function atualiza_estabelecimento( $eid,$mode ) {
 		$expiracao = "0";
 
 	}
-	
-	$limite_produtos = 0;
+
 	mysqli_query( $db_con, "UPDATE estabelecimentos SET 
 		status = '$status',
 		funcionalidade_marketplace = '$funcionalidade_marketplace', 
@@ -1392,7 +1391,7 @@ function new_voucher( $plano,$descricao ) {
 
 	global $db_con;
 	global $_SESSION;
-
+	
 	for(  $x=0; $x<999; $x++ ) {
 		$codigo = strtoupper( random_key(4)."-".random_key(4)."-".random_key(4)."-".random_key(4) );
 		$naotem = mysqli_num_rows( mysqli_query( $db_con, "SELECT codigo FROM vouchers WHERE codigo = '$codigo'" ) );
@@ -1411,10 +1410,10 @@ function new_voucher( $plano,$descricao ) {
 			$log_nome = $_SESSION['user']['nome'];
 			$log_lid = "";
 			// Tipos
-			if( $_SESSION['user']['level'] == "1" ) {
+			if( isset($_SESSION['user']) && $_SESSION['user']['level'] == "1" ) {
 				$log_user_tipo = "O Administrador";
 			}
-			if( $_SESSION['user']['level'] == "2" ) {
+			if( isset($_SESSION['user']) && $_SESSION['user']['level'] == "2" ) {
 				$log_user_tipo = "A Loja";
 			}
 			log_register( $log_uid,$log_lid, $log_user_tipo." ".$log_nome." criou o voucher ".$descricao." às ".databr( date('Y-m-d H:i:s') ) );
@@ -1712,7 +1711,7 @@ function consulta_pagamento( $gateway_ref ) {
 	$dados = json_decode($res,1);
 	// print("<pre>".print_r($dados,true)."</pre>");
 
-	if( isset($dados['elements'][0]) ) {
+	if( $dados['elements'][0] ) {
 		$consulta = $dados['elements'][0];
 		$retorno['gateway_ref'] = $consulta['external_reference'];
 		$retorno['status'] = $consulta['order_status'];
