@@ -27,12 +27,12 @@ $preference = $client->create([
     ),
     "payer"=> array(
         "nome"=> $nome,
-        "email"=> "user@email.com",
+        // "email"=> "user@email.com",
         "whatsapp"=> $whatsapp ,
-        "identification"=> array(
-            "type"=> "CPF",
-            "number"=> "19119119100"
-        ),
+        // "identification"=> array(
+        //     "type"=> "CPF",
+        //     "number"=> "19119119100"
+        // ),
         "address"=> array(
             "estado" => $estado,
             "cidade" => $cidade,

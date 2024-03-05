@@ -510,7 +510,7 @@ if ($formdata) {
 									<div class="col-md-12">
 
 										<div class="form-field-default">
-
+																																																																		<!-- Incluir opção de pagamento online(Mercado Pago) -->
 											<label>Forma de pagamento:</label>
 											<div class="fake-select">
 												<i class="lni lni-chevron-down"></i>
@@ -532,6 +532,9 @@ if ($formdata) {
 													<?php } ?>
 													<?php if ($data_content['pagamento_outros'] == "1") { ?>
 														<option value="5">Outros</option>
+													<?php } ?>
+													<?php if ($data_content['pagamento_mercado_pago'] == "1") { ?>
+														<option value="7">Mercado Pago</option>
 													<?php } ?>
 												</select>
 												<div class="clear"></div>
@@ -682,31 +685,35 @@ if ($formdata) {
 
 							<div class="col-md-6 hidden-xs hidden-sm"></div>
 
-							<div class="col-md-3 col-xs-7 col-sm-7">
-								<input type="hidden" name="formdata" value="1" />
-								<button class="botao-acao"><i class="lni lni-whatsapp"></i> <span>Enviar pedido</span></button>
-							</div>
 							<!-- TODO: inserir botão de integração do mercado pago e configurar com as informações corretas -->
 							<!-- Mercado Pago -->
-							<div id="wallet_container">
-							</div>
-							<script>
-								// TODO: inserir a public key do estabelecimento
-								const mp = new MercadoPago($public_key, {
-									locale: 'pt-BR'
-								});
+							<?php if ($data_content['pagamento_mercado_pago'] == "1") { ?>
+								<div id="wallet_container"></div>
+								<script>
+									// TODO: inserir a public key do estabelecimento
+									const mp = new MercadoPago($public_key, {
+										locale: 'pt-BR'
+									});
 
-								mp.bricks().create("wallet", "wallet_container", {
-									initialization: {
-										preferenceId: "testMP1305",
-									},
-									customization: {
-										texts: {
-											valueProp: 'smart_option',
+									mp.bricks().create("wallet", "wallet_container", {
+										initialization: {
+											preferenceId: "testMP1305",
 										},
-									},
-								});
-							</script>
+										customization: {
+											texts: {
+												valueProp: 'smart_option',
+											},
+										},
+									});
+								</script>
+							<?php } else{ ?>
+								<!-- Renderização do botão do whatsapp caso não faça o pagamento via Mercado Pago -->
+								<div class="col-md-3 col-xs-7 col-sm-7">
+									<input type="hidden" name="formdata" value="1" />
+									<button class="botao-acao"><i class="lni lni-whatsapp"></i> <span>Enviar pedido</span></button>
+								</div>
+							<?php } ?>
+							
 
 						</div>
 
@@ -959,6 +966,15 @@ include($virtualpath . '/_layout/footer.php');
 		if (forma_pagamento == "6") {
 			$(".elemento-forma-pagamento-descricao").hide();
 		}
+
+		if (forma_pagamento == "7") {
+			$(".elemento-forma-pagamento-descricao").show();
+			$(".elemento-forma-pagamento-descricao label").html("Forma de pagamento:");
+			$(".elemento-forma-pagamento-descricao input").attr("placeholder", "Forma de pagamento:");
+			$(".elemento-forma-pagamento-descricao .form-tip").html("Formas aceitas: <?php echo $data_content['pagamento_mercado_pago_descricao']; ?>");
+			$(".elemento-forma-pagamento-descricao .form-tip").show();
+		}
+
 
 	});
 
