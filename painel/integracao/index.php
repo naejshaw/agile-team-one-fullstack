@@ -41,7 +41,7 @@ if (mysqli_num_rows($result) > 0) {
 
 //var_dump($public_key);
 // Preenchimento dos campos do formulário
-if ($_POST['formdata']) {
+if (isset($_POST['formdata'])) {
     $public_key = htmlclean($_POST['input-public-key']);
     $secret_key = htmlclean($_POST['input-secret-key']);
 	$formdata = $_POST['formdata'];
@@ -82,7 +82,7 @@ function update_estabelecimento( $db_con, $public_key, $secret_key, $id)
 
 
 //se o botao salvar for clicado vai executar o post do form
-if ($formdata) {
+if (isset($formdata)) {
 	
 	// Checar Erros gerados se nao enviar os dados
 	 $checkerrors = 0;

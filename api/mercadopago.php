@@ -1,5 +1,6 @@
 <?php
-include('../../vendor/autoload.php');   
+// include('../../vendor/autoload.php');   
+include '../vendor/autoload.php';
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;

@@ -110,7 +110,7 @@
 		$numeric_data['subdominio_tipo'][] = array( "value" => "5", "name" => "Blacklist" );
 
 		// Status venda
-
+		// TODO: utilizar o status_venda para exibir o status no comprovante
 		$numeric_data['status_venda'][] = array( "value" => "Aguardando pagamento", "name" => "1" );
 		$numeric_data['status_venda'][] = array( "value" => "Finalizada", "name" => "2" );
 		$numeric_data['status_venda'][] = array( "value" => "Cancelada", "name" => "3" );

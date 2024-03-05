@@ -17,7 +17,7 @@ if( isset($_SESSION['user']) &&  $_SESSION['user']['logged'] == "1" ) {
 // SEO
 $seo_subtitle = "Cadastrar";
 $seo_description = "Cadastrar";
-$seo_keywords = isset($app['title']).", ".isset($seo_title);
+$seo_keywords = isset($app['title']) && isset($seo_title) ? $app['title'].", ".$seo_title : '';
 $seo_image = get_just_url()."/_core/_cdn/img/favicon.png";
 // HEADER
 $system_header .= "";
@@ -29,7 +29,7 @@ include('../../_core/_layout/modal.php');
 //global $recaptcha_secretkey;
 //require_once('../../_core/_cdn/recaptcha/autoload.php');
 global $simple_url;
-$afiliado = isset($_SESSION['afiliado']);
+$afiliado = isset($_SESSION['afiliado']) ? $_SESSION['afiliado'] : '';
 ?>
 
 <?php
@@ -40,7 +40,7 @@ $afiliado = isset($_SESSION['afiliado']);
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = isset($_POST['formdata']) ? $_POST['formdata'] : '';
 
   if( $formdata ) {
 
@@ -1447,9 +1447,9 @@ $afiliado = isset($_SESSION['afiliado']);
                           <input type="radio" name="terms" value="1" <?php if( isset($_POST['terms']) ){ echo 'CHECKED'; }; ?>> Eu aceito os termos de uso
                         </div>
 
-                        <div class="ocaptcha">
-                          <div class="g-recaptcha form-field" data-sitekey="<?php echo isset($recaptcha_sitekey); ?>"></div>
-                        </div>
+                        <!-- <div class="ocaptcha">
+                          <div class="g-recaptcha form-field" data-sitekey="<?php echo $recaptcha_sitekey; ?>"></div>
+                        </div> -->
 
                     </div>
 
@@ -1682,7 +1682,7 @@ $(document).ready( function() {
           $('#the_form').trigger("change");
       },
       onFinishing: function (event, currentIndex){
-          form.validate().settings.ignore = ":disabled";
+          form.validate().settings.ignore = ":enabled";
           return form.valid();
           $('#the_form').trigger("change");
       },
@@ -1753,7 +1753,7 @@ $(document).ready(function() {
   $( "#input-estado" ).change(function() {
     var estado = $(this).children("option:selected").val();
     $("#input-cidade").html("<option>-- Carregando cidades --</option>");
-    $("#input-cidade").load("<?php just_url(); ?>/_core/_ajax/cidades.php?estado="+estado+"&cidade=<?php echo htmlclean( $_POST['cidade'] ); ?>");
+    $("#input-cidade").load("<?php just_url(); ?>/_core/_ajax/cidades.php?estado="+estado+"&cidade=<?php echo htmlclean( isset($_POST['cidade']) ? $_POST['cidade'] : '' ); ?>");
   });
 
   $( "#input-estado" ).trigger("change");

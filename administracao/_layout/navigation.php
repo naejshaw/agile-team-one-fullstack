@@ -5,7 +5,7 @@ $estop = user_info('estado');
 ?>
 <nav class="navbar pull-left">
 	<ul class="nav navbar-nav">
-		<li class="active"><a href="#">Ínicio</a></li>
+		<li class="active"><a href="/administracao/inicio">Ínicio</a></li>
 		<?php if($oper == 1) { ?>
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -80,7 +80,7 @@ $estop = user_info('estado');
 
 <nav class="navbar pull-right hidden-xs hidden-sm">
 	<ul class="nav navbar-nav">
-		<li class="active"><a target="_blank" href="<?php just_url(); ?>"><i class="lni lni-home"></i> Portal</a></li>
+		<li class="active"><a target="_blank" href="<?php just_url(); ?>/conheca"><i class="lni lni-home"></i> Portal</a></li>
 	</ul>
 </nav> 
 

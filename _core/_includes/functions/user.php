@@ -480,6 +480,7 @@ function sacola_remover( $eid,$pid ) {
 
 }
 
+// TODO: gerar o $pedido_status ao finalizar um pedido
 function checkout_salvar( $nome,$whatsapp,$forma_entrega,$estado,$cidade,$endereco_cep,$endereco_numero,$endereco_bairro,$endereco_rua,$endereco_complemento,$endereco_referencia,$forma_pagamento,$forma_pagamento_informacao,$cupom ) {
 
 	global $db_con;
@@ -503,9 +504,11 @@ function checkout_salvar( $nome,$whatsapp,$forma_entrega,$estado,$cidade,$endere
 	$_SESSION['checkout']['forma_pagamento'] = $forma_pagamento;
 	$_SESSION['checkout']['forma_pagamento_informacao'] = $forma_pagamento_informacao;
 	$_SESSION['checkout']['cupom'] = $cupom;
+	$_SESSION['checkout']['pedido_status'] = $pedido_status;
 
 }
 
+// TODO: inserir o $pedido_status na geração do comprovante
 function gera_comprovante($eid,$modo,$tamanho,$numero) {
 
 	global $_SESSION;
@@ -1693,6 +1696,7 @@ function edit_assinatura( $id,$funcionalidade_marketplace,$funcionalidade_variac
 
 }
 
+// TODO: inserir mudança de $pedido_status quando o pagamento for realizado
 function consulta_pagamento( $gateway_ref ) {
 
 	global $mp_acess_token;

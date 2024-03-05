@@ -241,7 +241,7 @@ if ("serviceWorker" in navigator) {
 
 															<a href="<?php just_url(); ?>/esqueci" class="text-center"><i class="lni lni-question-circle"></i> Esqueci minha senha?</a>
 
-															<a href="<?php just_url(); ?>" class="text-center"><i class="icone icone-sacola"></i> Voltar</a>
+															<a href="<?php just_url(); ?>/conheca" class="text-center"><i class="icone icone-sacola"></i> Voltar</a>
 
 															<!-- <a href="<?php just_url(); ?>/comece" class="text-center"><i class="lni lni-rocket"></i> Quero vender</a> -->
 

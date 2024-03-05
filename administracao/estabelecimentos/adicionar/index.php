@@ -1685,7 +1685,7 @@ $(document).ready(function() {
   $( "#input-estado" ).change(function() {
     var estado = $(this).children("option:selected").val();
     $("#input-cidade").html("<option>-- Carregando cidades --</option>");
-    $("#input-cidade").load("<?php just_url(); ?>/_core/_ajax/cidades.php?estado="+estado+"&cidade=<?php echo htmlclean( $_POST['cidade'] ); ?>");
+    $("#input-cidade").load("<?php just_url(); ?>/_core/_ajax/cidades.php?estado="+estado+"&cidade=<?php echo htmlclean( isset($_POST['cidade']) ? $_POST['cidade'] : '' ); ?>");
   });
 
   $( "#input-estado" ).trigger("change");

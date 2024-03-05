@@ -9,7 +9,7 @@
 				<div class="col-md-3">
 
 					<div class="brand brand-image pull-left">
-						<a href="<?php just_url(); ?>">
+						<a href="<?php just_url(); ?>/">
 						<div class="logofont logofont-dark">
 						   <span><?php echo $titulo_topo; ?></span>
 						   </div>
@@ -45,7 +45,12 @@
 						<div class="user-info-login">
 							<a href="<?php just_url(); ?>/login" title="Faça login ou cadastre-se">
 								<i class="lni lni-user"></i>
-								<span>Faça login ou cadastre-se</span>
+								<span>Faça login ou</span>
+							</a>
+						</div>
+						<div class="user-info-login">
+							<a href="<?php just_url(); ?>/comece/cadastrar" title="Faça login ou cadastre-se">
+								<span>cadastre-se</span>
 							</a>
 						</div>
 
