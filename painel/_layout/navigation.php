@@ -1,7 +1,7 @@
 <nav class="navbar pull-left">
 	<ul class="nav navbar-nav">
 		<li class="active"><a href="<?php panel_url(); ?>">Ínicio</a></li>
-		<?php if( $_SESSION['estabelecimento']['status'] == "1" ) { ?>
+		<?php if( isset($_SESSION['estabelecimento']['status']) && $_SESSION['estabelecimento']['status'] == "1" ) { ?>
 		<li><a href="<?php panel_url(); ?>/pedidos">Pedidos</a></li>
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -23,7 +23,7 @@
 				<li><a href="<?php panel_url(); ?>/produtos"><i class="lni lni-radio-button"></i> Gerenciar</a></li>
 			</ul>
 		</li>
-		<?php if( $_SESSION['estabelecimento']['funcionalidade_banners'] == "1" ) { ?>
+		<?php if( isset($_SESSION['estabelecimento']['funcionalidade_banners']) && $_SESSION['estabelecimento']['funcionalidade_banners'] == "1" ) { ?>
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 				Banners
