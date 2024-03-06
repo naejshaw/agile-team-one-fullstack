@@ -76,9 +76,9 @@ include('../_layout/modal.php');
 			<div class="lista-menus">
 				<div class="col-md-4">
 					<div class="lista-menus-menu">
-						<a class="bt" href="<?php echo isset($meudominio); ?>" target="_blank">
+						<a class="bt" href="<?php echo isset($meudominio) ? $meudominio : ''; ?>" target="_blank">
 							<i class="lni lni-home"></i>
-							<span>Ver meu catalogo</span>
+							<span>Ver catalogo</span>
 							<i class="lni lni-chevron-right"></i>
 							<div class="clear"></div>
 						</a>
