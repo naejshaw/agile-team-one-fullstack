@@ -16,11 +16,11 @@ include('../_layout/sidebars.php');
 include('../_layout/modal.php');
 
 global $db_con;
-$eid = $_SESSION['estabelecimento']['id']; //estabelecimento logado
+$eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : ''; //estabelecimento logado
 $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimento']['id'],"subdominio").".".$simple_url;
 
 // Id do estabelecimento logado 
-$id = $_SESSION['estabelecimento']['id'];
+$id = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
 
 // Variáveis de inicialização
 $public_key = "";
@@ -57,8 +57,8 @@ if (isset($_POST['formdata'])) {
 function update_estabelecimento( $db_con, $public_key, $secret_key, $id)
 {
 	// Sanitizar os dados
-    $public_key = mysqli_real_escape_string($db_con, $public_key);
-    $secret_key = mysqli_real_escape_string($db_con, $secret_key);
+    $public_key = isset($public_key) ? mysqli_real_escape_string($db_con, $public_key) : '';
+    $secret_key = isset($secret_key) ? mysqli_real_escape_string($db_con, $secret_key) : '';
 
 	// Preparar a consulta SQL
     $sql = "UPDATE estabelecimentos SET public_key = ?, secret_key = ? WHERE id = ?";

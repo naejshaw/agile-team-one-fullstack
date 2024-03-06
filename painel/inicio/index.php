@@ -17,7 +17,7 @@ include('../_layout/modal.php');
 
 
 // Globals
-  $id = $_SESSION['estabelecimento']['id'];
+  $id = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
 
   $queryestabelecimento = mysqli_query( $db_con, "SELECT * FROM estabelecimentos WHERE id = '$id' LIMIT 1");
   $dataestabelecimento = mysqli_fetch_array( $queryestabelecimento );
