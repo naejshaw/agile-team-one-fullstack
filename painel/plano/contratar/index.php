@@ -77,8 +77,8 @@ if ($codigo_voucher ){
     "SELECT * FROM planos WHERE id = '$id' AND status = '1' LIMIT 1"
   );
 
-  $hasdata = mysqli_num_rows($edit);
-  $data = mysqli_fetch_array($edit);
+  $hasdata = isset($edit) ? mysqli_num_rows($edit) : '';
+  $data = isset($edit) ? mysqli_fetch_array($edit) : '';
   //print("<pre>".print_r($data)."</pre>");
 
 }
