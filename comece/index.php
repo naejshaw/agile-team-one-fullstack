@@ -53,7 +53,14 @@ $afiliado = isset($_SESSION['afiliado']);
 
 				
 					<span class="text">
-						Ao se cadastrar você ganha <br/> <strong><?php echo data_info( "planos",$plano_default,"duracao_dias" ); ?> dias</strong> <br/>para testar nossa plataforma, criar seu catálogo e impulsionar suas vendas.
+						Ao se cadastrar você ganha <br/> <strong>
+							<?php 
+							if(isset($plano_default)){
+
+								echo data_info( "planos",$plano_default,"duracao_dias" ); 
+							}
+							?> 
+							dias</strong> <br/>para testar nossa plataforma, criar seu catálogo e impulsionar suas vendas.
 					</span>
 					
 					<!--
