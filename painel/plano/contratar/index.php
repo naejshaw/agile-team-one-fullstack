@@ -44,7 +44,7 @@ $has_voucher = '';
 
 
 //se in informar um voucher isset($_GET["voucher"])
-$codigo_voucher = isset($_GET["voucher"]) ? $_GET["vouncher"] : '';
+$codigo_voucher = isset($_GET["voucher"]);
 if ($codigo_voucher ){
   
   //verifica e trata o codigo enviado evitando sql inject
@@ -69,7 +69,7 @@ if ($codigo_voucher ){
   }
 
   //pega o ID do estabelecimento logado
-  $eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
+  $eid = $_SESSION["estabelecimento"]["id"];
 
   //acao de editar o estabelecimento
   $edit = mysqli_query(
@@ -77,19 +77,19 @@ if ($codigo_voucher ){
     "SELECT * FROM planos WHERE id = '$id' AND status = '1' LIMIT 1"
   );
 
-  $hasdata = isset($edit) ? mysqli_num_rows($edit) : '';
-  $data = isset($edit) ? mysqli_fetch_array($edit) : '';
+  $hasdata = mysqli_num_rows($edit);
+  $data = mysqli_fetch_array($edit);
   //print("<pre>".print_r($data)."</pre>");
 
 }
 
 // Checar se formulário foi executado
 
-$formdata = isset($_POST["formdata"]) ? $_POST["formdata"] : '';
+$formdata = isset($_POST["formdata"]);
 
 if ($formdata) {
     // Setar campos
-    $termos = isset($_POST["termos"]) ? mysqli_real_escape_string($db_con, $_POST["termos"]) : ''; 
+    $termos = mysqli_real_escape_string($db_con, isset($_POST["termos"]));
 
     // Checar Erros
     $checkerrors = 0;
@@ -123,7 +123,7 @@ if ($formdata) {
             }
            // se nao tiver voucher executa o mercado pago 
         } else {
-            $eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
+            $eid = $_SESSION["estabelecimento"]["id"];
             $define_query = mysqli_query(
                 $db_con,
                 "SELECT email FROM estabelecimentos WHERE id = '$eid' LIMIT 1"
@@ -281,7 +281,7 @@ if ($formdata) {
             <span>/</span>
             <a href="<?php panel_url(); ?>/plano">Planos</a>
             <span>/</span>
-            <a href="<?php panel_url(); ?>/plano/contratar?id=<?php echo $id; ?>&voucher=<?php echo $voucher; ?>">Plano</a>
+            <a href="<?php panel_url(); ?>/plano/contratar?id=<?php echo isset($id); ?>&voucher=<?php echo isset($voucher); ?>">Plano</a>
           </div>
         </div>
         
@@ -305,7 +305,7 @@ if ($formdata) {
                   list_errors();
               } ?>
 
-              <?php if (isset($_GET["msg"]) && $_GET["msg"] == "erro") { ?>
+              <?php if (isset($_GET["msg"] )== "erro") { ?>
 
                 <?php modal_alerta(
                     "Erro, tente novamente mais tarde!",
@@ -314,7 +314,7 @@ if ($formdata) {
 
               <?php } ?>
 
-              <?php if (isset($_GET["msg"]) && $_GET["msg"] == "sucesso") { ?>
+              <?php if (isset($_GET["msg"]) == "sucesso") { ?>
 
                 <?php modal_alerta("Editado com sucesso!", "sucesso"); ?>
 
@@ -410,7 +410,7 @@ if ($formdata) {
 
                   <div class="form-field-terms">
                     <input type="hidden" name="afiliado" value="<?php echo htmlclean(
-                        isset($_GET["afiliado"]) ? $_GET["afiliado"] : ''
+                        isset($_GET["afiliado"])
                     ); ?>"/>
                     <input type="hidden" name="formdata" value="1"/>
                     <input type="radio" name="terms" value="1" <?php if (
@@ -495,8 +495,8 @@ include "../../_layout/rdp.php";
 include "../../_layout/footer.php";
 ?>
 
-
-<!-- <script>
+<!-- 
+<script>
   const mp = new MercadoPago($mp_public_key);
 </script> -->
 
