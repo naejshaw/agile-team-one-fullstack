@@ -223,7 +223,7 @@ if ("serviceWorker" in navigator) {
 
 														<div class="form-field form-field-icon form-field-submit">
 															<button>
-																<span>Entrar</span>
+																<span>Entrar aqui</span>
 																<i class="lni lni-chevron-right"></i>
 															</button>
 
