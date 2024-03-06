@@ -22,7 +22,7 @@ if( isset($_SESSION['user']) && $_SESSION['user']['logged'] == "1" ) {
 
 }
 ?>
-
+<!-- Teste -->
 <!DOCTYPE html>
 <html>
 	<head>
