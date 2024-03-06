@@ -21,10 +21,10 @@ global $db_con;
 
 // Variables
 
-$nome = mysqli_real_escape_string( $db_con, $_GET['nome'] );
-$email = mysqli_real_escape_string( $db_con, $_GET['email'] );
-$nivel = mysqli_real_escape_string( $db_con, $_GET['nivel'] );
-$status = mysqli_real_escape_string( $db_con, $_GET['status'] );
+$nome = isset($_GET['nome']) ? mysqli_real_escape_string( $db_con, $_GET['nome'] ) : '';
+$email = isset($_GET['email']) ? mysqli_real_escape_string( $db_con, $_GET['email'] ) : '';
+$nivel = isset($_GET['nivel']) ? mysqli_real_escape_string( $db_con, $_GET['nivel'] ) : '';
+$status = isset($_GET['status']) ? mysqli_real_escape_string( $db_con, $_GET['status'] ) : '';
 
 $getdata = "";
 
@@ -84,13 +84,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 

@@ -21,9 +21,9 @@ global $db_con;
 
 // Variables
 
-$codigo = mysqli_real_escape_string( $db_con, $_GET['nome'] );
-$descricao = mysqli_real_escape_string( $db_con, $_GET['descricao'] );
-$status = mysqli_real_escape_string( $db_con, $_GET['status'] );
+$codigo = isset($_GET['nome']) ? mysqli_real_escape_string( $db_con, $_GET['nome'] ) : '';
+$descricao = isset($_GET['descricao']) ? mysqli_real_escape_string( $db_con, $_GET['descricao'] ) : '';
+$status = isset($_GET['status']) ? mysqli_real_escape_string( $db_con, $_GET['status'] ) : '';
 
 $getdata = "";
 
@@ -136,7 +136,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-filtros" class="panel-collapse collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div id="collapse-filtros" class="panel-collapse collapse <?php if( isset($_GET['filtered']) && $_GET['filtered'] ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET">
@@ -162,7 +162,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 												<select name="status">
 													<option></option>
 		                                            <?php for( $x = 0; $x < count( $numeric_data['status_voucher'] ); $x++ ) { ?>
-		                                            <option value="<?php echo $numeric_data['status_voucher'][$x]['value']; ?>" <?php if( $_GET['visible'] == $numeric_data['status_voucher'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['status_voucher'][$x]['name']; ?></option>
+		                                            <option value="<?php echo $numeric_data['status_voucher'][$x]['value']; ?>" <?php if( isset($_GET['visible']) && $_GET['visible'] == $numeric_data['status_voucher'][$x]['value'] ) { echo 'SELECTED'; }; ?>><?php echo $numeric_data['status_voucher'][$x]['name']; ?></option>
 		                                            <?php } ?>
 												</select>
 												<div class="clear"></div>
@@ -180,7 +180,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) && $_GET['filtered'] ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php admin_url(); ?>/vouchers" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

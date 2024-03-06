@@ -23,8 +23,8 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 // Variables
 
-$estabelecimento = mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] );
-$codigo = mysqli_real_escape_string( $db_con, $_GET['codigo'] );
+$estabelecimento = isset($_GET['estabelecimento_id']) ? mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] ) : '';
+$codigo = isset($_GET['codigo']) ? mysqli_real_escape_string( $db_con, $_GET['codigo'] ) : '';
 
 $getdata = "";
 
@@ -76,13 +76,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 

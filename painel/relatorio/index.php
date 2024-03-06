@@ -23,11 +23,11 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 // Variables
 
-$estabelecimento = mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] );
-$numero = mysqli_real_escape_string( $db_con, $_GET['numero'] );
-$nome = mysqli_real_escape_string( $db_con, $_GET['nome'] );
-$status = mysqli_real_escape_string( $db_con, $_GET['status'] );
-$cupom = mysqli_real_escape_string( $db_con, $_GET['cupom'] );
+$estabelecimento = isset($_GET['estabelecimento_id']) ? mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] ) : '';
+$numero = isset($_GET['numero']) ? mysqli_real_escape_string( $db_con, $_GET['numero'] ) : '';
+$nome = isset($_GET['nome']) ? mysqli_real_escape_string( $db_con, $_GET['nome'] ) : '';
+$status = isset($_GET['status']) ? mysqli_real_escape_string( $db_con, $_GET['status'] ) : '';
+$cupom = isset($_GET['cupom']) ? mysqli_real_escape_string( $db_con, $_GET['cupom'] ) : '';
 
 $getdata = "";
 
@@ -67,12 +67,12 @@ if( $cupom ) {
   $query .= "AND cupom = '$cupom' ";
 }
 
-$data_inicial = mysqli_real_escape_string( $db_con, $_GET['data_inicial'] );
-if( !$data_inicial ) { $data_inicial = date("d/m/").(date(Y)-1); }
+$data_inicial = isset($_GET['data_inicial']) ? mysqli_real_escape_string( $db_con, $_GET['data_inicial'] ) : '';
+if( !$data_inicial ) { $data_inicial = date("d/m/").(date('Y')-1); }
 $data_inicial_sql = datausa_min( $data_inicial );
 $data_inicial_sql = $data_inicial_sql." 00:00:00";
 
-$data_final = mysqli_real_escape_string( $db_con, $_GET['data_final'] );
+$data_final = isset($_GET['data_final']) ? mysqli_real_escape_string( $db_con, $_GET['data_final'] ) : '';
 if( !$data_final ) { $data_final = date("d/m/Y"); }
 $data_final_sql = datausa_min( $data_final );
 $data_final_sql = $data_final_sql." 23:59:59";
@@ -107,13 +107,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 
@@ -161,7 +161,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 								</a>
 							</h4>
 						</div>
-						<div class="panel-collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div class="panel-collapse <?php if( isset($_GET['filtered']) && $_GET['filtered'] ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET" action="<?php panel_url(); ?>/relatorio/relatorio.php" target="_blank">
@@ -203,7 +203,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) && $_GET['filtered'] ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php panel_url(); ?>/pedidos" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

@@ -21,7 +21,7 @@ global $db_con;
 
 // Variables
 
-$nome = mysqli_real_escape_string( $db_con, $_GET['nome'] );
+$nome = isset($_GET['nome']) ? mysqli_real_escape_string( $db_con, $_GET['nome'] ) : '';
 
 $getdata = "";
 
@@ -71,13 +71,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 
