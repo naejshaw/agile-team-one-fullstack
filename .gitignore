@@ -1,11 +1,6 @@
 /_core/_includes/config.php
 /conheca/.htaccess
-<<<<<<< HEAD
 .htaccess
 /vendor
-/teste.estouon.app.br
-/_core/_includes/functions/mercadopagoOld
-=======
 /conheca/index.html
 /app/config/config_secret.php
->>>>>>> 988e2a68777bada2eb0b3da730696466c56f6f19

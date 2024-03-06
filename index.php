@@ -74,7 +74,7 @@ include('_core/_includes/config.php');
 
 
     // Roteando
-    $router = isset($_GET['inrouter']);
+    $router = isset($_GET['inrouter']) ? $_GET['inrouter'] : '';
     $router = explode('/', $router);
     $inacao = $router[0];
     $inparametro = $router[1];
