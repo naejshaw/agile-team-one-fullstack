@@ -1046,7 +1046,7 @@ function contratar_plano( $eid,$plano,$gateway_transaction,$gateway_ref,$gateway
 
 	$rel_planos_id = $plano;
 
-	$afiliado = data_info( "planos", $plano, "afiliado" );
+	$afiliado =  data_info( "planos", $plano, "afiliado" );
 	$rel_estabelecimentos_id = $eid;
 	$rel_estabelecimentos_nome = data_info( "estabelecimentos", $eid, "nome" );
 	$rel_estabelecimentos_subdominio = data_info( "estabelecimentos", $eid, "subdominio" );

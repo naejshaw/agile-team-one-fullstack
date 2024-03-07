@@ -44,11 +44,11 @@ $has_voucher = '';
 
 
 //se in informar um voucher isset($_GET["voucher"])
-$codigo_voucher = isset($_GET["voucher"]);
-if ($codigo_voucher ){
+$codigo_voucher = isset($_GET["voucher"]) ? $_GET['voucher'] : '';
+if (isset($codigo_voucher) ){
   
   //verifica e trata o codigo enviado evitando sql inject
-  $voucher = mysqli_real_escape_string($db_con, $_GET["voucher"] );
+  $voucher = isset($_GET['voucher']) ? mysqli_real_escape_string($db_con, $_GET["voucher"] ) : '';
   //resultado da consulta no Banco pelo voucher 
   $voucher_query = mysqli_query(
       $db_con,
@@ -65,7 +65,7 @@ if ($codigo_voucher ){
   if ($has_voucher) {
     $id = $data_voucher["rel_planos_id"];
   } else {
-      $id = mysqli_real_escape_string($db_con, isset($_GET["plano"]));
+      $id = isset($_GET['plano']) ? mysqli_real_escape_string($db_con, $_GET["plano"]) : '';
   }
 
   //pega o ID do estabelecimento logado
@@ -85,7 +85,7 @@ if ($codigo_voucher ){
 
 // Checar se formulário foi executado
 
-$formdata = isset($_POST["formdata"]);
+$formdata = isset($_POST["formdata"]) ? $_POST['formdata'] : '';
 
 if ($formdata) {
     // Setar campos
@@ -222,7 +222,7 @@ if ($formdata) {
                   //ver retorno
                   //print("<pre>".print_r($obj,true)."</pre>");
 
-                  if( $gateway_link ) {
+                  if( isset($gateway_link) ) {
                     
                     if( contratar_plano( $eid, $id, $gateway_transaction,$gateway_ref,$gateway_link ) ) {
           
@@ -279,9 +279,9 @@ if ($formdata) {
           <div class="bread">
             <a href="<?php panel_url(); ?>"><i class="lni lni-home"></i></a>
             <span>/</span>
-            <a href="<?php panel_url(); ?>/plano">Planos</a>
+            <a href="<?php panel_url(); ?>/plano/listar">Planos</a>
             <span>/</span>
-            <a href="<?php panel_url(); ?>/plano/contratar?id=<?php echo isset($id); ?>&voucher=<?php echo isset($voucher); ?>">Plano</a>
+            <a href="<?php panel_url(); ?>/plano/contratar?id=<?php echo isset($id) ? $id : ''; ?>&voucher=<?php echo isset($voucher) ? $voucher : ''; ?>">Plano</a>
           </div>
         </div>
         
@@ -292,8 +292,7 @@ if ($formdata) {
     <!-- Content -->
 
     <div class="data box-white mt-16">
-
-      <?php if (isset($hasdata)) { ?>
+      <?php if (isset($formdata)) { ?>
 
       <form id="the_form" class="form-default" method="POST" enctype="multipart/form-data">
 
@@ -305,7 +304,7 @@ if ($formdata) {
                   list_errors();
               } ?>
 
-              <?php if (isset($_GET["msg"] )== "erro") { ?>
+              <?php if (isset($_GET["msg"]) && $_GET["msg"]== "erro") { ?>
 
                 <?php modal_alerta(
                     "Erro, tente novamente mais tarde!",
@@ -314,7 +313,7 @@ if ($formdata) {
 
               <?php } ?>
 
-              <?php if (isset($_GET["msg"]) == "sucesso") { ?>
+              <?php if (isset($_GET["msg"]) && $_GET["msg"]== "sucesso") { ?>
 
                 <?php modal_alerta("Editado com sucesso!", "sucesso"); ?>
 
@@ -461,7 +460,7 @@ if ($formdata) {
 
         <span class="nulled nulled-edit color-red">Erro, inválido ou não encontrado!</span>
 
-      <?php } ?>
+      <?php var_dump($id);} ?>
 
     </div>
     <!-- Se obter uma preference id renderiza o checkout pro

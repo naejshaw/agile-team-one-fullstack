@@ -3,7 +3,7 @@ require_once("_core/_includes/config.php");
 // SEO
 $seo_subtitle = "Página não encontrada";
 $seo_description = "Página não encontrada";
-$seo_keywords = $app['title'].", ".$seo_title;
+$seo_keywords = isset($app['title']) && isset($seo_title) ? $app['title'].", ".$seo_title : '';
 $seo_image = get_just_url()."/_core/_cdn/img/favicon.png";
 // HEADER
 $system_header .= "";
@@ -13,13 +13,13 @@ include('_core/_layout/sidebars.php');
 include('_core/_layout/modal.php');
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 

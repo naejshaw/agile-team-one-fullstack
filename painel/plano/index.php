@@ -16,10 +16,10 @@ include('../_layout/sidebars.php');
 include('../_layout/modal.php');
 
 $acao = isset($_GET['acao']);
-$eid = $_SESSION['estabelecimento']['id'];
-$id = mysqli_real_escape_string( $db_con, isset($_GET['id']) );
+$eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
+$id = isset($_GET['id']) ? mysqli_real_escape_string( $db_con, $_GET['id'] ) : '';
 
-if( $acao == "remover" ) {
+if( isset($acao) && $acao == "remover" ) {
 
 	$cando = 0;
 
@@ -52,7 +52,7 @@ if( $acao == "remover" ) {
 <?php
 
 global $db_con;
-$eid = $_SESSION['estabelecimento']['id'];
+$eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
 
 ?>
 
@@ -119,12 +119,12 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 				<?php
 				$hoje = date("Y-m-d");
-				$eid = $_SESSION['estabelecimento']['id'];
+				$eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
 				$query_pendentes = mysqli_query( $db_con, "SELECT * FROM assinaturas WHERE gateway_expiration >= '$hoje' AND status = '0' AND rel_estabelecimentos_id = '$eid' AND excluded != '1' ORDER BY id DESC" );
 				$total_pendentes = mysqli_num_rows( $query_pendentes );
 				?>
 
-				<?php if( $total_pendentes >= 1 ) { ?>
+				<?php if( isset($total_pendentes) && $total_pendentes >= 1 ) { ?>
 
 					<div class="panel-group panel-filters panel-pendentes">
 						<div class="panel panel-default">
