@@ -77,8 +77,8 @@ if (isset($codigo_voucher) ){
     "SELECT * FROM planos WHERE id = '$id' AND status = '1' LIMIT 1"
   );
 
-  $hasdata = mysqli_num_rows($edit);
-  $data = mysqli_fetch_array($edit);
+  $hasdata = isset($edit) ? mysqli_num_rows($edit) : '';
+  $data = isset($edit) ? mysqli_fetch_array($edit) : '';
   //print("<pre>".print_r($data)."</pre>");
 
 }
@@ -108,9 +108,9 @@ if ($formdata) {
     }
 
     // Executar registro
-    if (!$checkerrors) {
+    if (!isset($checkerrors)) {
        //se tiver um voucher aplica como pagamento
-        if ($has_voucher) {
+        if (isset($has_voucher)) {
             if (aplicar_voucher($eid, $voucher)) {
                 atualiza_estabelecimento(
                     $_SESSION["estabelecimento"]["id"],
@@ -123,11 +123,11 @@ if ($formdata) {
             }
            // se nao tiver voucher executa o mercado pago 
         } else {
-            $eid = $_SESSION["estabelecimento"]["id"];
-            $define_query = mysqli_query(
+            $eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION["estabelecimento"]["id"] : '';
+            $define_query = isset($eid) ? mysqli_query(
                 $db_con,
                 "SELECT email FROM estabelecimentos WHERE id = '$eid' LIMIT 1"
-            );
+            ) : '';
             $define_data = mysqli_fetch_array($define_query);
             $email_cliente = $define_data["email"];
 
@@ -383,7 +383,7 @@ if ($formdata) {
 
       		    <div class="title-line mt-0 pd-0">
       		      <i class="lni lni-question-circle"></i>
-      		      <span>Termos de <?php if ($has_voucher) {
+      		      <span>Termos de <?php if (isset($has_voucher)) {
                   echo "adesão";
               } else {
                   echo "compra";
@@ -460,7 +460,7 @@ if ($formdata) {
 
         <span class="nulled nulled-edit color-red">Erro, inválido ou não encontrado!</span>
 
-      <?php var_dump($id);} ?>
+      <?php ;} ?>
 
     </div>
     <!-- Se obter uma preference id renderiza o checkout pro

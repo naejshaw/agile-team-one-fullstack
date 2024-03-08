@@ -23,10 +23,10 @@ $eid = $_SESSION['estabelecimento']['id'];
 
 // Variables
 
-$estabelecimento = mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] );
-$nome = mysqli_real_escape_string( $db_con, $_GET['nome'] );
-$visible = mysqli_real_escape_string( $db_con, $_GET['visible'] );
-$status = mysqli_real_escape_string( $db_con, $_GET['status'] );
+$estabelecimento = isset($_GET['estabelecimento_id']) ? mysqli_real_escape_string( $db_con, $_GET['estabelecimento_id'] ) : '';
+$nome = isset($_GET['nome']) ? mysqli_real_escape_string( $db_con, $_GET['nome'] ) : '';
+$visible = isset($_GET['visible']) ? mysqli_real_escape_string( $db_con, $_GET['visible'] ) : '';
+$status = isset($_GET['status']) ? mysqli_real_escape_string( $db_con, $_GET['status'] ) : '';
 
 $getdata = "";
 
@@ -78,13 +78,13 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 
 ?>
 
-<?php if( $_GET['msg'] == "erro" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "erro" ) { ?>
 
 <?php modal_alerta("Erro, tente novamente!","erro"); ?>
 
 <?php } ?>
 
-<?php if( $_GET['msg'] == "sucesso" ) { ?>
+<?php if( isset($_GET['msg']) && $_GET['msg'] == "sucesso" ) { ?>
 
 <?php modal_alerta("Ação efetuada com sucesso!","sucesso"); ?>
 
@@ -132,7 +132,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-filtros" class="panel-collapse collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div id="collapse-filtros" class="panel-collapse collapse <?php if( isset($_GET['filtered']) ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET">
@@ -155,7 +155,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php panel_url(); ?>/frete" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

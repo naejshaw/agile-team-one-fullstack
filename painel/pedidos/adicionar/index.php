@@ -96,7 +96,7 @@ include('../../_layout/modal.php');
 
     if( !$checkerrors ) {
 
-      if( $pid = new_produto( $estabelecimento,$categoria,$destaque,$nome,$descricao,$valor,$oferta,$valor_promocional,$status ) ) {
+      if( $pid = new_produto( $estabelecimento,$categoria,$destaque,$ref,$nome,$descricao,$valor,$oferta,$valor_promocional,$variacao,$status,$visible,$integrado ) ) {
 
         if ( $_FILES['file'] ) {
 

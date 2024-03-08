@@ -130,7 +130,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-filtros" class="panel-collapse collapse <?php if( $_GET['filtered'] ) { echo 'in'; }; ?>">
+						<div id="collapse-filtros" class="panel-collapse collapse <?php if( isset($_GET['filtered']) ) { echo 'in'; }; ?>">
 							<div class="panel-body">
 
 								<form class="form-filters form-100" method="GET">
@@ -139,7 +139,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 										<div class="col-md-10">
 											<div class="form-field-default">
 												<label>Código:</label>
-												<input type="text" name="nome" placeholder="Código" value="<?php echo htmlclean( $nome ); ?>"/>
+												<input type="text" name="nome" placeholder="Código" value="<?php echo htmlclean( isset($nome) ? $nome : '' ); ?>"/>
 											</div>
 										</div>
 										<div class="col-md-2">
@@ -153,7 +153,7 @@ if( !$pagina OR $pagina > $total_paginas OR !is_numeric($pagina) ) {
 											</div>
 										</div>
 									</div>
-									<?php if( $_GET['filtered'] ) { ?>
+									<?php if( isset($_GET['filtered']) ) { ?>
 									<div class="row">
 										<div class="col-md-12">
 										    <a href="<?php panel_url(); ?>/cupons" class="limpafiltros"><i class="lni lni-close"></i> Limpar filtros</a>

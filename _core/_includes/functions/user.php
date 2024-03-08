@@ -1362,7 +1362,7 @@ function atualiza_estabelecimento( $eid,$mode ) {
 
 	}
 
-	mysqli_query( $db_con, "UPDATE estabelecimentos SET 
+	isset($limite_produtos) ? mysqli_query( $db_con, "UPDATE estabelecimentos SET 
 		status = '$status',
 		funcionalidade_marketplace = '$funcionalidade_marketplace', 
 		funcionalidade_variacao = '$funcionalidade_variacao', 
@@ -1370,7 +1370,7 @@ function atualiza_estabelecimento( $eid,$mode ) {
 		expiracao = '$expiracao',
 		limite_produtos = '$limite_produtos' 
 		WHERE id = '$eid'
-	");
+	") : '';
 
 	if( $_SESSION['estabelecimento']['id'] == $eid ) {
 

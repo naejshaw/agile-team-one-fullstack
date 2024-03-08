@@ -26,7 +26,7 @@ include('../../_layout/modal.php');
 
   // Checar se formulário foi executado
 
-  $formdata = isset($_POST['formdata']);
+  $formdata = isset($_POST['formdata']) ? $_POST['formdata'] : '';
 
   if( $formdata ) {
 
@@ -163,7 +163,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Título:</label>
-                  <input type="text" name="titulo" placeholder="titulo" value="<?php echo htmlclean( isset($_POST['titulo']) ); ?>">
+                  <input type="text" name="titulo" placeholder="titulo" value="<?php echo htmlclean( isset($_POST['titulo']) ? $_POST['titulo'] : '' ); ?>">
 
               </div>
 
@@ -220,7 +220,7 @@ include('../../_layout/modal.php');
               <div class="form-field-default">
 
                   <label>Link:</label>
-                  <input type="text" name="link" placeholder="link" value="<?php echo htmlclean( isset($_POST['link']) ); ?>">
+                  <input type="text" name="link" placeholder="link" value="<?php echo htmlclean( isset($_POST['link']) ? $_POST['link'] : '' ); ?>">
 
               </div>
 
