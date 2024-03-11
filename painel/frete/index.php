@@ -39,12 +39,12 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 20;
-$pagina = $_GET["pagina"] == "" ? 1 : $_GET["pagina"];
+$pagina = !isset($_GET["pagina"]) ? 1 : $_GET["pagina"];
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
 
-$query .= "SELECT * FROM frete ";
+isset($query) ? $query .= "SELECT * FROM frete " : $query = "SELECT * FROM frete ";
 
 $query .= "WHERE 1=1 AND outros = '0' ";
 

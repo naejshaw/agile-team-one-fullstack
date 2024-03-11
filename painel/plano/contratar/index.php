@@ -124,10 +124,10 @@ if ($formdata) {
            // se nao tiver voucher executa o mercado pago 
         } else {
             $eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION["estabelecimento"]["id"] : '';
-            $define_query = isset($eid) ? mysqli_query(
+            $define_query = mysqli_query(
                 $db_con,
                 "SELECT email FROM estabelecimentos WHERE id = '$eid' LIMIT 1"
-            ) : '';
+            );
             $define_data = mysqli_fetch_array($define_query);
             $email_cliente = $define_data["email"];
 
@@ -202,8 +202,8 @@ if ($formdata) {
             curl_close($curl);
 
             $obj = json_decode($response);
-
-            if (isset($obj->id)) {
+            
+            if ($obj->id) {
                 if ($obj->id != null) {
                  
                   // Setar gateway
@@ -255,13 +255,13 @@ if ($formdata) {
   <script src="https://sdk.mercadopago.com/js/v2"></script>
   
   <script>
-      const mp = new MercadoPago("<?php echo isset($mp_public_ke); ?>", {
+      const mp = new MercadoPago("<?php echo isset($mp_public_key) ? $mp_public_key : ''; ?>", {
         locale: 'pt-BR'
       });
 
       mp.bricks().create("wallet", "wallet_container", {
         initialization: {
-            preferenceId: "<?php echo isset($gateway_transaction); ?>",
+            preferenceId: "<?php echo isset($gateway_transaction) ? $gateway_transaction : ''; ?>",
         },
       });
   </script>

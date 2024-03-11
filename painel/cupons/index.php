@@ -37,12 +37,12 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 20;
-$pagina = $_GET["pagina"] == "" ? 1 : $_GET["pagina"];
+$pagina = !isset($_GET["pagina"]) ? 1 : $_GET["pagina"];
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
 
-$query .= "SELECT * FROM cupons ";
+isset($query) ? $query .= "SELECT * FROM cupons " : $query = "SELECT * FROM cupons ";
 
 $query .= "WHERE 1=1 ";
 

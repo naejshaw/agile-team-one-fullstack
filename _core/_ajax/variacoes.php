@@ -1,9 +1,9 @@
 <?php 
 error_reporting(0);
-$modo = $_GET['modo'];
+$modo = isset($_GET['modo']) ? $_GET['modo'] : '';
 ?>
 
-<?php if( $modo == "variacao" ) { ?>
+<?php if( isset($modo) &&  $modo == "variacao" ) { ?>
 <div class="panel-group panel-filters panel-subvariacao" style="display: none;">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -70,7 +70,7 @@ $modo = $_GET['modo'];
 
 <?php } ?>
 
-<?php if( $modo == "item" ) { ?>
+<?php if( isset($modo) && $modo == "item" ) { ?>
 
   <div class='col-md-4 col-item' variacao-id='' item-id='' style="display: none;">
     <div class='item'>

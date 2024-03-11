@@ -1,14 +1,16 @@
 <?php
 // CORE
-include($virtualpath.'/_layout/define.php');
+global $virtualpath;
+require '_layout/define.php';
+// include($virtualpath.'/_layout/define.php');
 
 // APP
 global $app;
 is_active( $app['id'] );
 global $seo_title;
 // Querys
-$busca = mysqli_real_escape_string( $db_con, $_GET['busca'] );
-$categoria = mysqli_real_escape_string( $db_con, $_GET['categoria'] );
+$busca = isset($_GET['busca']) ? mysqli_real_escape_string( $db_con, $_GET['busca'] ) : '';
+$categoria = isset($_GET['categoria']) ? mysqli_real_escape_string( $db_con, $_GET['categoria'] ) : '';
 // SEO
 $seo_subtitle = $app['title'];
 $seo_description = $app['description_clean'];

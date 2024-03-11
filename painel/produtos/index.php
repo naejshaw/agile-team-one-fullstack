@@ -40,12 +40,12 @@ foreach($_GET as $query_string_variable => $value) {
 // Config
 
 $limite = 12;
-$pagina = $_GET["pagina"] == "" ? 1 : $_GET["pagina"];
+$pagina = !isset($_GET["pagina"]) ? 1 : $_GET["pagina"];
 $inicio = ($pagina * $limite) - $limite;
 
 // Query
 
-$query .= "SELECT * FROM produtos ";
+isset($query) ? $query .= "SELECT * FROM produtos " : $query = "SELECT * FROM produtos ";
 
 $query .= "WHERE 1=1 ";
 
