@@ -1,18 +1,18 @@
 <?php 
 include('_core/_includes/config.php');
 
-  // Globais
+  // Globais - Definição de variáveis
   $rootpath;
   $httprotocol;
   $simple_url;
   $gowww = $httprotocol.$simple_url;
-  $firstdomain = explode(".", $simple_url);
-  $firstdomain = $firstdomain[0];
+  $firstdomain = explode(".", $simple_url); //Separa a url em um array, usando como parâmetro de divisão o "." neste caso
+  $firstdomain = $firstdomain[0]; //Atribui o primeiro valor do array gerado anteriormente à variável $firstdomain
   
   // Mapeando subdominio //
   
-  $insubdominio = $_GET['insubdominio'];
-  if( !$insubdominio ) {
+  $insubdominio = $_GET['insubdominio']; 
+  if( !$insubdominio ) { //Verifica se a variável não foi atribuída
     $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
     $insubdominio = array_shift($insubdominio);
     if( $insubdominio == $firstdomain ) {
@@ -22,7 +22,6 @@ include('_core/_includes/config.php');
       //   header("location: ".$gowww);
       // }
     }
-    var_dump($insubdominio);
 
   // Estabelecimento
   if( mysqli_num_rows( mysqli_query( $db_con, "SELECT id,subdominio FROM estabelecimentos WHERE subdominio = '$insubdominio' AND excluded != '1' LIMIT 1" ) ) ) {
@@ -59,7 +58,7 @@ include('_core/_includes/config.php');
   }
 
   // Se existe o subdominio
-    if ($insubdominio) {
+  if ($insubdominio) {
 
       // Tipo do subdominio
       switch ($insubdominio) {
