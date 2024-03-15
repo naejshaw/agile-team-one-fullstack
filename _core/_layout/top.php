@@ -24,7 +24,7 @@
 
 						<div class="clear"></div>
 
-						<!--<form class="align-middle" action="https://conheca.veloximports.com.br">
+						<!-- <form class="align-middle" action="https://conheca.veloximports.com.br">
 
 							<input type="text" name="busca" placeholder="Digite sua busca..." value="<?php echo htmlclean( isset($_GET['busca']) ); ?>"/>
 							<button>
@@ -32,7 +32,7 @@
 							</button>
 							<div class="clear"></div>
 
-						</form>-->
+						</form> -->
 
 					</div>
 

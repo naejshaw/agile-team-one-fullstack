@@ -1,6 +1,8 @@
 /_core/_includes/config.php
 /conheca/.htaccess
-.htaccess
+.htaccess.old
 /vendor
 /conheca/index.html
 /app/config/config_secret.php
+.github/workflows/aluno.yml
+.htaccess

@@ -1,6 +1,6 @@
 <?php
 // CORE
-include('../_core/_includes/config.php');
+include '../_core/_includes/config.php';
 
 global $httprotocol;
 global $simple_url;
@@ -12,9 +12,9 @@ $seo_keywords = "";
 $system_header = "";
 
 if( isset($_COOKIE['cidade']) ) {
-	$cidade = mysqli_real_escape_string( $db_con, $_COOKIE['cidade'] );
+	$cidade = isset($_COOKIE['cidade']) ? mysqli_real_escape_string( $db_con, $_COOKIE['cidade'] ) : '';
 	$subdominio = data_info( "cidades",$cidade,"subdominio" );
-	if( $subdominio ) {
+	if( isset($subdominio) ) {
 		$gourl = $httprotocol.$subdominio.".".$simple_url;
 		header("Location: ".$gourl);
 	}
@@ -133,7 +133,7 @@ if( isset($_COOKIE['cidade']) ) {
 																while ( $data_estado = mysqli_fetch_array( $query_estados ) ) {
 								                              ?>
 
-								                                <option <?php if( isset($_POST['estado']) == $data_estado['estado_id'] ) { echo "SELECTED"; }; ?> value="<?php echo $data_estado['estado_id']; ?>"><?php echo $data_estado['estado_nome']; ?></option>
+								                                <option <?php if( isset($_POST['estado']) && $_POST['estado'] == $data_estado['estado_id'] ) { echo "SELECTED"; }; ?> value="<?php echo $data_estado['estado_id']; ?>"><?php echo $data_estado['estado_nome']; ?></option>
 
 								                              <?php } ?>
 

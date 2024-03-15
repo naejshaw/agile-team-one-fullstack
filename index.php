@@ -8,19 +8,21 @@ include('_core/_includes/config.php');
   $gowww = $httprotocol.$simple_url;
   $firstdomain = explode(".", $simple_url);
   $firstdomain = $firstdomain[0];
-
-// Mapeando subdominio //
-
+  
+  // Mapeando subdominio //
+  
   $insubdominio = $_GET['insubdominio'];
   if( !$insubdominio ) {
-    $insubdominio = array_shift((explode('.', $_SERVER['HTTP_HOST'])));
+    $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
+    $insubdominio = array_shift($insubdominio);
     if( $insubdominio == $firstdomain ) {
       $insubdominio = "";
     }
     // if( $insubdominio == "www" ) {
-    //   header("location: ".$gowww);
-    // }
-  }
+      //   header("location: ".$gowww);
+      // }
+    }
+    var_dump($insubdominio);
 
   // Estabelecimento
   if( mysqli_num_rows( mysqli_query( $db_con, "SELECT id,subdominio FROM estabelecimentos WHERE subdominio = '$insubdominio' AND excluded != '1' LIMIT 1" ) ) ) {
@@ -131,8 +133,8 @@ include('_core/_includes/config.php');
     if( $insubdominio ) {
       include("404.php");
     } else {
-      //include("localizacao/index.php");// DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
-      header("Location: https://ominichanel.redewe2m.com.br/conheca");
+      include("localizacao/index.php"); //DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
+      // header("Location: https://ominichanel.redewe2m.com.br/conheca");
     }
 
   }

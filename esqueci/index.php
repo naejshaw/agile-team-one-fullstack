@@ -24,7 +24,7 @@ $email = isset($_POST['email']) ? mysqli_real_escape_string($db_con, $_POST['ema
 
 // Checar se formulário foi executado
 
-$formdata = isset($_POST['formdata']);
+$formdata = isset($_POST['formdata']) ? $_POST['formdata'] : '';
 
 if( $formdata ) {
 
