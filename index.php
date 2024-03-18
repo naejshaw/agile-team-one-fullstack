@@ -10,7 +10,8 @@ include('_core/_includes/config.php');
   $firstdomain = $firstdomain[0]; //Atribui o primeiro valor do array gerado anteriormente à variável $firstdomain
   
   // Mapeando subdominio //
-  $insubdominio = explode('.', $_SERVER['HTTP_HOST']);
+  $insubdominio = explode('.', $_SERVER['HTTP_HOST'])[0];
+  // var_dump($insubdominio);
   // if ( strpos($insubdominio, '.') !== false) {
   //   $insubdominio = substr($insubdominio, 0, strpos($insubdominio, '.'));
   // }
@@ -32,7 +33,8 @@ include('_core/_includes/config.php');
     $data = mysqli_fetch_array( $query );
     $has_insubdominio = "1";
     $insubdominioid = $data['id'];
-    $insubdominiotipo = "1";
+    $insubdominiotipo = 1;
+    
   }
 
   // Cidade
@@ -41,7 +43,8 @@ include('_core/_includes/config.php');
     $data = mysqli_fetch_array( $query );
     $has_insubdominio = "1";
     $insubdominioid = $data['id'];
-    $insubdominiotipo = "2";
+    $insubdominiotipo = 2;
+    
   }
 
   // Subdominio
@@ -56,6 +59,7 @@ include('_core/_includes/config.php');
         $has_insubdominio = "0";
         $insubdominioid = "";
         $insubdominiotipo = "";
+        
       }
     }
   }
@@ -64,16 +68,16 @@ include('_core/_includes/config.php');
   if ($insubdominio) {
 
       // Tipo do subdominio
-      switch ($insubdominio) {
-        case 'estabelecimento':
-          $insubdominiotipo = 1;
-          break;
-        case 'cidade':
-          $insubdominiotipo = 2;
-          break;
-        default:
-          $insubdominiotipo = 0;
-      }
+      // switch ($insubdominio) {
+      //   case 'estabelecimento':
+      //     $insubdominiotipo = 1;
+      //     break;
+      //   case 'cidade':
+      //     $insubdominiotipo = 2;
+      //     break;
+      //   default:
+      //     $insubdominiotipo = 0;
+      // }
 
 
 
@@ -84,7 +88,7 @@ include('_core/_includes/config.php');
     $inparametro = isset($router[1]) ? $router[1] : '';
 
     // Estabelecimento
-    if ($insubdominiotipo == 1) {
+    if (isset($insubdominiotipo) && $insubdominiotipo == 1) {
       $virtualpath = $rootpath.'/app/estabelecimento';
       switch ($inacao) {
         case '':
@@ -107,9 +111,11 @@ include('_core/_includes/config.php');
       }
     }
 
+    var_dump($insubdominio);
+    var_dump($insubdominioid);
+    var_dump($insubdominiotipo);
     // Cidade
 
-   // Cidade
   if ($insubdominiotipo == 2) {
       $virtualpath = $rootpath.'/app/cidade';
       switch ($inacao) {
