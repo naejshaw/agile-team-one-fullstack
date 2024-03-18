@@ -10,18 +10,21 @@ include('_core/_includes/config.php');
   $firstdomain = $firstdomain[0]; //Atribui o primeiro valor do array gerado anteriormente à variável $firstdomain
   
   // Mapeando subdominio //
-  
-  $insubdominio = $_GET['insubdominio']; 
-  if( !$insubdominio ) { //Verifica se a variável não foi atribuída
-    $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
-    $insubdominio = array_shift($insubdominio);
-    if( $insubdominio == $firstdomain ) {
-      $insubdominio = "";
-    }
-    // if( $insubdominio == "www" ) {
-      //   header("location: ".$gowww);
-      // }
-    }
+  $insubdominio = explode('.', $_SERVER['HTTP_HOST']);
+  // if ( strpos($insubdominio, '.') !== false) {
+  //   $insubdominio = substr($insubdominio, 0, strpos($insubdominio, '.'));
+  // }
+  // $insubdominio = $_GET['insubdominio']; 
+  // if( !$insubdominio ) { 
+  //   $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
+  //   $insubdominio = array_shift($insubdominio);
+  //   if( $insubdominio == $firstdomain ) {
+  //     $insubdominio = "";
+  //   }
+  //   if( $insubdominio == "www" ) {
+  //       header("location: ".$gowww);
+  //     }
+  //   }
 
   // Estabelecimento
   if( mysqli_num_rows( mysqli_query( $db_con, "SELECT id,subdominio FROM estabelecimentos WHERE subdominio = '$insubdominio' AND excluded != '1' LIMIT 1" ) ) ) {
@@ -78,7 +81,7 @@ include('_core/_includes/config.php');
     $router = isset($_GET['inrouter']) ? $_GET['inrouter'] : '';
     $router = explode('/', $router);
     $inacao = $router[0];
-    $inparametro = $router[1];
+    $inparametro = isset($router[1]) ? $router[1] : '';
 
     // Estabelecimento
     if ($insubdominiotipo == 1) {
@@ -107,7 +110,7 @@ include('_core/_includes/config.php');
     // Cidade
 
    // Cidade
-    if ($insubdominiotipo == 2) {
+  if ($insubdominiotipo == 2) {
       $virtualpath = $rootpath.'/app/cidade';
       switch ($inacao) {
         case '':
@@ -132,8 +135,8 @@ include('_core/_includes/config.php');
     if( $insubdominio ) {
       include("404.php");
     } else {
-      include("localizacao/index.php"); //DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
-      // header("Location: https://ominichanel.redewe2m.com.br/conheca");
+      // include("localizacao/index.php"); //DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
+      header("Location: https://ominichanel.redewe2m.com.dev/conheca");
     }
 
   }
