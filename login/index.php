@@ -148,7 +148,7 @@ if ("serviceWorker" in navigator) {
 
 														<div class="msg msg-error bg-gray mt-10">
 															<i class="lni lni-close"></i>
-															<span>Dados incorretos, tente novamente!</span>
+															<span>Dados erros, tente novamente!</span>
 														</div>
 
 													</div>
