@@ -4,8 +4,10 @@ global $seo_subtitle;
 global $seo_description;
 global $seo_keywords;
 global $seo_image;
-$hostArray = (explode('.', $_SERVER['HTTP_HOST']));
-$insubdominiourl = array_shift($hostArray);
+$hostArray = isset($_SERVER['HTTP_HOST']) ? explode('.', $_SERVER['HTTP_HOST']) : '';
+// var_dump($hostArray);
+$insubdominiourl = isset($hostArray) ? array_shift($hostArray) : '';
+// var_dump("InsubdominioURL : ".$insubdominiourl);
 ?>
 <!DOCTYPE html>
 <html>

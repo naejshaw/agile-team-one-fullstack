@@ -73,7 +73,7 @@
 				</div>
 
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadd">
-						<a href="<?php echo isset($app['url']); ?>">
+						<a href="<?php echo $app['url']; ?>">
 						<div class="logofont logofont-city brand-cidade">
 							<span><?php echo $titulo_topo; ?></span>
 							</div>

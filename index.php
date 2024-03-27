@@ -10,22 +10,22 @@ include('_core/_includes/config.php');
   $firstdomain = $firstdomain[0]; //Atribui o primeiro valor do array gerado anteriormente à variável $firstdomain
   
   // Mapeando subdominio //
-  $insubdominio = explode('.', $_SERVER['HTTP_HOST'])[0];
+  // $insubdominio = explode('.', $_SERVER['HTTP_HOST'])[0];
   // var_dump($insubdominio);
   // if ( strpos($insubdominio, '.') !== false) {
   //   $insubdominio = substr($insubdominio, 0, strpos($insubdominio, '.'));
   // }
-  // $insubdominio = $_GET['insubdominio']; 
-  // if( !$insubdominio ) { 
-  //   $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
-  //   $insubdominio = array_shift($insubdominio);
-  //   if( $insubdominio == $firstdomain ) {
-  //     $insubdominio = "";
-  //   }
-  //   if( $insubdominio == "www" ) {
-  //       header("location: ".$gowww);
-  //     }
-  //   }
+  $insubdominio = isset($_GET['insubdominio']) ? $_GET['insubdominio'] : ''; 
+  if( !$insubdominio ) { 
+    $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
+    $insubdominio = array_shift($insubdominio);
+    if( $insubdominio == $firstdomain ) {
+      $insubdominio = "";
+    }
+    if( $insubdominio == "www" ) {
+        header("location: ".$gowww);
+      }
+    }
 
   // Estabelecimento
   if( mysqli_num_rows( mysqli_query( $db_con, "SELECT id,subdominio FROM estabelecimentos WHERE subdominio = '$insubdominio' AND excluded != '1' LIMIT 1" ) ) ) {
@@ -82,13 +82,15 @@ include('_core/_includes/config.php');
 
 
     // Roteando
-    $router = isset($_GET['inrouter']) ? $_GET['inrouter'] : '';
+    $router = $_GET['inrouter'];
     $router = explode('/', $router);
     $inacao = $router[0];
     $inparametro = isset($router[1]) ? $router[1] : '';
-
+    var_dump($router);
+    var_dump("Acao: ".$inacao);
+    var_dump("Parametro: ".$inparametro);
     // Estabelecimento
-    if (isset($insubdominiotipo) && $insubdominiotipo == 1) {
+    if ($insubdominiotipo == 1) {
       $virtualpath = $rootpath.'/app/estabelecimento';
       switch ($inacao) {
         case '':
@@ -111,9 +113,6 @@ include('_core/_includes/config.php');
       }
     }
 
-    var_dump($insubdominio);
-    var_dump($insubdominioid);
-    var_dump($insubdominiotipo);
     // Cidade
 
   if ($insubdominiotipo == 2) {
@@ -135,14 +134,17 @@ include('_core/_includes/config.php');
           $chamar = $virtualpath.'/404.php';
       }
     }
-
+    var_dump("Chamar: ".$chamar);
+    var_dump("Subdominio: ".$insubdominio);
+    var_dump("Subdominio ID: ".$insubdominioid);
+    var_dump("Subdominio Tipo: ".$insubdominiotipo);
   } else {
 
     if( $insubdominio ) {
       include("404.php");
     } else {
-      // include("localizacao/index.php"); //DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
-      header("Location: https://ominichanel.redewe2m.com.dev/conheca");
+      include("localizacao/index.php"); //DESMASCAR PARA USAR MARKETPLACE COMO PAGINA PADRAO
+      // header("Location: https://ominichanel.redewe2m.com.dev/conheca");
     }
 
   }

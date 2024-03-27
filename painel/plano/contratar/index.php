@@ -146,7 +146,6 @@ if ($formdata) {
             $assinatura_parcelas = intval($data["duracao_meses"]);
 
             $curl = curl_init();
-
             curl_setopt_array($curl, [
                 CURLOPT_URL => "https://api.mercadopago.com/checkout/preferences",
                 CURLOPT_RETURNTRANSFER => true,
@@ -198,7 +197,6 @@ if ($formdata) {
                 ],
             ]);
             $response = curl_exec($curl);
-             //var_dump($response);
             curl_close($curl);
 
             $obj = json_decode($response);
@@ -261,7 +259,7 @@ if ($formdata) {
 
       mp.bricks().create("wallet", "wallet_container", {
         initialization: {
-            preferenceId: "<?php echo isset($gateway_transaction) ? $gateway_transaction : ''; ?>",
+            preferenceId: "<?php echo $gateway_transaction; ?>",
         },
       });
   </script>
@@ -300,7 +298,7 @@ if ($formdata) {
 
             <div class="col-md-12">
 
-              <?php if (isset($checkerrors)) {
+              <?php if (isset($checkerrors) && $checkerrors != 0) {
                   list_errors();
               } ?>
 
@@ -463,10 +461,10 @@ if ($formdata) {
       <?php ;} ?>
 
     </div>
-    <!-- Se obter uma preference id renderiza o checkout pro
-    <?php //if ($preference_id) { ?>
+    <!-- Se obter uma preference id renderiza o checkout pro -->
+    <?php if ($preference_id) { ?>
       <div id="wallet_container">
-    <?php //} ?>
+    <?php } ?>
     <script>
       const mp = new MercadoPago($mp_public_key, {
         locale: 'pt-BR'
@@ -478,7 +476,7 @@ if ($formdata) {
         },
       });
   </script>
-  -->
+  
     <!-- / Content -->
 
   </div>

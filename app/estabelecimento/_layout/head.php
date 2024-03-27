@@ -4,9 +4,9 @@ global $seo_subtitle;
 global $seo_description;
 global $seo_keywords;
 global $seo_image;
-
-$local = "0";
-$local = $_GET['local'];
+var_dump("Subdominio URL: ".$insubdominiourl);
+// $local = "0";
+$local = isset($_GET['local']) ? $_GET['local'] : '0';
 
 if( $local > 0 ) {
 $_SESSION["local"] = $local;

@@ -3,6 +3,7 @@
 namespace App\Config;
 // Carregue configurações sensíveis de um arquivo separado
 require_once 'config_secret.php';
+include './_core/_includes/config.php';
 // iniciar o buffer de saída. O buffer de saída permite manipular os cabeçalhos HTTP antes que eles sejam enviados ao navegador.
 ob_start();
 
@@ -10,11 +11,11 @@ ob_start();
 const SYSTEM_NAME = "Ominichanel"; // Nome do sistema
 const SYSTEM_VERSION = "1.0.0"; // Versão do sistema
 const ENVIRONMENT = "TEST"; // Ambiente de execução (TEST ou PROD)
-const CAMINHO_BASE = "/var/www/ominichanel"; // Caminho base no servidor para os arquivos do sistema
-const APP_URL = 'https://ominichanel.dev';
+const CAMINHO_BASE = "C:\xampp\htdocs\ominichanel.redewe2m.com.dev\public_html\agile-team-one-fullstack"; // Caminho base no servidor para os arquivos do sistema
+const APP_URL = 'https://ominichanel.redewe2m.com.dev';
 const HTTP_PROTOCOL = "https://";
-const SIMPLE_URL = "ominichanel.dev";
-const HOME_PAGE = "conheca.ominichanel.dev";
+const SIMPLE_URL = "ominichanel.redewe2m.com.dev";
+const HOME_PAGE = "conheca.ominichanel.redewe2m.com.dev";
 const GOWWW = HTTP_PROTOCOL . SIMPLE_URL; //monta url com as 2 constantes.
 
 
@@ -28,14 +29,14 @@ $just_url   = HTTP_PROTOCOL . SIMPLE_URL;
 $app_url    = HTTP_PROTOCOL . SIMPLE_URL . "/app";
 
 // Title
-$seo_title = "Estou On";
+$seo_title = "Ominichanel";
 $seo_description = "Compre sem sair de casa!";
 
 //$titulo_topo = "Sua<strong> Logo.</strong>"; //TITULO DA LOGO PARA USAR TITULO INVES DE IMAGEM TIRAR OS // DO COMEÇO E COLOCAR NO DE BAIXO 
 $titulo_topo = '<img src="/_core/_cdn/img/logo.png">'; //US4R LOGO INVES DE TITUL5
-$titulo_rodape ="Estou On";
+$titulo_rodape ="Ominichanel";
 $sub_titulo_rodape ="O SISTEMA DE VENDAS DESCOMPLICADO!"; //Endereço ou Slogan
-$titulo_rodape_marketplace ="EstouOn, Compre sem sair de casa!"; //Endereço ou Slogan
+$titulo_rodape_marketplace ="Ominichanel, Compre sem sair de casa!"; //Endereço ou Slogan
 
 // Redes/Whatsapp/Email
 $whatsapp = "21981760591";
@@ -58,7 +59,7 @@ if( !$_SERVER['HTTPS'] ) {
 $manutencao = false;
 
 if( $manutencao ) {
-	include("manutencao.php");
+	include("./_core/_includes/manutencao.php");
 	die;
 }
 
@@ -90,7 +91,7 @@ $smtp_user = $config_smtp['smtp_user'];
 $smtp_pass = $config_smtp['smtp_pass'];
 
 // Includes da funcoes separar para carregar so o necessario
-include("_core/_includes/functions.php");
+include("/xampp/htdocs/ominichanel.redewe2m.com.dev/public_html/agile-team-one-fullstack/_core/_includes/functions.php");
 
 // Plano default descobrir qual e o 5
 $plano_default = "5";
