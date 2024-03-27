@@ -1,12 +1,12 @@
 <?php
 include("/xampp/htdocs/ominichanel.redewe2m.com.dev/public_html/agile-team-one-fullstack/_core/_includes/config.php");
-global $insubdominioid;
-global $insubdominiourl;
+global $insubdominioid; //TODO: Buscar a atribuição
+global $insubdominiourl; //TODO: Buscar a atribuição
 global $httprotocol;
 var_dump($db_con);
 $define_query = mysqli_query( $db_con, "SELECT * FROM estabelecimentos WHERE id = '$insubdominioid' LIMIT 1");
 $define_data = mysqli_fetch_array( $define_query );
-// TODO: Investigar a ausência de $simple_url
+// TODO: Investigar a ausência de $simple_url - feito
 $app['url'] = $httprotocol.$insubdominiourl.".".$simple_url;
 var_dump("Subdominio ID: ".$insubdominioid);
 var_dump("Subdominio URL: ".$insubdominiourl);
