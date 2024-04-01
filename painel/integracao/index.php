@@ -16,11 +16,11 @@ include('../_layout/sidebars.php');
 include('../_layout/modal.php');
 
 global $db_con;
-$eid = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : ''; //estabelecimento logado
+$eid = $_SESSION['estabelecimento']['id']; //estabelecimento logado
 $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimento']['id'],"subdominio").".".$simple_url;
 
 // Id do estabelecimento logado 
-$id = isset($_SESSION['estabelecimento']['id']) ? $_SESSION['estabelecimento']['id'] : '';
+$id = $_SESSION['estabelecimento']['id'];
 
 // Variáveis de inicialização
 $public_key = "";

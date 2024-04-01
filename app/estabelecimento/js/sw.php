@@ -10,7 +10,7 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('fox-store').then(function(cache) {
      return cache.addAll([
-       '<?php echo $app['url']; ?>'
+       '<?php echo isset($app['url']) ? $app['url'] : ''; ?>'
      ]);
    })
  );

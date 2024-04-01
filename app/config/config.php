@@ -3,7 +3,7 @@
 namespace App\Config;
 // Carregue configurações sensíveis de um arquivo separado
 require_once 'config_secret.php';
-include './_core/_includes/config.php';
+// include './_core/_includes/config.php';
 // iniciar o buffer de saída. O buffer de saída permite manipular os cabeçalhos HTTP antes que eles sejam enviados ao navegador.
 ob_start();
 

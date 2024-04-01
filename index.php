@@ -1,6 +1,6 @@
 <?php 
-include('_core/_includes/config.php');
-
+// include('_core/_includes/config.php');
+include "/xampp/htdocs/ominichanel.redewe2m.com.dev/public_html/agile-team-one-fullstack/_core/_includes/config.php";
   // Globais - Definição de variáveis
   $rootpath;
   $httprotocol;
