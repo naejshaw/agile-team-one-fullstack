@@ -1,6 +1,6 @@
 <?php 
 // include('_core/_includes/config.php');
-include "/xampp/htdocs/ominichanel.redewe2m.com.dev/public_html/agile-team-one-fullstack/_core/_includes/config.php";
+include_once "./_core/_includes/config.php";
   // Globais - Definição de variáveis
   $rootpath;
   $httprotocol;
@@ -10,11 +10,11 @@ include "/xampp/htdocs/ominichanel.redewe2m.com.dev/public_html/agile-team-one-f
   $firstdomain = $firstdomain[0]; //Atribui o primeiro valor do array gerado anteriormente à variável $firstdomain
   
   // Mapeando subdominio //
-  // $insubdominio = explode('.', $_SERVER['HTTP_HOST'])[0];
+  $insubdominio = explode('.', $_SERVER['HTTP_HOST'])[0];
   // var_dump($insubdominio);
-  // if ( strpos($insubdominio, '.') !== false) {
-  //   $insubdominio = substr($insubdominio, 0, strpos($insubdominio, '.'));
-  // }
+  if ( strpos($insubdominio, '.') !== false) {
+    $insubdominio = substr($insubdominio, 0, strpos($insubdominio, '.'));
+  }
   $insubdominio = isset($_GET['insubdominio']) ? $_GET['insubdominio'] : ''; 
   if( !$insubdominio ) { 
     $insubdominio = explode(".", $_SERVER['HTTP_HOST']);
