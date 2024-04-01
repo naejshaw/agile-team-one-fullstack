@@ -27,7 +27,7 @@ $public_key = "";
 $secret_key = "";
 
 // Consultar as chaves do banco de dados
-$sql = "SELECT mp_public_key, mp_secret_key FROM estabelecimentos WHERE id = ?";
+$sql = "SELECT public_key, secret_key FROM estabelecimentos WHERE id = ?";
 isset($db_con) ? $stmt = mysqli_prepare($db_con, $sql) : $stmt = '';
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
