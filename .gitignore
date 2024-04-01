@@ -6,3 +6,4 @@
 /app/config/config_secret.php
 .github/workflows/aluno.yml
 .htaccess
+.env
