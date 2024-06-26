@@ -149,7 +149,7 @@ $filtered = isset($_GET['filtered']) ? $_GET['filtered'] : '';
 						curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 						$response = curl_exec($ch);
-						curl_close($ch);
+						curl_close($ch); //TODO: Retirar e realizar testes
 
 						$response = json_decode($response);
 
@@ -173,7 +173,7 @@ $filtered = isset($_GET['filtered']) ? $_GET['filtered'] : '';
 								curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 								curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 								$response_detail = curl_exec($ch);
-								curl_close($ch);
+								curl_close($ch); //TODO: Retirar e realizar testes
 
 								$response_detail = json_decode($response_detail);
 

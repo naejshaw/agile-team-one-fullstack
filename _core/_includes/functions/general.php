@@ -193,8 +193,11 @@ function random_key($a) {
 			$rand2 = "25";
 
 		}
-
-		$value .= $chars[ $rand1 ][ rand(0,$rand2) ];
+		if($rand1 && $rand2){
+			$value .= $chars[ $rand1 ][ rand(0,$rand2) ];
+		} else{
+			$value = [];
+		}
 	}
 
 	return $value;

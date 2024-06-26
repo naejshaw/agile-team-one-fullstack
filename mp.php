@@ -16,6 +16,6 @@ curl_setopt($ch,CURLOPT_POST, 1);
 curl_setopt($ch,CURLOPT_POSTFIELDS, $vars);
 $result = curl_exec($ch);
 $result = json_decode($result);
-curl_close($ch);
+curl_close($ch); //TODO: Retirar e realizar testes
 print("<pre>".print_r($result,true)."</pre>");
 ?>

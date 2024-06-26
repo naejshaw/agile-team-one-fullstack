@@ -6,7 +6,7 @@ session_id( $token );
 $eid = mysqli_real_escape_string( $db_con, $_POST['eid'] );
 $pid = mysqli_real_escape_string( $db_con, $_POST['produto'] );
 $produto = mysqli_real_escape_string( $db_con, $_POST['produto'] );
-$parsedata = parse_str( $_POST['data'], $data );
+$parsedata = parse_str( $_POST['data'], $data );  //TODO: Retirar e realizar testes
 $quantidade = $data['quantidade'];
 $observacoes = $data['observacoes'];
 $variacoes = $data['variacao'];

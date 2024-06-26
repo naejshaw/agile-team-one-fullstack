@@ -67,7 +67,7 @@ $afiliado = isset($_SESSION['afiliado']) ? $_SESSION['afiliado'] : '';
             )
         ));
         $response = curl_exec($curl);
-        curl_close($curl);
+        curl_close($curl); //TODO: Retirar e realizar testes
 
         if( strpos($response, '"success": true') !== FALSE ) {
           $captcha = "1";

@@ -77,6 +77,6 @@ class Curl
      */
     public function close($ch)
     {
-        curl_close($ch);
+        curl_close($ch); //TODO: Retirar e realizar testes
     }
 }

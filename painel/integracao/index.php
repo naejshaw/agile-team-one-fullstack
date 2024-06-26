@@ -20,102 +20,100 @@ $eid = $_SESSION['estabelecimento']['id']; //estabelecimento logado
 $meudominio = $httprotocol.data_info("estabelecimentos",$_SESSION['estabelecimento']['id'],"subdominio").".".$simple_url;
 
 // Id do estabelecimento logado 
-// $id = $_SESSION['estabelecimento']['id'];
+$id = $_SESSION['estabelecimento']['id'];
 
 // Variáveis de inicialização
-// $public_key = "";
-// $secret_key = "";
+$public_key = "";
+$secret_key = "";
 
 // Consultar as chaves do banco de dados
-// $sql = "SELECT public_key, secret_key FROM estabelecimentos WHERE id = ?";
-// $stmt = mysqli_prepare($db_con, $sql);
-// mysqli_stmt_bind_param($stmt, "i", $id);
-// mysqli_stmt_execute($stmt);
-// $result = mysqli_stmt_get_result($stmt);
+$sql = "SELECT public_key, secret_key FROM estabelecimentos WHERE id = ?";
+$stmt = mysqli_prepare($db_con, $sql);
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
-// if (mysqli_num_rows($result) > 0) {
-//     $row = mysqli_fetch_assoc($result);
-//     $public_key = $row['public_key'];
-//     $secret_key = $row['secret_key'];
-// }
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $public_key = $row['public_key'];
+    $secret_key = $row['secret_key'];
+}
 
 //var_dump($public_key);
 // Preenchimento dos campos do formulário
-// if (isset($_POST['formdata'])) {
-//     $public_key = htmlclean($_POST['input-public-key']);
-//     $secret_key = htmlclean($_POST['input-secret-key']);
-// 	$formdata = $_POST['formdata'];
-// }
-
-
+if (isset($_POST['formdata'])) {
+    $public_key = htmlclean($_POST['input-public-key']);
+    $secret_key = htmlclean($_POST['input-secret-key']);
+	$formdata = $_POST['formdata'];
+}
 
 // verificando se os valores foram atribuidos
 //var_dump($public_key);
 //var_dump($secret_key);
 
 //cria a funcao para atualizar a tabela estabelecimento
-// function update_estabelecimento( $db_con, $public_key, $secret_key, $id)
-// {
+function update_estabelecimento( $db_con, $public_key, $secret_key, $id)
+{
 // 	// Sanitizar os dados
-//     $public_key = isset($public_key) ? mysqli_real_escape_string($db_con, $public_key) : '';
-//     $secret_key = isset($secret_key) ? mysqli_real_escape_string($db_con, $secret_key) : '';
+    $public_key = isset($public_key) ? mysqli_real_escape_string($db_con, $public_key) : '';
+    $secret_key = isset($secret_key) ? mysqli_real_escape_string($db_con, $secret_key) : '';
 
 // 	// Preparar a consulta SQL
-//     $sql = "UPDATE estabelecimentos SET public_key = ?, secret_key = ? WHERE id = ?";
+    $sql = "UPDATE estabelecimentos SET public_key = ?, secret_key = ? WHERE id = ?";
 
 //     // Criar um statement
-//     $stmt = mysqli_prepare($db_con, $sql);
+    $stmt = mysqli_prepare($db_con, $sql);
 
 //     // Vincular os parâmetros
-//     mysqli_stmt_bind_param($stmt, "sss", $public_key, $secret_key, $id);
+    mysqli_stmt_bind_param($stmt, "sss", $public_key, $secret_key, $id);
 
 //     // Executar a consulta
-//     mysqli_stmt_execute($stmt);
+    mysqli_stmt_execute($stmt);
 
 //     // Fechar o statement
-//     mysqli_stmt_close($stmt);
+    mysqli_stmt_close($stmt);
 
 //     // Retornar o número de linhas afetadas
-//     return mysqli_affected_rows($db_con);
+    return mysqli_affected_rows($db_con);
 
-// }
+}
 
 
 //se o botao salvar for clicado vai executar o post do form
-// if (isset($formdata)) {
+if (isset($formdata)) {
 	
 // 	// Checar Erros gerados se nao enviar os dados
-// 	 $checkerrors = 0;
-// 	 $errormessage = []; //declara um array
+	 $checkerrors = 0;
+	 $errormessage = []; //declara um array
 
-// 	 if( !$public_key ) {
-// 		$checkerrors++;
-// 		$errormessage[] = "A Public Key não pode ser nulo";
-// 	  }
+	 if( !$public_key ) {
+		$checkerrors++;
+		$errormessage[] = "A Public Key não pode ser nulo";
+	  }
 
 // 	// verificar se a secret_key foi informada
-// 	  if( !$secret_key ) {
-// 		$checkerrors++;
-// 		$errormessage[] = "A Secret Key não pode ser nula";
-// 	  }
+	  if( !$secret_key ) {
+		$checkerrors++;
+		$errormessage[] = "A Secret Key não pode ser nula";
+	  }
 
-// 	  // Executar registro
+	  // Executar registro
 
-// 	//   if( !$checkerrors ) {
-// 		//tem como atualizar sem passar todas as colunas?
-// // 		if( update_estabelecimento( $db_con, $public_key, $secret_key, $id) ) {
+	  if( !$checkerrors ) {
+		// tem como atualizar sem passar todas as colunas?
+		if( update_estabelecimento( $db_con, $public_key, $secret_key, $id) ) {
   
-// // 		  header("Location: index.php?msg=sucesso&id=".$id);
+		  header("Location: index.php?msg=sucesso&id=".$id);
   
-// // 		} else {
+		} else {
   
-// // 		 header("Location: index.php?msg=erro&id=".$id);
+		 header("Location: index.php?msg=erro&id=".$id);
   
-// // 		}
+		}
   
-// // 	  }
+	  }
 
-// }
+}
 ?>
 
 

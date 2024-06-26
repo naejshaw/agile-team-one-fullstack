@@ -38,7 +38,7 @@ if(isset($body->token)){
     ));
     
     $response = curl_exec($curl);
-    curl_close($curl);
+    curl_close($curl); //TODO: Retirar e realizar testes
 
     echo $response;
 

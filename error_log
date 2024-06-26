@@ -1,0 +1,592 @@
+[17-Jan-2024 14:03:52 America/Sao_Paulo] PHP Warning:  Undefined array key "keepalive" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[17-Jan-2024 14:03:52 America/Sao_Paulo] PHP Warning:  Undefined array key "keepalive" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 134
+[17-Jan-2024 14:03:52 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[17-Jan-2024 14:03:52 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[17-Jan-2024 16:33:53 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[17-Jan-2024 16:33:53 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[01-Mar-2024 10:39:56 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 10:39:56 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[01-Mar-2024 10:41:40 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 10:41:40 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[01-Mar-2024 10:41:43 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 10:41:43 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[01-Mar-2024 10:59:17 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 10:59:17 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined array key "avatar" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 97
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined array key "rel_lojas_id" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 119
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 13:53:22 America/Sao_Paulo] PHP Warning:  Undefined array key "busca" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/sidebars.php on line 20
+[01-Mar-2024 17:03:12 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 17:03:12 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 17:03:12 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 17:03:12 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 17:03:12 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 17:04:49 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 17:04:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 17:04:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 17:04:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 17:04:49 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:06:28 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:06:29 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:29 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:29 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:29 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:06:32 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:06:32 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:32 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:32 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:32 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:06:33 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:06:33 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:33 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:33 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:06:33 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:07:40 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:07:40 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:07:40 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:07:40 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:07:40 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:07:47 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:07:47 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:07:47 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:07:47 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:07:47 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:08:54 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:08:55 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:08:55 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:08:55 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:08:55 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:09:19 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:09:20 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:20 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:20 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:20 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:09:45 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:09:45 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:45 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:45 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:45 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:09:48 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:09:48 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:48 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:09:49 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined array key "avatar" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 97
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined array key "rel_lojas_id" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 119
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 18:51:18 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Undefined array key "avatar" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 97
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Undefined array key "rel_lojas_id" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 119
+[01-Mar-2024 21:45:50 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[01-Mar-2024 21:45:51 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 21:45:51 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 21:45:51 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[01-Mar-2024 21:45:51 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 09:08:13 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[02-Mar-2024 09:08:13 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[02-Mar-2024 09:08:13 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[02-Mar-2024 09:08:13 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[02-Mar-2024 09:08:13 America/Sao_Paulo] PHP Warning:  Undefined array key "avatar" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 97
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Warning:  Undefined array key "rel_lojas_id" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 119
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:08:14 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 09:28:07 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 09:28:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:28:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:28:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:28:07 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 09:29:30 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 09:29:30 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:29:30 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:29:30 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:29:30 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 09:29:33 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 09:29:33 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:29:33 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:29:33 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 09:29:33 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 10:09:48 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 10:09:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:09:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:09:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:09:49 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 10:22:18 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 10:22:18 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:22:18 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:22:18 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:22:18 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 10:22:26 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 10:22:26 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:22:26 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:22:26 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 10:22:26 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 12:16:01 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 12:16:01 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 12:16:02 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 12:16:02 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 12:16:02 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 16:43:40 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 16:43:40 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 16:43:41 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 16:43:41 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 16:43:41 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 17:00:02 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 17:00:02 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[02-Mar-2024 17:02:40 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[02-Mar-2024 17:02:41 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 17:02:41 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 17:02:41 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[02-Mar-2024 17:02:41 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[04-Mar-2024 11:13:07 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[04-Mar-2024 11:13:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[04-Mar-2024 11:13:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[04-Mar-2024 11:13:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[04-Mar-2024 11:13:07 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[04-Mar-2024 12:28:06 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[04-Mar-2024 12:28:06 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[04-Mar-2024 12:28:06 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[04-Mar-2024 12:28:07 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[04-Mar-2024 12:28:07 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 14:22:55 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 14:22:55 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:22:55 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:22:55 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:22:55 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 14:23:30 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 14:23:30 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:23:30 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:23:30 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:23:30 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 14:23:54 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 14:23:54 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:23:54 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:23:54 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 14:23:54 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 15:17:49 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 15:17:49 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 15:20:32 America/Sao_Paulo] PHP Warning:  Undefined array key "keepalive" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[05-Mar-2024 15:20:32 America/Sao_Paulo] PHP Warning:  Undefined array key "keepalive" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 134
+[05-Mar-2024 15:20:32 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 15:20:32 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 15:24:11 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 15:24:11 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 15:35:51 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 15:35:51 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 15:35:51 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 15:35:51 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 15:35:51 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[05-Mar-2024 15:54:16 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[05-Mar-2024 15:54:16 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 15:54:16 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 15:54:16 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[05-Mar-2024 15:54:16 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 10:10:49 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1368
+[06-Mar-2024 10:10:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[06-Mar-2024 10:10:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[06-Mar-2024 10:10:49 America/Sao_Paulo] PHP Warning:  Undefined variable $uploadpathreturn in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 554
+[06-Mar-2024 10:10:49 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 10:58:27 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 10:58:27 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 12:16:18 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 12:16:18 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 16:36:01 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 16:36:01 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 19:40:48 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 19:40:48 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 19:58:33 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 19:58:33 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 20:03:21 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 20:03:21 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 20:03:50 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 20:03:50 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[06-Mar-2024 21:44:43 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[06-Mar-2024 21:44:43 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[07-Mar-2024 08:16:02 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[07-Mar-2024 08:16:02 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[07-Mar-2024 14:31:43 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[07-Mar-2024 14:31:43 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[07-Mar-2024 14:40:57 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[07-Mar-2024 14:40:57 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[07-Mar-2024 14:41:18 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[07-Mar-2024 14:41:18 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[08-Mar-2024 10:27:52 America/Sao_Paulo] PHP Warning:  Undefined variable $limite_produtos in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1371
+[08-Mar-2024 10:27:52 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[08-Mar-2024 20:00:50 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[19-Mar-2024 14:37:21 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 166
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 166
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 172
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 172
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 172
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 172
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "estabelecimento" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 6
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 6
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "estabelecimento" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1375
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 1375
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/head.php on line 25
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key "perfil" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/top.php on line 12
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Uninitialized string offset 0 in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 605
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Uninitialized string offset 1 in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 606
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined array key 1 in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 450
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Warning:  Undefined variable $newimage in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 486
+[19-Mar-2024 18:43:28 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: imagesx(): Argument #1 ($image) must be of type GdImage, null given in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php:486
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php(486): imagesx(NULL)
+#1 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php(613): gera_thumb(NULL, '512', '512')
+#2 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/_layout/top.php(12): thumber(NULL, '512')
+#3 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(14): include('/home1/redewe49...')
+#4 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/upload.php on line 486
+[19-Mar-2024 18:43:33 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 14:17:12 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:45:55 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:46:43 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:56:25 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:56:28 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:56:33 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:56:56 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 20:58:08 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[27-Mar-2024 21:03:01 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 17:20:28 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 17:20:43 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 17:20:44 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 17:20:47 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 17:25:51 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 17:42:37 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 127
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Warning:  Undefined array key "user" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/config.php on line 136
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Warning:  Undefined array key "avatar" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 97
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Warning:  Undefined array key "rel_lojas_id" in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/_core/_includes/functions/user.php on line 119
+[01-Apr-2024 18:38:56 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:10:10 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mp_public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT mp_publi...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:10:14 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mp_public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT mp_publi...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:10:16 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mp_public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT mp_publi...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:10:52 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mp_public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT mp_publi...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:11:42 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'mp_public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT mp_publi...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:27:08 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'public_key' in 'field list' in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php:31
+Stack trace:
+#0 /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php(31): mysqli_prepare(Object(mysqli), 'SELECT public_k...')
+#1 {main}
+  thrown in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 31
+[01-Apr-2024 20:32:17 America/Sao_Paulo] PHP Warning:  Undefined variable $public_key in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 252
+[01-Apr-2024 20:32:17 America/Sao_Paulo] PHP Warning:  Undefined variable $secret_key in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 260
+[01-Apr-2024 20:36:00 America/Sao_Paulo] PHP Warning:  Undefined variable $public_key in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 252
+[01-Apr-2024 20:36:00 America/Sao_Paulo] PHP Warning:  Undefined variable $secret_key in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 260
+[01-Apr-2024 21:02:33 America/Sao_Paulo] PHP Warning:  Undefined variable $public_key in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 252
+[01-Apr-2024 21:02:33 America/Sao_Paulo] PHP Warning:  Undefined variable $secret_key in /home1/redewe49/public_html/ominichanel.redewe2m.com.br/front/painel/integracao/index.php on line 260
